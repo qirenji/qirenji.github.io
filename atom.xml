@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-18T04:41:51.000Z</updated>
+  <updated>2017-07-18T15:52:37.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -14,6 +14,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo搭建github个人博客</title>
+    <link href="http://www.qirenji.info/2017/07/18/hexo%E6%90%AD%E5%BB%BAgithub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://www.qirenji.info/2017/07/18/hexo搭建github个人博客/</id>
+    <published>2017-07-18T15:41:11.000Z</published>
+    <updated>2017-07-18T15:52:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="用Hexo-3-搭建github-blog"><a href="#用Hexo-3-搭建github-blog" class="headerlink" title="用Hexo 3 搭建github blog"></a>用Hexo 3 搭建github blog</h2><p>本文使用的是Mac进行演示，如过是windows系统方式基本相同，单具体安装步骤请自行百度。</p>
+<h3 id="1-注册github账号"><a href="#1-注册github账号" class="headerlink" title="1. 注册github账号"></a>1. 注册github账号</h3><p>点击gitbub<a href="http://github.com/" target="_blank" rel="external">官方网站</a>进行注册</p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p>注册完成后点击github首页上的➕New repository创建仓库</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="img/github-create.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<p>创建的Repository name有固定的格式<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">你的github昵称<span class="selector-class">.github</span><span class="selector-class">.io</span></div></pre></td></tr></table></figure></p>
+<p>点击Creat repository即可创建仓库</p>
+<h4 id="生成添加秘钥"><a href="#生成添加秘钥" class="headerlink" title="生成添加秘钥"></a>生成添加秘钥</h4><p>打开终端输入：</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"Github的注册邮箱地址"</span></div></pre></td></tr></table></figure>
+<p>一路Enter过来就好，待秘钥生成完毕，会得到两个文件id_rsa和id_rsa.pub</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.pub</div></pre></td></tr></table></figure>
+<p>查看公钥并复制其内容。</p>
+<p><a href="http://github.com/settings/keys" target="_blank" rel="external">http://github.com/settings/ssh</a></p>
+<p>New SSH key<br>输入一个Title把刚才查看到的公钥输入到Key上，生成SSH key。</p>
+<h3 id="2-node-js-和git安装"><a href="#2-node-js-和git安装" class="headerlink" title="2.node.js 和git安装"></a>2.node.js 和git安装</h3><p>进入<a href="http://http://nodejs.cn/download//" target="_blank" rel="external">node.js官网</a>，下载并安装即可，推荐安装新版。</p>
+<hr>
+<p>git安装可用过homebrew安装，首先安装homebrew</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/<span class="keyword">install</span>/<span class="keyword">master</span>/<span class="keyword">install</span>)<span class="string">"</span></div></pre></td></tr></table></figure>
+<p>然后安装git</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>git</div></pre></td></tr></table></figure>
+<h3 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h3><p>强调一下，这一步使我们搭建博客的核心，是重中之重。</p>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></div></pre></td></tr></table></figure>
+<p>安装好之后，终端输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo</span></div></pre></td></tr></table></figure>
+<p>若出现下图，说明hexo安装成功</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/291600-34e4d1af45d6f267.png?imageMogr2/auto-orient/strip%7CimageView2/2" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<h4 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h4><p>着到你创建博客的目录，创建博客文件夹</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 创建博客文件夹，并初始化博客</div><div class="line"><span class="meta">$</span><span class="bash"> hexo init &lt;folder&gt;</span></div><div class="line">//进入博客文件夹</div><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> &lt;folder&gt;</span></div><div class="line">//安装所有的依赖包</div><div class="line"><span class="meta">$</span><span class="bash"> npm install</span></div></pre></td></tr></table></figure>
+<h3 id="4-修改博客主题和配置"><a href="#4-修改博客主题和配置" class="headerlink" title="4.修改博客主题和配置"></a>4.修改博客主题和配置</h3><ul>
+<li>先下载<a href="http://hexo.in/themes/" target="_blank" rel="external">主题</a>到themes文件夹中</li>
+<li>修改_config.yml文件中themes项为自己的主题名</li>
+<li>修改_config.yml文件中的deploy项如下</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/你的昵称/你的昵称.github.io.git</span></div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure>
+<h3 id="5-新建文章并发布"><a href="#5-新建文章并发布" class="headerlink" title="5.新建文章并发布"></a>5.新建文章并发布</h3><p>在博客根文件夹下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo n <span class="string">"文章名称"</span></span></div></pre></td></tr></table></figure>
+<p>可以看到在source/_post/文件夹看到新建的.md文件<br>可以在其结尾处添加一些内容，方便我们测试。<br>输入<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo g</span></div></pre></td></tr></table></figure></p>
+<p>生成我们要发布的文件，在发布之前我们可以通过</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo s</span></div></pre></td></tr></table></figure>
+<p>然后打开浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>,查看文章。<br>现在只是在本地跑起来来，还需要把程序托管到github上。</p>
+<p>首先来到 <a href="https://github.com/你的昵称/你的昵称.github.io/settings" target="_blank" rel="external">https://github.com/你的昵称/你的昵称.github.io/settings</a> 进行github pages页进行设置，选择source为master分支，点击save即可</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="img/github-pages.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//安装hexo git插件</span></div><div class="line"><span class="symbol">$</span> npm install hexo-deployer-git --save</div><div class="line"><span class="comment">//部署到github</span></div><div class="line"><span class="symbol">$</span> hexo g</div></pre></td></tr></table></figure>
+<p>这样就可通过 你的昵称.github.io 来访问我们的博客了</p>
+<h3 id="6-关联域名"><a href="#6-关联域名" class="headerlink" title="6.关联域名"></a>6.关联域名</h3><p>首先去万网，godaddy等域名系统来购买一个域名。<br>这里我买的是godaddy的域名。购买完成后进入到 管理DNS 关联github</p>
+<p> <img src="img/hexo-dns.png" alt="image"></p>
+<p>然后再去github pages页设置Custom domain选项为你买的域名。<br>关联成功后等待几分钟，就可以通过域名访问你的hexo博客来。</p>
+<h3 id="7-其他"><a href="#7-其他" class="headerlink" title="7.其他"></a>7.其他</h3><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo常用命令</div><div class="line">hexo n <span class="string">"我的博客"</span>==hexo new <span class="string">"我的博客"</span><span class="comment">#新建文章</span></div><div class="line">hexo <span class="attr">p==hexo</span> publish</div><div class="line">hexo <span class="attr">g==hexo</span> generate<span class="comment">#生成</span></div><div class="line">hexo <span class="attr">s==hexo</span> server<span class="comment">#启动服务预览</span></div><div class="line">hexo <span class="attr">d==hexo</span> deploy<span class="comment">#部署</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;用Hexo-3-搭建github-blog&quot;&gt;&lt;a href=&quot;#用Hexo-3-搭建github-blog&quot; class=&quot;headerlink&quot; title=&quot;用Hexo 3 搭建github blog&quot;&gt;&lt;/a&gt;用Hexo 3 搭建github blog&lt;/
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
