@@ -73,7 +73,7 @@
     <link href="http://www.qirenji.info/2017/07/18/hexo%E6%90%AD%E5%BB%BAgithub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.qirenji.info/2017/07/18/hexo搭建github个人博客/</id>
     <published>2017-07-18T15:41:11.000Z</published>
-    <updated>2017-07-19T14:26:59.000Z</updated>
+    <updated>2017-07-19T14:33:19.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="用Hexo-3-搭建github-blog"><a href="#用Hexo-3-搭建github-blog" class="headerlink" title="用Hexo 3 搭建github blog"></a>用Hexo 3 搭建github blog</h1><p>本文使用的是Mac进行演示，如过是windows系统方式基本相同，单具体安装步骤请自行百度。</p>
 <h2 id="一-注册github账号"><a href="#一-注册github账号" class="headerlink" title="一. 注册github账号"></a>一. 注册github账号</h2><p>点击gitbub<a href="http://github.com/" target="_blank" rel="external">官方网站</a>进行注册</p>
@@ -151,9 +151,9 @@
       <category term="建站" scheme="http://www.qirenji.info/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="项目部署" scheme="http://www.qirenji.info/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
-    
       <category term="hexo" scheme="http://www.qirenji.info/tags/hexo/"/>
+    
+      <category term="个人博客" scheme="http://www.qirenji.info/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
