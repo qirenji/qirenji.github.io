@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-19T01:49:45.000Z</updated>
+  <updated>2017-07-19T14:08:27.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue项目部署阿里云</title>
+    <link href="http://www.qirenji.info/2017/07/19/Vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    <id>http://www.qirenji.info/2017/07/19/Vue项目部署阿里云/</id>
+    <published>2017-07-19T14:06:29.000Z</published>
+    <updated>2017-07-19T14:08:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue项目部署到阿里云服务器"><a href="#Vue项目部署到阿里云服务器" class="headerlink" title="Vue项目部署到阿里云服务器"></a>Vue项目部署到阿里云服务器</h1><p>文章适合初学vue项目想部署到服务上的。</p>
+<h2 id="一、文件准备"><a href="#一、文件准备" class="headerlink" title="一、文件准备"></a>一、文件准备</h2><p>首先准备好要发布的前后台文件</p>
+<h3 id="前端文件"><a href="#前端文件" class="headerlink" title="前端文件"></a>前端文件</h3><p>如是使用vue-cli搭建，在vue项目中使用如下命令生成</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">run</span><span class="bash"> build</span></div></pre></td></tr></table></figure>
+<p>可以看到在本地多出来一个dist文件，此文件为压缩后文件，可直接部署到服务器</p>
+<h3 id="后端文件"><a href="#后端文件" class="headerlink" title="后端文件"></a>后端文件</h3><p>可以简单编写一个，或由后端同学提供<br>这里给出一个nodejs的小例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> port = process.env.PORT || <span class="number">3000</span>;</div><div class="line"><span class="keyword">var</span> app = express();</div><div class="line"></div><div class="line">app.use(express.static(<span class="string">'./dist'</span>));</div><div class="line"></div><div class="line">app.get(<span class="string">"/"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">	res.render(<span class="string">'index.html'</span>,&#123;&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = app.listen(port, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (err) &#123;</div><div class="line">		<span class="built_in">console</span>.log(err);</div><div class="line">		<span class="keyword">return</span></div><div class="line">	&#125;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'Listening at http://localhost:'</span> + port + <span class="string">'\n'</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>这里后端端口号使用3000端口。</p>
+<h2 id="二-关联文件"><a href="#二-关联文件" class="headerlink" title="二. 关联文件"></a>二. 关联文件</h2><ul>
+<li><p>把前后端文件放入一个文件夹中，添加至github或码云等仓库</p>
+</li>
+<li><p>在git上添加服务器和本地的ssh。</p>
+</li>
+<li><p>服务器和本地都需安装pm2</p>
+</li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> pm2 -g</div></pre></td></tr></table></figure>
+<p>这样就可以通过github把本地和服务器关联起来。</p>
+<p>在服务器端的/www文件夹下，创建项目文件夹，并修改其权限，简单简单修改为 </p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> <span class="string">/www</span></div><div class="line"></div><div class="line">sudo chmod 777 cnode</div></pre></td></tr></table></figure>
+<h2 id="三-修改阿里云安全组"><a href="#三-修改阿里云安全组" class="headerlink" title="三. 修改阿里云安全组"></a>三. 修改阿里云安全组</h2><p>登陆到阿里云服务器管理页面，找到安全组，添加项目中所需要的安全组的端口号。</p>
+<h2 id="四-修改服务器防火墙"><a href="#四-修改服务器防火墙" class="headerlink" title="四. 修改服务器防火墙"></a>四. 修改服务器防火墙</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//修改防火墙 </span></div><div class="line">sudo vi /etc/iptables<span class="selector-class">.up</span><span class="selector-class">.rules</span></div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//重启防火墙</span></div><div class="line">sudo iptables-restore &lt; /etc/iptables<span class="selector-class">.up</span><span class="selector-class">.rules</span></div></pre></td></tr></table></figure>
+<h2 id="五-编写ecosystem文件"><a href="#五-编写ecosystem文件" class="headerlink" title="五. 编写ecosystem文件"></a>五. 编写ecosystem文件</h2><p>本地编写ecosystem.json文件。如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"apps"</span>: [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">"name"</span>: <span class="string">"cnode"</span>,</div><div class="line">      <span class="attr">"script"</span>: <span class="string">"server.js"</span>,</div><div class="line">      <span class="attr">"env"</span>: &#123;</div><div class="line">        <span class="attr">"COMMON_VARIABLE"</span>: <span class="string">"true"</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"env_production"</span>: &#123;</div><div class="line">        <span class="attr">"NODE_ENV"</span>: <span class="string">"production"</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  ],</div><div class="line">  <span class="attr">"deploy"</span>: &#123;</div><div class="line">    <span class="attr">"production"</span>: &#123;</div><div class="line">      <span class="attr">"user"</span>: <span class="string">"服务器用户名"</span>,</div><div class="line">      <span class="attr">"host"</span>: [<span class="string">"你的服务器ip"</span>],</div><div class="line">      <span class="attr">"port"</span>: <span class="string">"服务器端口号"</span>,</div><div class="line">      <span class="attr">"ref"</span>: <span class="string">"origin/master"</span>,</div><div class="line">      <span class="attr">"repo"</span>: <span class="string">"gtihub或码云的对应项目ssh地址"</span>,</div><div class="line">      <span class="attr">"path"</span>: <span class="string">"/www/cnode/production"</span>,</div><div class="line">      <span class="attr">"ssh_options"</span>: <span class="string">"StrictHostKeyChecking=no"</span>,</div><div class="line">      <span class="attr">"post-deploy"</span>: <span class="string">"npm install --registry=https://registry.npm.taobao.org &amp;&amp; pm2 startOrRestart ecosystem.json --env production"</span>,</div><div class="line">      <span class="attr">"env"</span>: &#123;</div><div class="line">        <span class="attr">"NODE_ENV"</span>: <span class="string">"production"</span></div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后本地执行</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pm2 deploy ecosystem<span class="selector-class">.json</span> production resetup</div></pre></td></tr></table></figure>
+<p>看到Success说明部署成功。</p>
+<p>以后每次服务器更新只需提交到github执行上述代码即可</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Vue项目部署到阿里云服务器&quot;&gt;&lt;a href=&quot;#Vue项目部署到阿里云服务器&quot; class=&quot;headerlink&quot; title=&quot;Vue项目部署到阿里云服务器&quot;&gt;&lt;/a&gt;Vue项目部署到阿里云服务器&lt;/h1&gt;&lt;p&gt;文章适合初学vue项目想部署到服务上的。&lt;/
+    
+    </summary>
+    
+      <category term="Vue js" scheme="http://www.qirenji.info/categories/Vue-js/"/>
+    
+      <category term="建站" scheme="http://www.qirenji.info/categories/Vue-js/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+    
+      <category term="项目部署" scheme="http://www.qirenji.info/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo搭建github个人博客</title>
