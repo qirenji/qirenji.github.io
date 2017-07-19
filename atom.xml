@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-19T14:16:37.000Z</updated>
+  <updated>2017-07-19T14:23:59.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.qirenji.info/2017/07/19/Vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     <id>http://www.qirenji.info/2017/07/19/Vue项目部署阿里云/</id>
     <published>2017-07-19T14:06:29.000Z</published>
-    <updated>2017-07-19T14:16:37.000Z</updated>
+    <updated>2017-07-19T14:23:59.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue项目部署到阿里云服务器"><a href="#Vue项目部署到阿里云服务器" class="headerlink" title="Vue项目部署到阿里云服务器"></a>Vue项目部署到阿里云服务器</h1><p>文章适合初学vue项目想部署到服务上的。</p>
 <h2 id="一、文件准备"><a href="#一、文件准备" class="headerlink" title="一、文件准备"></a>一、文件准备</h2><p>首先准备好要发布的前后台文件</p>
@@ -75,7 +75,7 @@
     <link href="http://www.qirenji.info/2017/07/18/hexo%E6%90%AD%E5%BB%BAgithub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://www.qirenji.info/2017/07/18/hexo搭建github个人博客/</id>
     <published>2017-07-18T15:41:11.000Z</published>
-    <updated>2017-07-19T14:16:39.000Z</updated>
+    <updated>2017-07-19T14:24:20.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="用Hexo-3-搭建github-blog"><a href="#用Hexo-3-搭建github-blog" class="headerlink" title="用Hexo 3 搭建github blog"></a>用Hexo 3 搭建github blog</h1><p>本文使用的是Mac进行演示，如过是windows系统方式基本相同，单具体安装步骤请自行百度。</p>
 <h2 id="一-注册github账号"><a href="#一-注册github账号" class="headerlink" title="一. 注册github账号"></a>一. 注册github账号</h2><p>点击gitbub<a href="http://github.com/" target="_blank" rel="external">官方网站</a>进行注册</p>
@@ -151,6 +151,8 @@
     </summary>
     
       <category term="建站" scheme="http://www.qirenji.info/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="hexo" scheme="http://www.qirenji.info/categories/%E5%BB%BA%E7%AB%99/hexo/"/>
     
     
       <category term="hexo" scheme="http://www.qirenji.info/tags/hexo/"/>
