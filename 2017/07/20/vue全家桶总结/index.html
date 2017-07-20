@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>vue全家桶总结 | 一抹阳光 - qirenji.info | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Vue">
+    <meta name="description" content="vue全家桶学习一. vue-cli(手脚架搭建项目)初始化项目1vue init webpack projectName 然后顺序执行如下命令，可启动vue项目 123cd my-projectnpm installnpm run dev 如项目中使用其他库或组件需   1npm install *** --save-dev 例如使用scss编写软件,需安装sass编译工具  1npm inst">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue全家桶总结">
+<meta property="og:url" content="http://www.qirenji.info/2017/07/20/vue全家桶总结/index.html">
+<meta property="og:site_name" content="一抹阳光 - qirenji.info">
+<meta property="og:description" content="vue全家桶学习一. vue-cli(手脚架搭建项目)初始化项目1vue init webpack projectName 然后顺序执行如下命令，可启动vue项目 123cd my-projectnpm installnpm run dev 如项目中使用其他库或组件需   1npm install *** --save-dev 例如使用scss编写软件,需安装sass编译工具  1npm inst">
+<meta property="og:updated_time" content="2017-07-20T14:11:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue全家桶总结">
+<meta name="twitter:description" content="vue全家桶学习一. vue-cli(手脚架搭建项目)初始化项目1vue init webpack projectName 然后顺序执行如下命令，可启动vue项目 123cd my-projectnpm installnpm run dev 如项目中使用其他库或组件需   1npm install *** --save-dev 例如使用scss编写软件,需安装sass编译工具  1npm inst">
+    
+        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.info" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.10">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Qi Renji</h5>
+          <a href="mailto:q290187113@qq.com" title="q290187113@qq.com" class="mail">q290187113@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/collection"  >
+                <i class="icon icon-lg icon-link"></i>
+                资料收集
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qirenji" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vue全家桶总结</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vue全家桶总结</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-07-20T14:09:27.000Z" itemprop="datePublished" class="page-time">
+  2017-07-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Vue/">Vue</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Vue/JavaScript/">JavaScript</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vue全家桶学习"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue全家桶学习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一-vue-cli-手脚架搭建项目"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一. vue-cli(手脚架搭建项目)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二-vue-router"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二.vue-router</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三-vue-resource"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">三. vue-resource</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue-resource"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">vue-resource</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#axios"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">axios</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四-vuex"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">四. vuex</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五-vue的属性"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">五. vue的属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#六、父子组件传递数据"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">六、父子组件传递数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#父to子"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">父to子</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#七、其他"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">七、其他</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-vue全家桶总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vue全家桶总结</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-07-20 22:09:27" datetime="2017-07-20T14:09:27.000Z"  itemprop="datePublished">2017-07-20</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Vue/">Vue</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Vue/JavaScript/">JavaScript</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="vue全家桶学习"><a href="#vue全家桶学习" class="headerlink" title="vue全家桶学习"></a>vue全家桶学习</h1><h2 id="一-vue-cli-手脚架搭建项目"><a href="#一-vue-cli-手脚架搭建项目" class="headerlink" title="一. vue-cli(手脚架搭建项目)"></a>一. vue-cli(手脚架搭建项目)</h2><p>初始化项目<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">vue init webpack projectName</span></div></pre></td></tr></table></figure></p>
+<p>然后顺序执行如下命令，可启动vue项目</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd <span class="keyword">my</span>-project</div><div class="line">npm install</div><div class="line">npm <span class="built_in">run</span> dev</div></pre></td></tr></table></figure>
+<p>如项目中使用其他库或组件需  </p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install *** --<span class="built_in">save</span>-<span class="built_in">dev</span></div></pre></td></tr></table></figure>
+<p>例如使用scss编写软件,需安装sass编译工具 </p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install sass sass-loader <span class="keyword">node</span><span class="title">-sass</span> --save-dev</div></pre></td></tr></table></figure>
+<h2 id="二-vue-router"><a href="#二-vue-router" class="headerlink" title="二.vue-router"></a>二.vue-router</h2><p>vue-router主要作为程序的路由控制器</p>
+<ul>
+<li>使用：</li>
+</ul>
+<p>main.js中添加router</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">router</span> <span class="selector-tag">from</span> ‘./<span class="selector-tag">router</span>’</div><div class="line"><span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</div><div class="line">  <span class="attribute">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  <span class="attribute">template</span>: <span class="string">'&lt;App/&gt;'</span>,</div><div class="line">  <span class="attribute">components</span>: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>./router/index.js文件中</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import Router <span class="keyword">from</span> ‘vue-router’</div><div class="line">Vue.use(Router);</div><div class="line"></div><div class="line"><span class="builtin-name">export</span><span class="built_in"> default </span>new Router(&#123;</div><div class="line">	routes: [</div><div class="line">		&#123;</div><div class="line">			path: ‘/user/:name’,</div><div class="line">			name: ‘user’,</div><div class="line">			component:<span class="built_in"> User</span></div><div class="line">		&#125;</div><div class="line">		&#123;</div><div class="line">			path: ‘/’,</div><div class="line">			redirect: ‘/goods’(映射两个地址的关系)</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>路由的使用(相当于是a链接)，绑定to来传递数据</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:to</span>=<span class="string">“</span></span></span><span class="template-variable">&#123;name:’user’, params: &#123;name:...&#125;</span><span class="xml"><span class="tag">&#125;”&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在要切换路由的位置使用router-view进行配合的</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="section">&lt;router-view&gt;</span><span class="section">&lt;/router-view&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>其他</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回上一页面</span></div><div class="line"><span class="keyword">this</span>.$router.go(<span class="number">-1</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//等同于&lt;router-link&gt;</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;<span class="string">name:</span><span class="string">'article'</span>,<span class="string">params:</span> &#123; &#125;&#125;)</div></pre></td></tr></table></figure>
+<h2 id="三-vue-resource"><a href="#三-vue-resource" class="headerlink" title="三. vue-resource"></a>三. vue-resource</h2><h3 id="vue-resource"><a href="#vue-resource" class="headerlink" title="vue-resource"></a>vue-resource</h3><p>添加vue-resource组件</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> VueResource from ‘vue-resource’</span></div><div class="line"></div><div class="line">Vue.use(VueResource);</div></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">this.<span class="variable">$http</span>.<span class="builtin-name">get</span>(‘/goods’)</div><div class="line">	.then(<span class="built_in">..</span>.)</div></pre></td></tr></table></figure>
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><p>vue-ressource的下一代产品</p>
+<figure class="highlight capnproto"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> VueAxios <span class="keyword">from</span> ‘vue-axios’</div><div class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> ‘axios’</div><div class="line"></div><div class="line">Vue.use(VueAxios,axios)</div></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.axios.get(‘https:<span class="comment">//...’)</span></div><div class="line">	.then(<span class="function"><span class="params">result</span> =&gt;</span> &#123; ... &#125;)</div><div class="line"><span class="keyword">this</span>.axios.post(‘https:<span class="comment">//’,&#123;accesstoken: this.ak&#125;)</span></div><div class="line">	.then(<span class="function"><span class="params">result</span> =&gt;</span> &#123; ... &#125;)</div></pre></td></tr></table></figure>
+<h2 id="四-vuex"><a href="#四-vuex" class="headerlink" title="四. vuex"></a>四. vuex</h2><p>组件之间多通信时使用</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">import Vuex <span class="keyword">from</span> ‘vuex’</div><div class="line">vue.use(Vuex);</div><div class="line">const store = new Vuex.Store(&#123;</div><div class="line">	<span class="keyword">state</span>: &#123;</div><div class="line">		tab: ‘<span class="literal">all</span>’</div><div class="line">	&#125;,</div><div class="line">	mutations: &#123;</div><div class="line">		changeTab(<span class="keyword">state</span>,payload) &#123;</div><div class="line">			<span class="keyword">state</span>.tab = …</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">new Vue(&#123;</div><div class="line">  el: '<span class="comment">#app',</span></div><div class="line">  store,</div><div class="line">  template: '<span class="variable">&lt;App/&gt;</span>',</div><div class="line">  components: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>在组件中使用</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">this.<span class="variable">$store</span>.<span class="keyword">state</span>.tab;</div><div class="line">this.<span class="variable">$store</span>.commit.(‘changeTab’,&#123; 传参 &#125;)</div></pre></td></tr></table></figure>
+<h2 id="五-vue的属性"><a href="#五-vue的属性" class="headerlink" title="五. vue的属性"></a>五. vue的属性</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">props</span>: &#123;&#125;</div><div class="line"><span class="attribute">computed</span>: &#123;&#125;</div><div class="line"><span class="attribute">methods</span>: &#123;&#125;</div><div class="line"><span class="attribute">components</span>: &#123;&#125;</div><div class="line"><span class="attribute">filters</span>: &#123;&#125;</div><div class="line"><span class="attribute">watch</span>: &#123; ‘seller’() &#123;&#125;&#125;</div><div class="line"></div><div class="line"><span class="stylus"><span class="function"><span class="title">data</span><span class="params">()</span></span> &#123;&#125;</span></div><div class="line"><span class="function"><span class="title">created</span><span class="params">()</span></span> &#123;&#125;</div><div class="line"><span class="function"><span class="title">mounted</span><span class="params">()</span></span> &#123;&#125;</div></pre></td></tr></table></figure>
+<p>注意这里只有data和生命周期的钩子函数使用函数形式。</p>
+<h2 id="六、父子组件传递数据"><a href="#六、父子组件传递数据" class="headerlink" title="六、父子组件传递数据"></a>六、父子组件传递数据</h2><ul>
+<li><h3 id="父to子"><a href="#父to子" class="headerlink" title="父to子"></a>父to子</h3>父组件中：</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v-bind:属性名=“ ”（简写为  :<span class="attribute">food</span>=“food”）</div></pre></td></tr></table></figure>
+<p>子组件：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">props</span>获取</div></pre></td></tr></table></figure>
+<ul>
+<li>子to父</li>
+</ul>
+<p>子组件：<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$emit(<span class="string">'add'</span>,<span class="keyword">event</span>.target)</div></pre></td></tr></table></figure></p>
+<p>父组件：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">v-on</span>(简写为<span class="variable">@add</span>=“addFood”)</div></pre></td></tr></table></figure>
+<h2 id="七、其他"><a href="#七、其他" class="headerlink" title="七、其他"></a>七、其他</h2><p>DOM更新完成之后执行</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;	&#125;);</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最後更新時間：<time datetime="2017-07-20T14:11:55.000Z" itemprop="dateUpdated">2017-07-20 22:11:55</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/07/20/vue全家桶总结/" target="_blank" rel="external">http://www.qirenji.info/2017/07/20/vue全家桶总结/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.qirenji.info">
+            <img src="/img/avatar.jpg" alt="Qi Renji">
+            Qi Renji
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/07/20/vue全家桶总结/&title=《vue全家桶总结》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/07/20/vue全家桶总结/&title=《vue全家桶总结》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/07/20/vue全家桶总结/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue全家桶总结》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/07/20/vue全家桶总结/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/07/20/vue全家桶总结/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/07/19/Vue项目部署阿里云/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Vue项目部署阿里云</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span>Qi Renji &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/07/20/vue全家桶总结/&title=《vue全家桶总结》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/07/20/vue全家桶总结/&title=《vue全家桶总结》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/07/20/vue全家桶总结/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue全家桶总结》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/07/20/vue全家桶总结/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/07/20/vue全家桶总结/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3aQW7EIAwF0N7/0ul2pCqZbxMqAY9VlNEEHgsL2/z8xOP6GH/ffL5Pfs1neXlgYGAsy7gex/MEIwtNNiVZGwYGxjmMuynvnqu/5kH57vnLmjEwMDCCRSTTJ8EaAwMDY0bAzUNtL1hjYGBg5Elsr/SWhOzn7Xs5F8fAwFiQkZfJ/v95Sn8DAwNjKcZVHO+2E6rh9XYuDAyMrRm90lheyh9pLZRLdRgYGFszqknmSElupP1QPsNiYGAcw0haCMmUvSsX5W3CwMDYjlENdr3jXbXxkG9KM2ZjYGAsxchDZ35MzP/Va08WGpkYGBjbMXpHunIQLB4xy61NDAyMTRnzph+5QpG3UTEwME5gjCy9VzjrNSd638TAwFid0bvONRIK83/lJAwMjL0Z84r4b122aGbhGBgYWzOqJba85/DW1tyuEAMD4wDGc9jNP90rz0ULzXNoDAyM7RjVT1QvSfQuYTTLfxgYGJsy8uJanvT2Am6yoV/KbRgYGMcwqslqfvE0f5NvIgYGxjmM5NhXPdL1Qnaz8IeBgXEwIz+uVWtivS80Ay4GBsayjKs4qtcjRjalebbFwMDYjjESInulseolsCkNTgwMjAUZ1SBbvcjVC+jl4yMGBsYBjELWWwyvvUbmUC6OgYGBMXCNbGKaioGBgVFMTXNYstyomYqBgXEAI08s85ZArw1QhWFgYJzA6KWO48j8Gll+YMXAwNiO8QtVCJNhecKAxwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.10"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.10" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

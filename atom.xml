@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-19T14:27:02.000Z</updated>
+  <updated>2017-07-20T14:11:55.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -16,11 +16,87 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vue全家桶总结</title>
+    <link href="http://www.qirenji.info/2017/07/20/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.qirenji.info/2017/07/20/vue全家桶总结/</id>
+    <published>2017-07-20T14:09:27.000Z</published>
+    <updated>2017-07-20T14:11:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue全家桶学习"><a href="#vue全家桶学习" class="headerlink" title="vue全家桶学习"></a>vue全家桶学习</h1><h2 id="一-vue-cli-手脚架搭建项目"><a href="#一-vue-cli-手脚架搭建项目" class="headerlink" title="一. vue-cli(手脚架搭建项目)"></a>一. vue-cli(手脚架搭建项目)</h2><p>初始化项目<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">vue init webpack projectName</span></div></pre></td></tr></table></figure></p>
+<p>然后顺序执行如下命令，可启动vue项目</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd <span class="keyword">my</span>-project</div><div class="line">npm install</div><div class="line">npm <span class="built_in">run</span> dev</div></pre></td></tr></table></figure>
+<p>如项目中使用其他库或组件需  </p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install *** --<span class="built_in">save</span>-<span class="built_in">dev</span></div></pre></td></tr></table></figure>
+<p>例如使用scss编写软件,需安装sass编译工具 </p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install sass sass-loader <span class="keyword">node</span><span class="title">-sass</span> --save-dev</div></pre></td></tr></table></figure>
+<h2 id="二-vue-router"><a href="#二-vue-router" class="headerlink" title="二.vue-router"></a>二.vue-router</h2><p>vue-router主要作为程序的路由控制器</p>
+<ul>
+<li>使用：</li>
+</ul>
+<p>main.js中添加router</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">router</span> <span class="selector-tag">from</span> ‘./<span class="selector-tag">router</span>’</div><div class="line"><span class="selector-tag">new</span> <span class="selector-tag">Vue</span>(&#123;</div><div class="line">  <span class="attribute">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  <span class="attribute">template</span>: <span class="string">'&lt;App/&gt;'</span>,</div><div class="line">  <span class="attribute">components</span>: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>./router/index.js文件中</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import Router <span class="keyword">from</span> ‘vue-router’</div><div class="line">Vue.use(Router);</div><div class="line"></div><div class="line"><span class="builtin-name">export</span><span class="built_in"> default </span>new Router(&#123;</div><div class="line">	routes: [</div><div class="line">		&#123;</div><div class="line">			path: ‘/user/:name’,</div><div class="line">			name: ‘user’,</div><div class="line">			component:<span class="built_in"> User</span></div><div class="line">		&#125;</div><div class="line">		&#123;</div><div class="line">			path: ‘/’,</div><div class="line">			redirect: ‘/goods’(映射两个地址的关系)</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>路由的使用(相当于是a链接)，绑定to来传递数据</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:to</span>=<span class="string">“</span></span></span><span class="template-variable">&#123;name:’user’, params: &#123;name:...&#125;</span><span class="xml"><span class="tag">&#125;”&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在要切换路由的位置使用router-view进行配合的</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="section">&lt;router-view&gt;</span><span class="section">&lt;/router-view&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>其他</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回上一页面</span></div><div class="line"><span class="keyword">this</span>.$router.go(<span class="number">-1</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//等同于&lt;router-link&gt;</span></div><div class="line"><span class="keyword">this</span>.$router.push(&#123;<span class="string">name:</span><span class="string">'article'</span>,<span class="string">params:</span> &#123; &#125;&#125;)</div></pre></td></tr></table></figure>
+<h2 id="三-vue-resource"><a href="#三-vue-resource" class="headerlink" title="三. vue-resource"></a>三. vue-resource</h2><h3 id="vue-resource"><a href="#vue-resource" class="headerlink" title="vue-resource"></a>vue-resource</h3><p>添加vue-resource组件</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta"><span class="meta-keyword">import</span> VueResource from ‘vue-resource’</span></div><div class="line"></div><div class="line">Vue.use(VueResource);</div></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">this.<span class="variable">$http</span>.<span class="builtin-name">get</span>(‘/goods’)</div><div class="line">	.then(<span class="built_in">..</span>.)</div></pre></td></tr></table></figure>
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h3><p>vue-ressource的下一代产品</p>
+<figure class="highlight capnproto"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> VueAxios <span class="keyword">from</span> ‘vue-axios’</div><div class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> ‘axios’</div><div class="line"></div><div class="line">Vue.use(VueAxios,axios)</div></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.axios.get(‘https:<span class="comment">//...’)</span></div><div class="line">	.then(<span class="function"><span class="params">result</span> =&gt;</span> &#123; ... &#125;)</div><div class="line"><span class="keyword">this</span>.axios.post(‘https:<span class="comment">//’,&#123;accesstoken: this.ak&#125;)</span></div><div class="line">	.then(<span class="function"><span class="params">result</span> =&gt;</span> &#123; ... &#125;)</div></pre></td></tr></table></figure>
+<h2 id="四-vuex"><a href="#四-vuex" class="headerlink" title="四. vuex"></a>四. vuex</h2><p>组件之间多通信时使用</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">import Vuex <span class="keyword">from</span> ‘vuex’</div><div class="line">vue.use(Vuex);</div><div class="line">const store = new Vuex.Store(&#123;</div><div class="line">	<span class="keyword">state</span>: &#123;</div><div class="line">		tab: ‘<span class="literal">all</span>’</div><div class="line">	&#125;,</div><div class="line">	mutations: &#123;</div><div class="line">		changeTab(<span class="keyword">state</span>,payload) &#123;</div><div class="line">			<span class="keyword">state</span>.tab = …</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;)</div><div class="line">new Vue(&#123;</div><div class="line">  el: '<span class="comment">#app',</span></div><div class="line">  store,</div><div class="line">  template: '<span class="variable">&lt;App/&gt;</span>',</div><div class="line">  components: &#123; App &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>在组件中使用</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">this.<span class="variable">$store</span>.<span class="keyword">state</span>.tab;</div><div class="line">this.<span class="variable">$store</span>.commit.(‘changeTab’,&#123; 传参 &#125;)</div></pre></td></tr></table></figure>
+<h2 id="五-vue的属性"><a href="#五-vue的属性" class="headerlink" title="五. vue的属性"></a>五. vue的属性</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">props</span>: &#123;&#125;</div><div class="line"><span class="attribute">computed</span>: &#123;&#125;</div><div class="line"><span class="attribute">methods</span>: &#123;&#125;</div><div class="line"><span class="attribute">components</span>: &#123;&#125;</div><div class="line"><span class="attribute">filters</span>: &#123;&#125;</div><div class="line"><span class="attribute">watch</span>: &#123; ‘seller’() &#123;&#125;&#125;</div><div class="line"></div><div class="line"><span class="stylus"><span class="function"><span class="title">data</span><span class="params">()</span></span> &#123;&#125;</span></div><div class="line"><span class="function"><span class="title">created</span><span class="params">()</span></span> &#123;&#125;</div><div class="line"><span class="function"><span class="title">mounted</span><span class="params">()</span></span> &#123;&#125;</div></pre></td></tr></table></figure>
+<p>注意这里只有data和生命周期的钩子函数使用函数形式。</p>
+<h2 id="六、父子组件传递数据"><a href="#六、父子组件传递数据" class="headerlink" title="六、父子组件传递数据"></a>六、父子组件传递数据</h2><ul>
+<li><h3 id="父to子"><a href="#父to子" class="headerlink" title="父to子"></a>父to子</h3>父组件中：</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v-bind:属性名=“ ”（简写为  :<span class="attribute">food</span>=“food”）</div></pre></td></tr></table></figure>
+<p>子组件：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">props</span>获取</div></pre></td></tr></table></figure>
+<ul>
+<li>子to父</li>
+</ul>
+<p>子组件：<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$emit(<span class="string">'add'</span>,<span class="keyword">event</span>.target)</div></pre></td></tr></table></figure></p>
+<p>父组件：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">v-on</span>(简写为<span class="variable">@add</span>=“addFood”)</div></pre></td></tr></table></figure>
+<h2 id="七、其他"><a href="#七、其他" class="headerlink" title="七、其他"></a>七、其他</h2><p>DOM更新完成之后执行</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;	&#125;);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;vue全家桶学习&quot;&gt;&lt;a href=&quot;#vue全家桶学习&quot; class=&quot;headerlink&quot; title=&quot;vue全家桶学习&quot;&gt;&lt;/a&gt;vue全家桶学习&lt;/h1&gt;&lt;h2 id=&quot;一-vue-cli-手脚架搭建项目&quot;&gt;&lt;a href=&quot;#一-vue-cli-手脚
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+    
+      <category term="JavaScript" scheme="http://www.qirenji.info/categories/Vue/JavaScript/"/>
+    
+    
+      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue项目部署阿里云</title>
     <link href="http://www.qirenji.info/2017/07/19/Vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     <id>http://www.qirenji.info/2017/07/19/Vue项目部署阿里云/</id>
     <published>2017-07-19T14:06:29.000Z</published>
-    <updated>2017-07-19T14:27:02.000Z</updated>
+    <updated>2017-07-20T14:12:10.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue项目部署到阿里云服务器"><a href="#Vue项目部署到阿里云服务器" class="headerlink" title="Vue项目部署到阿里云服务器"></a>Vue项目部署到阿里云服务器</h1><p>文章适合初学vue项目想部署到服务上的。</p>
 <h2 id="一、文件准备"><a href="#一、文件准备" class="headerlink" title="一、文件准备"></a>一、文件准备</h2><p>首先准备好要发布的前后台文件</p>
