@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-20T14:11:55.000Z</updated>
+  <updated>2017-07-22T13:49:52.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -16,11 +16,95 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>git常用命令</title>
+    <link href="http://www.qirenji.info/2017/07/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.qirenji.info/2017/07/22/git常用命令/</id>
+    <published>2017-07-22T13:48:13.000Z</published>
+    <updated>2017-07-22T13:49:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h1><h2 id="基本命令使用"><a href="#基本命令使用" class="headerlink" title="基本命令使用"></a>基本命令使用</h2><ol>
+<li><p>在当前目录创建Git仓库，会在当前目录创建.git文件夹</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git init</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>把文件提交到暂存区</p>
+</li>
+</ol>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> ./&lt;path&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li>提交当前工作空前的修改内容</li>
+</ol>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m <span class="string">'注释'</span></div></pre></td></tr></table></figure>
+<ol>
+<li>将存储库克隆到本地目录中</li>
+</ol>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/jquery/jquery.git</div></pre></td></tr></table></figure>
+<ol>
+<li>将本地分支的更新，推送到远程主机。</li>
+</ol>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</div></pre></td></tr></table></figure>
+<ol>
+<li>从远程获取最新版本并merge到本地</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git pull</span></div></pre></td></tr></table></figure>
+<p>相当于git fetch和git merge一起使用</p>
+<ol>
+<li>列出详细信息，在每一个名字后面列出其远程url</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git remote -v</span></div></pre></td></tr></table></figure>
+<ol>
+<li>在url创建名字为name的仓库<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="selector-tag">git</span> <span class="selector-tag">remote</span> <span class="selector-tag">add</span> <span class="selector-tag">origin</span> <span class="selector-tag">git</span>@<span class="keyword">git</span>.*/<span class="keyword">website_node</span>.<span class="keyword">git</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ol>
+<li>创建分支</li>
+</ol>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>dev</div></pre></td></tr></table></figure>
+<ol>
+<li>切换分支</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git checkout dev</span></div></pre></td></tr></table></figure>
+<ol>
+<li>查看当前分支</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git branch</span></div></pre></td></tr></table></figure>
+<ol>
+<li>创建并切换分支</li>
+</ol>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d dev</div></pre></td></tr></table></figure>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>Git最常用的可能就是多人协作时解决冲突问题。</p>
+<p>一般会先push上自己的文件</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> .</span></div><div class="line">git commit -m <span class="string">'注释'</span></div><div class="line">git push -u origin branch-name</div></pre></td></tr></table></figure>
+<p>然后发现推送失败了，这是因为远程的分支和自己的本地推送内容更新，所以需要使用git pull把远程分支与本地合并。</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git pull</span></div></pre></td></tr></table></figure>
+<p>如果合并有冲突，则需要在本地解决冲突。</p>
+<p>解决冲突之后，再重新git push就能推送成功了。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> baranch-name</div></pre></td></tr></table></figure>
+<p>这就是多人协作之解决冲突。</p>
+<p>这里也推荐初学者使用 <a href="https://desktop.github.com/" target="_blank" rel="external">github desktop</a>，毕竟图形化界面使用起来更直观一些。</p>
+<p>如需学习更多内容，请参廖雪峰老师的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;git常用命令&quot;&gt;&lt;a href=&quot;#git常用命令&quot; class=&quot;headerlink&quot; title=&quot;git常用命令&quot;&gt;&lt;/a&gt;git常用命令&lt;/h1&gt;&lt;h2 id=&quot;基本命令使用&quot;&gt;&lt;a href=&quot;#基本命令使用&quot; class=&quot;headerlink&quot; 
+    
+    </summary>
+    
+      <category term="远程管理" scheme="http://www.qirenji.info/categories/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="git" scheme="http://www.qirenji.info/tags/git/"/>
+    
+      <category term="远程管理" scheme="http://www.qirenji.info/tags/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vue全家桶总结</title>
     <link href="http://www.qirenji.info/2017/07/20/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%80%BB%E7%BB%93/"/>
     <id>http://www.qirenji.info/2017/07/20/vue全家桶总结/</id>
     <published>2017-07-20T14:09:27.000Z</published>
-    <updated>2017-07-20T14:11:55.000Z</updated>
+    <updated>2017-07-20T14:15:18.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="vue全家桶学习"><a href="#vue全家桶学习" class="headerlink" title="vue全家桶学习"></a>vue全家桶学习</h1><h2 id="一-vue-cli-手脚架搭建项目"><a href="#一-vue-cli-手脚架搭建项目" class="headerlink" title="一. vue-cli(手脚架搭建项目)"></a>一. vue-cli(手脚架搭建项目)</h2><p>初始化项目<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">vue init webpack projectName</span></div></pre></td></tr></table></figure></p>
 <p>然后顺序执行如下命令，可启动vue项目</p>
@@ -67,7 +151,7 @@
 <p>子组件：</p>
 <figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">props</span>获取</div></pre></td></tr></table></figure>
 <ul>
-<li>子to父</li>
+<li><h3 id="子to父"><a href="#子to父" class="headerlink" title="子to父"></a>子to父</h3></li>
 </ul>
 <p>子组件：<br><figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$emit(<span class="string">'add'</span>,<span class="keyword">event</span>.target)</div></pre></td></tr></table></figure></p>
 <p>父组件：</p>
