@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-24T14:55:49.000Z</updated>
+  <updated>2017-07-26T14:05:42.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx学习</title>
+    <link href="http://www.qirenji.info/2017/07/26/nginx%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.qirenji.info/2017/07/26/nginx学习/</id>
+    <published>2017-07-26T14:04:29.000Z</published>
+    <updated>2017-07-26T14:05:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ngix学习"><a href="#ngix学习" class="headerlink" title="ngix学习"></a>ngix学习</h1><h2 id="静态HTTP服务器"><a href="#静态HTTP服务器" class="headerlink" title="静态HTTP服务器"></a>静态HTTP服务器</h2><p>首先，Nginx是一个HTTP服务器，可以将服务器上的静态文件（如HTML、图片）通过HTTP协议展现给客户端。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span> <span class="number">80</span>; <span class="comment"># 端口号</span></div><div class="line">	<span class="attribute">location</span> / &#123;</div><div class="line">		<span class="attribute">root</span> /usr/share/nginx/html; <span class="comment"># 静态文件路径</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="反向代理服务器"><a href="#反向代理服务器" class="headerlink" title="反向代理服务器"></a>反向代理服务器</h2><p>客户端本来可以直接通过HTTP协议访问某网站应用服务器，如果网站管理员在中间加上一个Nginx，客户端请求Nginx，Nginx请求应用服务器，然后将结果返回给客户端，此时Nginx就是反向代理服务器。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">    <span class="attribute">location</span> / &#123;</div><div class="line">        <span class="attribute">proxy_pass</span> http://192.168.20.1:8080; <span class="comment"># 应用服务器HTTP地址</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>当网站访问量非常大，网站站长开心赚钱的同时，也摊上事儿了。因为网站越来越慢，一台服务器已经不够用了。于是将相同的应用部署在多台服务器上，将大量用户的请求分配给多台机器处理。同时带来的好处是，其中一台服务器万一挂了，只要还有其他服务器正常运行，就不会影响用户使用。</p>
+<p>Nginx可以通过反向代理来实现负载均衡。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">upstream</span> myapp &#123;</div><div class="line">	<span class="attribute">server</span> <span class="number">192.168.20.1:8080</span>; <span class="comment"># 应用服务器1</span></div><div class="line">	<span class="attribute">server</span> <span class="number">192.168.20.2:8080</span>; <span class="comment"># 应用服务器2</span></div><div class="line">&#125;</div><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">	<span class="attribute">location</span> / &#123;</div><div class="line">		<span class="attribute">proxy_pass</span> http://myapp;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="虚拟主机"><a href="#虚拟主机" class="headerlink" title="虚拟主机"></a>虚拟主机</h2><p>网站访问量大，需要负载均衡。然而并不是所有网站都如此出色，有的网站，由于访问量太小，需要节省成本，将多个网站部署在同一台服务器上。<br>例如将www.aaa.com和www.bbb.com两个网站部署在同一台服务器上，两个域名解析到同一个IP地址，但是用户通过两个域名却可以打开两个完全不同的网站，互相不影响，就像访问两个服务器一样，所以叫两个虚拟主机。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span> <span class="number">80</span> default_server;</div><div class="line">	<span class="attribute">server_name</span> _;</div><div class="line">	<span class="attribute">return</span> <span class="number">444</span>; <span class="comment"># 过滤其他域名的请求，返回444状态码</span></div><div class="line">&#125;</div><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">	<span class="attribute">server_name</span> www.aaa.com; <span class="comment"># www.aaa.com域名</span></div><div class="line">	<span class="attribute">location</span> / &#123;</div><div class="line">		<span class="attribute">proxy_pass</span> http://localhost:8080; <span class="comment"># 对应端口号8080</span></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="section">server</span> &#123;</div><div class="line">	<span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">	<span class="attribute">server_name</span> www.bbb.com; <span class="comment"># www.bbb.com域名</span></div><div class="line">	<span class="attribute">location</span> / &#123;</div><div class="line">		<span class="attribute">proxy_pass</span> http://localhost:8081; <span class="comment"># 对应端口号8081</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在服务器8080和8081分别开了一个应用，客户端通过不同的域名访问，根据server_name可以反向代理到对应的应用服务器。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;ngix学习&quot;&gt;&lt;a href=&quot;#ngix学习&quot; class=&quot;headerlink&quot; title=&quot;ngix学习&quot;&gt;&lt;/a&gt;ngix学习&lt;/h1&gt;&lt;h2 id=&quot;静态HTTP服务器&quot;&gt;&lt;a href=&quot;#静态HTTP服务器&quot; class=&quot;headerlink
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://www.qirenji.info/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="Nginx" scheme="http://www.qirenji.info/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/"/>
+    
+    
+      <category term="Nginx" scheme="http://www.qirenji.info/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>flex布局学习</title>
