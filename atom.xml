@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-07-26T14:05:42.000Z</updated>
+  <updated>2017-07-30T15:52:32.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -14,6 +14,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack学习</title>
+    <link href="http://www.qirenji.info/2017/07/29/webpack%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.qirenji.info/2017/07/29/webpack学习/</id>
+    <published>2017-07-29T15:50:25.000Z</published>
+    <updated>2017-07-30T15:52:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="webpack学习"><a href="#webpack学习" class="headerlink" title="webpack学习"></a>webpack学习</h1><p>webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less/sass）、图片等都作为模块来使用和处理。</p>
+<p>webpack不同于gulp和grunt。</p>
+<p>gulp是工具链、构建工具，可以配合各种插件做js压缩，css压缩，less编译 替代手工实现自动化的工具</p>
+<pre><code>1.构建工具
+
+2.自动化
+
+3.提高效率用
+</code></pre><p>webpack是文件打包工具，可以把项目的各种js文、css文件等打包合并成一个或多个文件，主要用于模块化方案，预编译模块的方案。</p>
+<pre><code>1.打包工具
+
+2.模块化识别
+
+3.编译模块代码方案用
+</code></pre><p>webpack的官网是 <a href="http://webpack.github.io/" target="_blank" rel="external">http://webpack.github.io/</a> ，文档地址是 <a href="http://webpack.github.io/docs/" target="_blank" rel="external">http://webpack.github.io/docs/</a> 。</p>
+<p>webpack主要有4大核心概念</p>
+<h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2><p>entry 是页面入口文件配置，其语法大致为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attribute">entry</span>: &#123;</div><div class="line">        page1: <span class="string">"./page1"</span>,</div><div class="line">        page2: [<span class="string">"./entry1"</span>, <span class="string">"./entry2"</span>]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="output"><a href="#output" class="headerlink" title="output"></a>output</h2><p>output 是对应输出项配置（即入口文件最终要生成什么名字的文件、存放到哪里）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">output</span>: &#123;</div><div class="line">        <span class="attribute">path</span>: <span class="string">"dist/js/page"</span>,</div><div class="line">        filename: <span class="string">"[name].bundle.js"</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="module-loaders"><a href="#module-loaders" class="headerlink" title="module.loaders"></a>module.loaders</h2><p> module.loaders 是最关键的一块配置。它告知 webpack 每一种文件都需要使用什么加载器来处理：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="string">module:</span> &#123;</div><div class="line">        <span class="comment">//加载器配置</span></div><div class="line"><span class="symbol">        loaders:</span> [</div><div class="line">            <span class="comment">//.css 文件使用 style-loader 和 css-loader 来处理</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.css$/</span>, <span class="string">loader:</span> <span class="string">'style-loader!css-loader'</span> &#125;,</div><div class="line">            <span class="comment">//.js 文件使用 jsx-loader 来编译处理</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.js$/</span>, <span class="string">loader:</span> <span class="string">'jsx-loader?harmony'</span> &#125;,</div><div class="line">            <span class="comment">//.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.scss$/</span>, <span class="string">loader:</span> <span class="string">'style!css!sass?sourceMap'</span>&#125;,</div><div class="line">            <span class="comment">//图片文件使用 url-loader 来处理，小于8kb的直接转为base64</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.(png|jpg)$/</span>, <span class="string">loader:</span> <span class="string">'url-loader?limit=8192'</span>&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>Loaders是以单个文件为基础对文件进行操作，而Plugins与Loaders不同的是，Plugins是对整体进行操作。</p>
+<p>使用插件，你只需要将其进行引入到配置文件并添加到plugins数组中，大多数的插件都是可通过选项进行配置。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">plugins:</span> [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(),  <span class="comment">//丑化压缩JS</span></div><div class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;<span class="string">template:</span> <span class="string">'./src/index.html'</span>&#125;)  <span class="comment">//生成HTML模板</span></div><div class="line">  ]</div></pre></td></tr></table></figure>
+<p>如需了解更多，请跳转址<a href="https://doc.webpack-china.org/" target="_blank" rel="external">webpack中文教程</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;webpack学习&quot;&gt;&lt;a href=&quot;#webpack学习&quot; class=&quot;headerlink&quot; title=&quot;webpack学习&quot;&gt;&lt;/a&gt;webpack学习&lt;/h1&gt;&lt;p&gt;webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less
+    
+    </summary>
+    
+      <category term="webpack" scheme="http://www.qirenji.info/categories/webpack/"/>
+    
+      <category term="工具" scheme="http://www.qirenji.info/categories/webpack/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="webpack" scheme="http://www.qirenji.info/tags/webpack/"/>
+    
+      <category term="打包工具" scheme="http://www.qirenji.info/tags/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx学习</title>

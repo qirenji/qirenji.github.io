@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>webpack学习 | 一抹阳光 - qirenji.info | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="webpack,打包工具">
+    <meta name="description" content="webpack学习webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less/sass）、图片等都作为模块来使用和处理。 webpack不同于gulp和grunt。 gulp是工具链、构建工具，可以配合各种插件做js压缩，css压缩，less编译 替代手工实现自动化的工具 1.构建工具  2.自动化  3.提高效率用 webpack是文件打包工具，可以把项目的各种js文、">
+<meta name="keywords" content="webpack,打包工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack学习">
+<meta property="og:url" content="http://www.qirenji.info/2017/07/29/webpack学习/index.html">
+<meta property="og:site_name" content="一抹阳光 - qirenji.info">
+<meta property="og:description" content="webpack学习webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less/sass）、图片等都作为模块来使用和处理。 webpack不同于gulp和grunt。 gulp是工具链、构建工具，可以配合各种插件做js压缩，css压缩，less编译 替代手工实现自动化的工具 1.构建工具  2.自动化  3.提高效率用 webpack是文件打包工具，可以把项目的各种js文、">
+<meta property="og:updated_time" content="2017-07-30T15:52:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack学习">
+<meta name="twitter:description" content="webpack学习webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less/sass）、图片等都作为模块来使用和处理。 webpack不同于gulp和grunt。 gulp是工具链、构建工具，可以配合各种插件做js压缩，css压缩，less编译 替代手工实现自动化的工具 1.构建工具  2.自动化  3.提高效率用 webpack是文件打包工具，可以把项目的各种js文、">
+    
+        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.info" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.10">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Qi Renji</h5>
+          <a href="mailto:q290187113@qq.com" title="q290187113@qq.com" class="mail">q290187113@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/collection"  >
+                <i class="icon icon-lg icon-link"></i>
+                资料收集
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qirenji" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">webpack学习</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">webpack学习</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-07-29T15:50:25.000Z" itemprop="datePublished" class="page-time">
+  2017-07-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/webpack/">webpack</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/webpack/工具/">工具</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#webpack学习"><span class="post-toc-number">1.</span> <span class="post-toc-text">webpack学习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Entry"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Entry</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#output"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">output</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#module-loaders"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">module.loaders</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Plugins"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Plugins</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-webpack学习"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">webpack学习</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-07-29 23:50:25" datetime="2017-07-29T15:50:25.000Z"  itemprop="datePublished">2017-07-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/webpack/">webpack</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/webpack/工具/">工具</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="webpack学习"><a href="#webpack学习" class="headerlink" title="webpack学习"></a>webpack学习</h1><p>webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less/sass）、图片等都作为模块来使用和处理。</p>
+<p>webpack不同于gulp和grunt。</p>
+<p>gulp是工具链、构建工具，可以配合各种插件做js压缩，css压缩，less编译 替代手工实现自动化的工具</p>
+<pre><code>1.构建工具
+
+2.自动化
+
+3.提高效率用
+</code></pre><p>webpack是文件打包工具，可以把项目的各种js文、css文件等打包合并成一个或多个文件，主要用于模块化方案，预编译模块的方案。</p>
+<pre><code>1.打包工具
+
+2.模块化识别
+
+3.编译模块代码方案用
+</code></pre><p>webpack的官网是 <a href="http://webpack.github.io/" target="_blank" rel="external">http://webpack.github.io/</a> ，文档地址是 <a href="http://webpack.github.io/docs/" target="_blank" rel="external">http://webpack.github.io/docs/</a> 。</p>
+<p>webpack主要有4大核心概念</p>
+<h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2><p>entry 是页面入口文件配置，其语法大致为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attribute">entry</span>: &#123;</div><div class="line">        page1: <span class="string">"./page1"</span>,</div><div class="line">        page2: [<span class="string">"./entry1"</span>, <span class="string">"./entry2"</span>]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="output"><a href="#output" class="headerlink" title="output"></a>output</h2><p>output 是对应输出项配置（即入口文件最终要生成什么名字的文件、存放到哪里）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">output</span>: &#123;</div><div class="line">        <span class="attribute">path</span>: <span class="string">"dist/js/page"</span>,</div><div class="line">        filename: <span class="string">"[name].bundle.js"</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="module-loaders"><a href="#module-loaders" class="headerlink" title="module.loaders"></a>module.loaders</h2><p> module.loaders 是最关键的一块配置。它告知 webpack 每一种文件都需要使用什么加载器来处理：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="string">module:</span> &#123;</div><div class="line">        <span class="comment">//加载器配置</span></div><div class="line"><span class="symbol">        loaders:</span> [</div><div class="line">            <span class="comment">//.css 文件使用 style-loader 和 css-loader 来处理</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.css$/</span>, <span class="string">loader:</span> <span class="string">'style-loader!css-loader'</span> &#125;,</div><div class="line">            <span class="comment">//.js 文件使用 jsx-loader 来编译处理</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.js$/</span>, <span class="string">loader:</span> <span class="string">'jsx-loader?harmony'</span> &#125;,</div><div class="line">            <span class="comment">//.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.scss$/</span>, <span class="string">loader:</span> <span class="string">'style!css!sass?sourceMap'</span>&#125;,</div><div class="line">            <span class="comment">//图片文件使用 url-loader 来处理，小于8kb的直接转为base64</span></div><div class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.(png|jpg)$/</span>, <span class="string">loader:</span> <span class="string">'url-loader?limit=8192'</span>&#125;</div><div class="line">        ]</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>Loaders是以单个文件为基础对文件进行操作，而Plugins与Loaders不同的是，Plugins是对整体进行操作。</p>
+<p>使用插件，你只需要将其进行引入到配置文件并添加到plugins数组中，大多数的插件都是可通过选项进行配置。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">plugins:</span> [</div><div class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(),  <span class="comment">//丑化压缩JS</span></div><div class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;<span class="string">template:</span> <span class="string">'./src/index.html'</span>&#125;)  <span class="comment">//生成HTML模板</span></div><div class="line">  ]</div></pre></td></tr></table></figure>
+<p>如需了解更多，请跳转址<a href="https://doc.webpack-china.org/" target="_blank" rel="external">webpack中文教程</a>。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-07-30T15:52:32.000Z" itemprop="dateUpdated">2017-07-30 23:52:32</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/07/29/webpack学习/" target="_blank" rel="external">http://www.qirenji.info/2017/07/29/webpack学习/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.qirenji.info">
+            <img src="/img/avatar.jpg" alt="Qi Renji">
+            Qi Renji
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打包工具/">打包工具</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/07/29/webpack学习/&title=《webpack学习》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/07/29/webpack学习/&title=《webpack学习》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/07/29/webpack学习/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《webpack学习》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/07/29/webpack学习/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/07/29/webpack学习/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/07/26/nginx学习/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">nginx学习</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span>Qi Renji &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/07/29/webpack学习/&title=《webpack学习》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/07/29/webpack学习/&title=《webpack学习》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/07/29/webpack学习/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《webpack学习》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/07/29/webpack学习/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/07/29/webpack学习/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3a0U7DMAwFUP7/p0HiCQna3Rt3aEtPnyrWJjlFsuLYHx/x9fl9Hd3/vM7/nsySP19fGBgYb8v4PL3apf++b5d4PtfhOBgYGDdgtMOtBdDzudrnMTAwMPKAm1x58MXAwMB4RsCNtm7lJ8DAwMBYS2LbFHTtQO3puTgGBsYbMuaFgefd/2t9AwMD4yUZ80S0DbWTjebhqjAwMLZmtAuapK9JqSDZkh6Oj4GBsSmjTSnzrduktaIeBwMD4zaMSVkxD5HtXNEHwsDAuAGj3cYl5cn2QG3yLgYGxh0Ya6lj2xiRJMCLb2FgYGzNaEPh2rFa0vJ1QXMYBgbG1oz85zzFXSsS5KTiGA4DA+PNGclD7fYxHy0vADyYCwMD4zaMttzYJrf5LHmIx8DAuA9jrXthLZg+pf0CAwNja8ZaO8Vae8RkQ5mMg4GBsSsjTx3Xktv82C4PxH/AMDAwbsC4qjGiPXRbK3w+qMFiYGBsx8gB8/RyXlooklgMDIyNGG04ywsD0Zcr0+DRfwADA+PNGfm2bNLCdcGh/3lbGAYGxqaMNuxOGr/a5WJgYGActYWthd215U6O9jAwMO7DaMNcmz9eNWay0cTAwNibMQmy8zR1rS0s2jNiYGBsx8iDabusSUmgeBIDAwMjbsKY70zbYgMGBgbGnHRtK8aD+gYGBsbWjDzM5S0XycFZ2zL7IOBiYGBsylhLINvyZMtL3rqgvoGBgfHqjC+hN7JQvIEFSwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.10"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.10" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
