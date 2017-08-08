@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>城市选择器插件（三级联动） | 一抹阳光 - qirenji.info | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,插件">
+    <meta name="description" content="城市选择器(三级联动)介绍一个中国地区的三级联动数据，也可以自定义数据。 使用默认数据引入js文件。在html文件中插入1&amp;lt;script src=&quot;./dist/all.js&quot;&amp;gt;&amp;lt;/script&amp;gt;， 然后1&amp;lt;script&amp;gt;new Select()&amp;lt;/script&amp;gt; 默认就可以生成中国地区的三级联动数据啦 自定义数据1new Select(&apos;.cont">
+<meta name="keywords" content="JavaScript,插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="城市选择器插件（三级联动）">
+<meta property="og:url" content="http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/index.html">
+<meta property="og:site_name" content="一抹阳光 - qirenji.info">
+<meta property="og:description" content="城市选择器(三级联动)介绍一个中国地区的三级联动数据，也可以自定义数据。 使用默认数据引入js文件。在html文件中插入1&amp;lt;script src=&quot;./dist/all.js&quot;&amp;gt;&amp;lt;/script&amp;gt;， 然后1&amp;lt;script&amp;gt;new Select()&amp;lt;/script&amp;gt; 默认就可以生成中国地区的三级联动数据啦 自定义数据1new Select(&apos;.cont">
+<meta property="og:image" content="http://www.qirenji.info/img/select-plugin-print.png">
+<meta property="og:updated_time" content="2017-08-08T14:59:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="城市选择器插件（三级联动）">
+<meta name="twitter:description" content="城市选择器(三级联动)介绍一个中国地区的三级联动数据，也可以自定义数据。 使用默认数据引入js文件。在html文件中插入1&amp;lt;script src=&quot;./dist/all.js&quot;&amp;gt;&amp;lt;/script&amp;gt;， 然后1&amp;lt;script&amp;gt;new Select()&amp;lt;/script&amp;gt; 默认就可以生成中国地区的三级联动数据啦 自定义数据1new Select(&apos;.cont">
+<meta name="twitter:image" content="http://www.qirenji.info/img/select-plugin-print.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.info" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.10">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Qi Renji</h5>
+          <a href="mailto:q290187113@qq.com" title="q290187113@qq.com" class="mail">q290187113@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/collection"  >
+                <i class="icon icon-lg icon-link"></i>
+                资料收集
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qirenji" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">城市选择器插件（三级联动）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">城市选择器插件（三级联动）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-08T14:49:20.000Z" itemprop="datePublished" class="page-time">
+  2017-08-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JavaScript/">JavaScript</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#城市选择器-三级联动"><span class="post-toc-number">1.</span> <span class="post-toc-text">城市选择器(三级联动)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#默认数据"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">默认数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义数据"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">自定义数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#示例"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">示例</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果图"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">效果图</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-城市选择器插件（三级联动）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">城市选择器插件（三级联动）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-08 22:49:20" datetime="2017-08-08T14:49:20.000Z"  itemprop="datePublished">2017-08-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JavaScript/">JavaScript</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="城市选择器-三级联动"><a href="#城市选择器-三级联动" class="headerlink" title="城市选择器(三级联动)"></a>城市选择器(三级联动)</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个中国地区的三级联动数据，也可以自定义数据。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="默认数据"><a href="#默认数据" class="headerlink" title="默认数据"></a>默认数据</h3><p>引入js文件。<br>在html文件中插入<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>，</div></pre></td></tr></table></figure></p>
+<p>然后<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"><span class="keyword">new</span> Select()</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>默认就可以生成中国地区的三级联动数据啦</p>
+<h3 id="自定义数据"><a href="#自定义数据" class="headerlink" title="自定义数据"></a>自定义数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new <span class="keyword">Select</span>(<span class="string">'.container'</span>, <span class="keyword">data</span>, <span class="built_in">text</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>第一个参数是插件所在的父容器</li>
+<li>第二个参数是插件所要选择的数据（json形式）</li>
+<li>第三个参数是选择器前面的提示词语<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,user-scalable=no"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>地区选择组件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">		</div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- &lt;script src="js/data.js"&gt;&lt;/script&gt;</span></div><div class="line">	&lt;script src="js/select-plugin-oop.js"&gt;&lt;/script&gt; --&gt;</div><div class="line"></div><div class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"dist/all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">		<span class="keyword">const</span> text = [<span class="string">'选项1'</span>,<span class="string">'选项二'</span>,<span class="string">'选项三'</span>]</div><div class="line">		<span class="comment">//自定义数据</span></div><div class="line">    <span class="keyword">const</span> data = &#123;</div><div class="line">       <span class="string">'province'</span>: [<span class="string">'a1'</span>, <span class="string">'a2'</span>, <span class="string">'a3'</span>],</div><div class="line">        <span class="string">'city'</span>: [</div><div class="line">                  [<span class="string">'a11'</span>, <span class="string">'a12'</span>, <span class="string">'a13'</span>],</div><div class="line">                  [<span class="string">'a21'</span>, <span class="string">'a22'</span>],</div><div class="line">                  [<span class="string">'a31'</span>, <span class="string">'a32'</span>]</div><div class="line">                ],</div><div class="line">        <span class="string">'county'</span>:  [</div><div class="line">                  [[<span class="string">'a111'</span>, <span class="string">'a112'</span>], [<span class="string">'a121'</span>, <span class="string">'a122'</span>], [<span class="string">'a131'</span>, <span class="string">'a132'</span>]],</div><div class="line">                  [[<span class="string">'a211'</span>, <span class="string">'a212'</span>], [<span class="string">'a221'</span>, <span class="string">'a222'</span>]],</div><div class="line">                  [[<span class="string">'a311'</span>], [<span class="string">'a312'</span>]]</div><div class="line">                ]</div><div class="line">              &#125;;</div><div class="line">		<span class="keyword">let</span> selector = <span class="keyword">new</span> Select(<span class="string">'.container'</span>,data,text);</div><div class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/select-plugin-print.png" alt="image" title="">
+                </div>
+                <div class="image-caption">image</div>
+            </figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-08T14:59:28.000Z" itemprop="dateUpdated">2017-08-08 22:59:28</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/08/08/城市选择器插件（三级联动）/" target="_blank" rel="external">http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.qirenji.info">
+            <img src="/img/avatar.jpg" alt="Qi Renji">
+            Qi Renji
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件/">插件</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/&title=《城市选择器插件（三级联动）》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/&title=《城市选择器插件（三级联动）》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《城市选择器插件（三级联动）》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/07/31/gulp学习/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">gulp学习</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span>Qi Renji &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/&title=《城市选择器插件（三级联动）》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/&title=《城市选择器插件（三级联动）》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《城市选择器插件（三级联动）》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvklEQVR42u3awU7kMBAEUP7/p1lpTxzIUNVtA0Ivp1EUJn5Gsj3V/fYWX+//r4+fP955ejK5kzz/+v6BCw8PD2809KfrNSl/5omUDPr1eJ7GjIeHh3ebl2wG7XATaru215sHHh4e3o/yksN0soW0YDw8PLy/xGuX/tmBGw8PD+938pIwoh3Q/vvzZw5kLXh4eHgxb1YA+9nP1+t7eHh4eKOqerLs5uWrWayQbwafjBMPDw/vAq+Na9tCV7tu57BisvDw8PC+hTdromqX+008UUwoHh4e3gXerEy1X+jbKU7+KkLi4eHhLXjHfvCPFujZ9xdbFB4eHt4FXnJ0bhf9WZl/0zpQNF3h4eHhHeXdW75nMce+tIaHh4d3m9dGBps4uP3chrmPR2o8PDy8Q7z65/2i3eotvvJyWvEuPDw8vDWvXco3zVh5+NtuP48bDx4eHt638HLSrLlqFjokbQ11VoGHh4e35uVfkZA2QcPmvZ+kLHh4eHhHeflhd7ZhzEpcm5ijaLrCw8PDW/NmG8OpIll7aM43ITw8PLzbvM1w2wL/PnSIWsHw8PDwjvKSRqs88E0O6C2yDS8+KYDh4eHhXebl5fmkeJ+0cM1KaNGTeHh4eBd4bTz6euFuI9p88zjWgoCHh4e35rXBwakmrS/aTEeH+McAFw8PD+8ob3bdOF6/vj+bFDw8PLwbvDaMOBvIziaoeCMeHh7eBV774nyaZpvHMEFJdj88PDy8Q7z38sqL+rPP+ZRFsQUeHh7eBd7sRDo7HM9SkHxSjh248fDw8ILx5FFpEgpsDtNtG0EUVeDh4eFd4yWL8qn8Y3OIr7MWPDw8vF/ASw7NszapWQPWF/8APDw8vB/ltUHD++jaNzpEfQ14eHh4a94sjGibCdppnQXKx7IWPDw8vEO19VkzwWw7yb9zWNnDw8PD63j/AJszfYJ3h9IQAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.10"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.10" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
