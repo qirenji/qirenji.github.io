@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.qirenji.info/"/>
-  <updated>2017-08-08T14:59:28.000Z</updated>
+  <updated>2017-08-09T01:40:01.000Z</updated>
   <id>http://www.qirenji.info/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.qirenji.info/2017/08/08/%E5%9F%8E%E5%B8%82%E9%80%89%E6%8B%A9%E5%99%A8%E6%8F%92%E4%BB%B6%EF%BC%88%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8%EF%BC%89/"/>
     <id>http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/</id>
     <published>2017-08-08T14:49:20.000Z</published>
-    <updated>2017-08-08T14:59:28.000Z</updated>
+    <updated>2017-08-09T01:40:01.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="城市选择器-三级联动"><a href="#城市选择器-三级联动" class="headerlink" title="城市选择器(三级联动)"></a>城市选择器(三级联动)</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个中国地区的三级联动数据，也可以自定义数据。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="默认数据"><a href="#默认数据" class="headerlink" title="默认数据"></a>默认数据</h3><p>引入js文件。<br>在html文件中插入<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./dist/all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>，</div></pre></td></tr></table></figure></p>
@@ -36,10 +36,11 @@
 <h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/img/select-plugin-print.png" alt="image" title="">
+                    <img src="/img/select-plugin-print.png" alt="效果图" title="">
                 </div>
-                <div class="image-caption">image</div>
+                <div class="image-caption">效果图</div>
             </figure>
+<p>github地址: <a href="https://github.com/qirenji/select-plugin" target="_blank" rel="external">https://github.com/qirenji/select-plugin</a></p>
 ]]></content>
     
     <summary type="html">
