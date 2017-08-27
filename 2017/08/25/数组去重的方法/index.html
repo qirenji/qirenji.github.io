@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>数组去重的方法 | 一抹阳光 - qirenji.info | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="ES6,JavaScript">
+    <meta name="description" content="网上常见的几种方法常规比较法思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。 12345678910111213141516function unique(arr)&amp;#123;　　var res = [arr[0]];　　for(var i=1;i&amp;lt;arr.length;i++)&amp;#123;　　　　var repeat = fals">
+<meta name="keywords" content="ES6,JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组去重的方法">
+<meta property="og:url" content="http://www.qirenji.info/2017/08/25/数组去重的方法/index.html">
+<meta property="og:site_name" content="一抹阳光 - qirenji.info">
+<meta property="og:description" content="网上常见的几种方法常规比较法思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。 12345678910111213141516function unique(arr)&amp;#123;　　var res = [arr[0]];　　for(var i=1;i&amp;lt;arr.length;i++)&amp;#123;　　　　var repeat = fals">
+<meta property="og:updated_time" content="2017-08-25T07:07:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数组去重的方法">
+<meta name="twitter:description" content="网上常见的几种方法常规比较法思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。 12345678910111213141516function unique(arr)&amp;#123;　　var res = [arr[0]];　　for(var i=1;i&amp;lt;arr.length;i++)&amp;#123;　　　　var repeat = fals">
+    
+        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.info" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.10">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Qi Renji</h5>
+          <a href="mailto:q290187113@qq.com" title="q290187113@qq.com" class="mail">q290187113@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/collection"  >
+                <i class="icon icon-lg icon-link"></i>
+                资料收集
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qirenji" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">数组去重的方法</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">数组去重的方法</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-25T07:03:25.000Z" itemprop="datePublished" class="page-time">
+  2017-08-25
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JavaScript/">JavaScript</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#网上常见的几种方法"><span class="post-toc-number">1.</span> <span class="post-toc-text">网上常见的几种方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常规比较法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">常规比较法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#先排序在去重"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">先排序在去重</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组下标去重"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">数组下标去重</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#利用对象的属性去重"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">利用对象的属性去重</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#说明"><span class="post-toc-number">2.</span> <span class="post-toc-text">说明</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES6新方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">ES6新方法</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-数组去重的方法"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">数组去重的方法</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-25 15:03:25" datetime="2017-08-25T07:03:25.000Z"  itemprop="datePublished">2017-08-25</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JavaScript/">JavaScript</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="网上常见的几种方法"><a href="#网上常见的几种方法" class="headerlink" title="网上常见的几种方法"></a>网上常见的几种方法</h1><h2 id="常规比较法"><a href="#常规比较法" class="headerlink" title="常规比较法"></a>常规比较法</h2><p>思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">function <span class="built_in">unique</span>(arr)&#123;</div><div class="line">　　<span class="built_in">var</span> res = [arr[<span class="number">0</span>]];</div><div class="line">　　<span class="keyword">for</span>(<span class="built_in">var</span> i=<span class="number">1</span>;i&lt;arr.<span class="built_in">length</span>;i++)&#123;</div><div class="line">　　　　<span class="built_in">var</span> repeat = <span class="literal">false</span>;</div><div class="line">　　　　<span class="keyword">for</span>(<span class="built_in">var</span> j=<span class="number">0</span>;j&lt;res.<span class="built_in">length</span>;j++)&#123;</div><div class="line">　　　　　　<span class="keyword">if</span>(arr[i] == res[j])&#123;</div><div class="line">　　　　　　　　repeat = <span class="literal">true</span>;</div><div class="line">　　　　　　　　<span class="built_in">break</span>;</div><div class="line">　　　　　　&#125;</div><div class="line">　　　　&#125;</div><div class="line">　　　　<span class="keyword">if</span>(!repeat)&#123;</div><div class="line">　　　　　　res.<span class="built_in">push</span>(arr[i]);</div><div class="line">　　　　&#125;</div><div class="line">　　&#125;</div><div class="line">　　<span class="built_in">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="先排序在去重"><a href="#先排序在去重" class="headerlink" title="先排序在去重"></a>先排序在去重</h2><p>思路：先将原数组排序，在与相邻的进行比较，如果不同则存入新数组<br><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique2</span></span>(arr)&#123;</div><div class="line">     arr.sort();</div><div class="line">     <span class="keyword">var</span> <span class="keyword">new</span><span class="type">Arr</span> = [arr[<span class="number">0</span>]];</div><div class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>, len=arr.length; i&lt;len; i++)&#123;</div><div class="line">         <span class="keyword">if</span>(arr[i] !== <span class="keyword">new</span><span class="type">Arr</span>[<span class="keyword">new</span><span class="type">Arr</span>.length<span class="number">-1</span>])&#123;</div><div class="line">             <span class="keyword">new</span><span class="type">Arr</span>.push(arr[i]);</div><div class="line">            &#125;</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">return</span> <span class="keyword">new</span><span class="type">Arr</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="数组下标去重"><a href="#数组下标去重" class="headerlink" title="数组下标去重"></a>数组下标去重</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique1</span></span>(arr)&#123;</div><div class="line">    <span class="keyword">var</span> <span class="keyword">new</span><span class="type">Arr</span> = [];<span class="comment">//新建一个数组</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,len=arr.length;i&lt;len;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">new</span><span class="type">Arr</span>.indexOf(arr[i]) == <span class="number">-1</span>)&#123;<span class="comment">//若新数组中未包含该项则将其存入新数组</span></div><div class="line">         <span class="keyword">new</span><span class="type">Arr</span>.push(arr[i]);</div><div class="line">     &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span><span class="type">Arr</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="利用对象的属性去重"><a href="#利用对象的属性去重" class="headerlink" title="利用对象的属性去重"></a>利用对象的属性去重</h2><p>思路：每次取出原数组的元素，然后再对象中访问这个属性，如果存在就说明重复<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span><span class="params">(arr)</span></span>&#123;</div><div class="line">　　<span class="keyword">var</span> res =[];</div><div class="line">　　<span class="keyword">var</span> json = &#123;&#125;;</div><div class="line">　　<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">　　　　<span class="keyword">if</span>(!json[arr[i]])&#123;</div><div class="line">　　　　　　res.push(arr[i]);</div><div class="line">　　　　　　json[arr[i]] = <span class="number">1</span>;</div><div class="line">　　　　&#125;</div><div class="line">　　&#125;</div><div class="line">　　<span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>利用对象的属性去重比较常用，兼容性也比较好。</p>
+<h1 id="ES6新方法"><a href="#ES6新方法" class="headerlink" title="ES6新方法"></a>ES6新方法</h1><p>ES6新增了Set对象，也就是我们所说的“集合”，它类似于数组，但是成员的值都是唯一的，没有重复的值。所以可以方便去重。</p>
+<p>如果用ES6为 Array 对象添加一个去除重复项的方法，则可以如下实现：</p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Array</span>.prototype.uniq = <span class="function"><span class="keyword">function</span></span>() &#123;</div><div class="line">  <span class="keyword">return</span> [...<span class="keyword">new</span> <span class="type">Set</span>(<span class="built_in">this</span>)];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>去重关键代码只需要一行，是不是非常简单？😄</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-25T07:07:11.000Z" itemprop="dateUpdated">2017-08-25 15:07:11</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/08/25/数组去重的方法/" target="_blank" rel="external">http://www.qirenji.info/2017/08/25/数组去重的方法/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.qirenji.info">
+            <img src="/img/avatar.jpg" alt="Qi Renji">
+            Qi Renji
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/25/数组去重的方法/&title=《数组去重的方法》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/25/数组去重的方法/&title=《数组去重的方法》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/25/数组去重的方法/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数组去重的方法》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/25/数组去重的方法/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/25/数组去重的方法/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/08/城市选择器插件（三级联动）/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">城市选择器插件（三级联动）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span>Qi Renji &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/25/数组去重的方法/&title=《数组去重的方法》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/25/数组去重的方法/&title=《数组去重的方法》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/25/数组去重的方法/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数组去重的方法》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/25/数组去重的方法/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/25/数组去重的方法/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQW4DIQwF0Nz/0uk2UjvTb5tWGnisooQZeFlYNub1isf7Y1x9//nr1fzvzyarLBsYGBiPZbxvx9UC+dbzp/Jff6BiYGAcwLgPiEnovJ+f8PJ1MTAwMJJX56O6IQwMDIy1AXftRid4DAyMExi9cJm8JwnZ1RIXAwPjNEZ+6v7/n/+kv4GBgfEoxqQcnZevSSMzWgUDA2NrRi/tS8rLaqsyKap/uZaBgYFxACPfVr6V6uWw0UUxDAyMrRn58f3kqCs/gOvNx8DA2JWRH+LnCWIvEFfTxMukEAMD4wBGNZjO+xLVPRRODTEwMLZg5ElhHv56FyzymnRUvmJgYDyWMW8P5M9W1yonjhgYGJsy8iK2uqFq0pmUvoUWJgYGxkaMZLtVXg+WH+RdroWBgbEdIy8y7xeuPpW3GaI/CAMDY2vGquSsd6zfO7CLimcMDIwDGJPGwCSV7KWbGBgYJzDyNK5XlPaujpVhGBgYWzPmR2y9PyIpgPPkEgMDY29GUo5Oitu8BO29BwMD4xxGtaxd1SSoJpcYGBgnM6oXTHvtgWpALxTbGBgYmzLexVG9rtFLExfnthgYGA9nrGptVsNxr/FZuGyBgYGxHWMSInszq09hYGBgrA18vZDaK5tHd9MwMDC2ZlQveFWbBM0yFQMDA+N2gUnQnBTDy1JDDAyMhzCSIrM6855dbWpiYGCczJjkXb2i9D41rAZiDAyMrRlfbv4sultfUW8AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.10"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.10" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
