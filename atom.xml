@@ -273,6 +273,75 @@
   </entry>
   
   <entry>
+    <title>Vue.js+Socket.io- 智能聊天室</title>
+    <link href="http://www.qirenji.info/2017/07/27/Vue-js-Socket-io-%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+    <id>http://www.qirenji.info/2017/07/27/Vue-js-Socket-io-智能聊天室/</id>
+    <published>2017-07-27T13:02:29.000Z</published>
+    <updated>2017-08-27T13:04:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue-js-Socket-io-智能聊天室"><a href="#Vue-js-Socket-io-智能聊天室" class="headerlink" title="Vue.js+Socket.io- 智能聊天室"></a>Vue.js+Socket.io- 智能聊天室</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本项目是使用Vue.js+Socket.io+Express实现的一个多人聊天室，也可以和智能机器人聊天，这里调用<a href="http://api.qingyunke.com/" target="_blank" rel="external">青云客API</a>接口。本项目虽然简单，但对vue的技术使用的还是比较全面的。</p>
+<p>源码地址 👉 <a href="https://github.com/qirenji/chat-vue" target="_blank" rel="external">https://github.com/qirenji/chat-vue</a></p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://60.205.181.124:18004/" target="_blank" rel="external">http://60.205.181.124:18004/</a></p>
+<p>多人群聊效果预览<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/chat-vue/chat.png" alt="chat" title="">
+                </div>
+                <div class="image-caption">chat</div>
+            </figure></p>
+<p>智能机器人聊天效果预览<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/chat-vue/ai.png" alt="AI" title="">
+                </div>
+                <div class="image-caption">AI</div>
+            </figure></p>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
+<li>Vue2.0：前端页面展示。</li>
+<li>Socket.io：实现实时通信</li>
+<li>Vuex：实现不同组件间的状态共享</li>
+<li>vue-router：页面路由切换</li>
+<li>axios：向后端发起请求。</li>
+<li>Express：实现后端socket.io监听功能。</li>
+<li>Moment.js：格式化时间。</li>
+<li>ES6：箭头函数等语法很好用。</li>
+<li>localStorage：保存用户信息以及聊天记录。</li>
+<li>Webpack：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li>
+<li>SASS(SCSS)：用SCSS做CSS预处理语言。</li>
+<li>flex：flex弹性布局，简单适配手机、PC端。</li>
+<li>CSS3：CSS3过渡动画及样式。</li>
+</ul>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>socket.io</p>
+<p>在服务器端</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">io.<span class="literal">on</span>(<span class="string">'connection'</span>, <span class="function"><span class="params">(socket)</span> =&gt;</span> &#123;</div><div class="line"></div><div class="line">  <span class="regexp">//</span> 群聊</div><div class="line">  socket.<span class="literal">on</span>(<span class="string">'sendGroupMsg'</span>, function (data) &#123;</div><div class="line">    socket.broadcast.emit(<span class="string">'receiveGroupMsg'</span>, data);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>在客户端</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/socket.io/socket.io.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">  <span class="comment">//上线发送名称信息 </span></div><div class="line">    socket.emit(<span class="string">'online'</span>, <span class="keyword">this</span>.$store.state.name);</div><div class="line">    <span class="comment">// console.log(this.$store.state.name);</span></div><div class="line">    <span class="comment">// 监听是否有上线的</span></div><div class="line">    socket.on(<span class="string">'online'</span>, (name) =&gt; <span class="template-variable">&#123;</span></div><div class="line">     ……</div><div class="line">    &#125;<span class="xml"><span class="actionscript">);</span></span></div><div class="line"></div><div class="line">    <span class="comment">// 监听是否有人在发送信息</span></div><div class="line">  	socket.on(<span class="string">'receiveGroupMsg'</span>, data =&gt; <span class="template-variable">&#123;</span></div><div class="line">      ……</div><div class="line">    &#125;<span class="xml"><span class="undefined">);</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>不管是服务器还是客户端都有 emit 和 on 这两个函数，可以说 socket.io 的核心就是这两个函数了，通过 emit 和 on 可以轻松地实现服务器与客户端之间的双向通信。</p>
+<p>emit ：用来触发一个事件，第一个参数为事件名，第二个参数为要发送的数据,如果要向所有在线的人发送信息需要夹，broadcast是发送信息到广播组的其他人。</p>
+<p>on ：用来监听一个 emit 触发的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来接收对方发来的数据。</p>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info">http://www.qirenji.info</a></p>
+<p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="external">https://github.com/qirenji/</a></p>
+<p>E-mail: lyf@qirenji.com</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Vue-js-Socket-io-智能聊天室&quot;&gt;&lt;a href=&quot;#Vue-js-Socket-io-智能聊天室&quot; class=&quot;headerlink&quot; title=&quot;Vue.js+Socket.io- 智能聊天室&quot;&gt;&lt;/a&gt;Vue.js+Socket.io- 智
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+    
+      <category term="实战项目" scheme="http://www.qirenji.info/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+    
+      <category term="智能聊天室" scheme="http://www.qirenji.info/tags/%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>nginx学习</title>
     <link href="http://www.qirenji.info/2017/07/26/nginx%E5%AD%A6%E4%B9%A0/"/>
     <id>http://www.qirenji.info/2017/07/26/nginx学习/</id>
