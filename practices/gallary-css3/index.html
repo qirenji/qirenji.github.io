@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gallary</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<!-- 禁止用户选中页面上的内容 -->
+<body onselectstart = "return false">
+<div class="wrap" id="wrap">
+	<!-- 照片 -->
+	<div class="photo photo_front" id="photo_{{index}}" onclick="turn(this)">
+		<div class="photo-wrap">
+			<!-- 照片正面 -->
+			<div class="side side-front">
+				<img class="image" src="images/{{img}}" alt="img">
+				<p class="caption">{{caption}}</p>
+			</div>
+			<!-- 照片反面 -->
+			<div class="side side-back">
+				<p class="desc">{{desc}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="mask"></div> -->
+
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

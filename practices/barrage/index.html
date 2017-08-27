@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹幕效果</title>
+<style>
+body{margin: 0;	padding: 0;	font-family: "微软雅黑";background: #fff;
+}
+#wrap{width:1000px; height: 600px; margin: 0 auto;}
+.screen{margin-top: 30px; height: 500px; border: 1px solid #ccc; overflow: hidden;position: relative;}
+.control{margin-top: 20px; width: 390px; margin-left:305px; }
+.text{width: 388px; height: 40px; border-radius: 5px; padding-left: 10px; border: 1px solid #ccc; margin:0 auto 10px;}
+.send{ height: 40px; width: 160px; border: 1px solid #FF6600; border-radius: 5px;background-color: #fff; margin-left: 36px;}
+.clear{height: 40px; width: 160px;border: 1px solid #ccc; border-radius: 5px;background-color: #fff;}
+.danmu{position: absolute; font-size: 20px; width: 300px;line-height: 20px;height: 20px; overflow: hidden;}
+</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="screen">
+		<!--<div class="danmu">说点什么呢？</div>-->
+	</div>
+	<div class="control">
+		<input type="text" class="text" placeholder="说点什么？"><br/>
+		<button class="send">发射</button>
+		<button class="clear">清屏</button>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="css/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	var pageH = $(".screen").height();
+	var pageW = $(".screen").width();
+	var colorArr = ["#cfaf12","#12af01","#981234","#adefsa","#db6be4","#f5264c","#d34a74"];
+	var screen=$(".screen");
+	var send = $(".send");
+	var clean = $(".clear");
+	var Top;
+	send.bind("click",auto);
+	clean.bind("click",clearScreen);
+	document.onkeydown=function(ev){
+		ev = window.event || ev;
+		if(ev.keyCode == 13){
+			auto();
+		}
+	}
+	function clearScreen() {
+		// console.log(1);
+		screen.empty();
+	}
+
+	function auto(){
+		var creSpan = $("<div class='danmu'></div>");
+		var text=$(".text").val();
+		creSpan.text(text);
+		$(".text").val("");
+		Top = parseInt(pageH*(Math.random()));
+		var num = parseInt(colorArr.length*(Math.random()));
+		if(Top>pageH-40){
+			Top = pageH-40;
+		}
+		creSpan.css({"top":Top,"left":1000,"color":getRandomColor()});
+		screen.append(creSpan);
+		var divDom = $(".danmu:last-child");
+		divDom.stop().animate({"left":-160},10000,"linear",function(){
+			$(this).remove();
+		});
+
+	}
+	function getRandomColor(){
+            return '#' + (function(h){
+                return new Array(7 - h.length).join("0") + h
+            })((Math.random() * 0x1000000 << 0).toString(16));
+        }
+
+
+});
+
+
+</script>
+</html>
