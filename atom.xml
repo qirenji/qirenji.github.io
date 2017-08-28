@@ -43,9 +43,9 @@
       <category term="JavaScript" scheme="http://www.qirenji.info/categories/JavaScript/"/>
     
     
-      <category term="ES6" scheme="http://www.qirenji.info/tags/ES6/"/>
-    
       <category term="JavaScript" scheme="http://www.qirenji.info/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="http://www.qirenji.info/tags/ES6/"/>
     
   </entry>
   
@@ -769,6 +769,74 @@
     
     
       <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue.js打造的GitHub排行榜</title>
+    <link href="http://www.qirenji.info/2017/07/20/Vue-js%E6%89%93%E9%80%A0%E7%9A%84GitHub%E6%8E%92%E8%A1%8C%E6%A6%9C/"/>
+    <id>http://www.qirenji.info/2017/07/20/Vue-js打造的GitHub排行榜/</id>
+    <published>2017-07-20T02:56:30.000Z</published>
+    <updated>2017-08-28T02:58:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Vue-js打造的GitHub排行榜"><a href="#Vue-js打造的GitHub排行榜" class="headerlink" title="Vue.js打造的GitHub排行榜"></a>Vue.js打造的GitHub排行榜</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>爬虫简单小练习，利用Node js对github项目进行爬虫，对github各种类项目进行按🌟star数目进行排序。</p>
+<p>Github地址：<a href="https://github.com/qirenji/github-ranking" target="_blank" rel="external">https://github.com/qirenji/github-ranking</a></p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul>
+<li>[x] github爬取 – 完成</li>
+<li>[x] 项目主页显示 – 完成</li>
+<li>[x] 项目切换 – 完成</li>
+</ul>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://60.205.181.124:18001/" target="_blank" rel="external">http://60.205.181.124:18001/</a></p>
+<p><strong>首页</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/github-ranking/index.png" alt="首页" title="">
+                </div>
+                <div class="image-caption">首页</div>
+            </figure>
+<p><strong>侧边栏项目切换</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/github-ranking/aside.png" alt="文章详情页" title="">
+                </div>
+                <div class="image-caption">文章详情页</div>
+            </figure>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
+<li><strong>Vue2.0</strong>：前端页面展示。</li>
+<li><strong>Vue-cli</strong>：vue手脚架工具。</li>
+<li><strong>axios</strong>：向后端发起请求。</li>
+<li><strong>cheerio</strong>：快速、灵活、实施的jQuery核心实现，抓取页面内容很方便。</li>
+<li><strong>ES6</strong>：箭头函数、promise等语法很好用。</li>
+<li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li>
+<li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li>
+<li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li>
+<li><strong>CSS3</strong>：CSS3过渡动画及样式。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>每次现爬取github等待时间较长，可以使用缓冲，加快访问速度。使用json数据文件存到服务器，等有用户访问的时候读取该文件，活着使用redis缓存工具来解决此问题。</li>
+<li>异步操作很好用，但也容易出错！熟练掌握Promis等方法，提高效率。</li>
+</ol>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p>
+<p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="external">https://github.com/qirenji/</a></p>
+<p>E-mail: lyf@qirenji.com</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Vue-js打造的GitHub排行榜&quot;&gt;&lt;a href=&quot;#Vue-js打造的GitHub排行榜&quot; class=&quot;headerlink&quot; title=&quot;Vue.js打造的GitHub排行榜&quot;&gt;&lt;/a&gt;Vue.js打造的GitHub排行榜&lt;/h1&gt;&lt;h2 id=&quot;前
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+    
+      <category term="实战项目" scheme="http://www.qirenji.info/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+    
+      <category term="Github排行榜" scheme="http://www.qirenji.info/tags/Github%E6%8E%92%E8%A1%8C%E6%A6%9C/"/>
     
   </entry>
   
