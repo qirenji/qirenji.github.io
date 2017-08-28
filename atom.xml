@@ -50,6 +50,124 @@
   </entry>
   
   <entry>
+    <title>Node.js + mongoDB + glup 搭建的电影网站</title>
+    <link href="http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-%E6%90%AD%E5%BB%BA%E7%9A%84%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
+    <id>http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/</id>
+    <published>2017-08-12T07:43:27.000Z</published>
+    <updated>2017-08-28T07:48:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Node-js-mongoDB-glup-搭建的电影网站"><a href="#Node-js-mongoDB-glup-搭建的电影网站" class="headerlink" title="Node.js + mongoDB + glup 搭建的电影网站"></a>Node.js + mongoDB + glup 搭建的电影网站</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。</p>
+<p>github地址：<a href="https://github.com/qirenji/movie" target="_blank" rel="external">https://github.com/qirenji/movie</a></p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul>
+<li>[x] 前台电影展示页</li>
+<li>[x] 电影详情页</li>
+<li>[x] 后台电影管理中心（电影录入、电影修改）</li>
+<li>[x] 用户登录注册注销功能</li>
+<li>[x] 后台用户管理中心（用户录入、用户修改）</li>
+<li>[x] 电影评论</li>
+<li>[x] 电影分类管理（分类录入、修改）<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2>在线预览地址 👉 <a href="http://60.205.181.124:18002/" target="_blank" rel="external">http://60.205.181.124:18002/</a></li>
+</ul>
+<p>电影首页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/index.png" alt="电影首页" title="">
+                </div>
+                <div class="image-caption">电影首页</div>
+            </figure>
+<p>登录页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/login.png" alt="登录页" title="">
+                </div>
+                <div class="image-caption">登录页</div>
+            </figure>
+<p>电影录入页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/admin.png" alt="电影录入页" title="">
+                </div>
+                <div class="image-caption">电影录入页</div>
+            </figure>
+<p>电影列表页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/movielist.png" alt="电影列表页" title="">
+                </div>
+                <div class="image-caption">电影列表页</div>
+            </figure>
+<p>电影分类页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/category.png" alt="电影分类页" title="">
+                </div>
+                <div class="image-caption">电影分类页</div>
+            </figure>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p>【前端】</p>
+<ul>
+<li>HTML/CSS/JS：亘古不变三件套</li>
+<li>ES6：ECMAScript 新一代语法，这也是以后的趋势</li>
+<li>Monment.js：时间日期格式化插件</li>
+<li>jQuery：主要用到 jQuery 的 ajax 方法处理异步请求和 DOM 操作</li>
+<li>Bootstrap：页面 UI 框架，天然响应式</li>
+<li>用SCSS做CSS预处理语言。</li>
+</ul>
+<p>【后端】</p>
+<ul>
+<li>pug：pug (以前的 jade) 是一个高性能的模板引擎，用来生成 HTML</li>
+<li>Node.js：整个后端由 Node.js 驱动；用 npm 安装资源文件</li>
+<li>Express：一个基于 Node.js 平台的 web 开发框架，由路由和中间件构成</li>
+</ul>
+<p>【数据库】</p>
+<ul>
+<li>mongoDB：进行数据存储的 NoSQL 数据库</li>
+</ul>
+<p>【自动化构建】</p>
+<ul>
+<li>gulp：前端自动化构建工具</li>
+</ul>
+<p>【部署工具】</p>
+<ul>
+<li>pm2:  Node 应用的进程管理器。</li>
+</ul>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">|<span class="string">-- movie-node                       // 项目根目录</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- app                          // 后台相关目录</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- controllers              // 控制层</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- models                   // 数据模型</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- schemas                  // 模型结构</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- views                    // 视图层</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- config                       // 路由管理</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- movie-backup                 // 数据库备份</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- public                       // 公用资源</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- dist                     // 公共资源打包目录</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- images                   // 公用图片</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- sass                     // 公用样式（初始化等）</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- scripts                  // 脚本交互文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- App.js                       // 程序入口文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- ecosystem.json               // pm2配置文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- gulpfile.js                  // gulp配置文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- package.json                 // 项目配置信息</span></div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>熟悉了 pug 的语法及其在 Node.js 中的使用方法</li>
+<li>初步掌握了 express 框架的使用，如何处理路由以及中间件</li>
+<li>掌握了 mongoose 在 Node.js 中如何连接数据库，以及 schema、model 的使用</li>
+<li>前后端数据传递与视图展现的流程</li>
+<li>学会了使用 bcryptjs（Node.js 的一个加解密模块）对密码进行 “hash + salt” 处理</li>
+<li>借助会话与 cookie 进行用户识别和持久化</li>
+</ol>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p>
+<p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="external">https://github.com/qirenji/</a></p>
+<p>E-mail: lyf@qirenji.com</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Node-js-mongoDB-glup-搭建的电影网站&quot;&gt;&lt;a href=&quot;#Node-js-mongoDB-glup-搭建的电影网站&quot; class=&quot;headerlink&quot; title=&quot;Node.js + mongoDB + glup 搭建的电影网站&quot;&gt;&lt;/
+    
+    </summary>
+    
+      <category term="Node" scheme="http://www.qirenji.info/categories/Node/"/>
+    
+      <category term="实战项目" scheme="http://www.qirenji.info/categories/Node/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+      <category term="Node" scheme="http://www.qirenji.info/tags/Node/"/>
+    
+      <category term="mongodb" scheme="http://www.qirenji.info/tags/mongodb/"/>
+    
+      <category term="电影网站" scheme="http://www.qirenji.info/tags/%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vue.js打造的音乐播放器</title>
     <link href="http://www.qirenji.info/2017/08/10/Vue-js%E6%89%93%E9%80%A0%E7%9A%84%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     <id>http://www.qirenji.info/2017/08/10/Vue-js打造的音乐播放器/</id>

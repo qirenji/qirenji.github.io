@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Node.js + mongoDB + glup 搭建的电影网站 | 一抹阳光 - qirenji.info | IT技术分享</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Node,mongodb,电影网站">
+    <meta name="description" content="Node.js + mongoDB + glup 搭建的电影网站前言此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。 github地址：https://github.com/qirenji/movie 实现功能 [x] 前台电影展示页 [x] 电影详情页 [x] 后台电影管理中心（电影录入、电影修改） [x] 用户登录注册">
+<meta name="keywords" content="Node,mongodb,电影网站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js + mongoDB + glup 搭建的电影网站">
+<meta property="og:url" content="http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/index.html">
+<meta property="og:site_name" content="一抹阳光 - qirenji.info">
+<meta property="og:description" content="Node.js + mongoDB + glup 搭建的电影网站前言此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。 github地址：https://github.com/qirenji/movie 实现功能 [x] 前台电影展示页 [x] 电影详情页 [x] 后台电影管理中心（电影录入、电影修改） [x] 用户登录注册">
+<meta property="og:image" content="http://www.qirenji.info/img/movie-node/index.png">
+<meta property="og:image" content="http://www.qirenji.info/img/movie-node/login.png">
+<meta property="og:image" content="http://www.qirenji.info/img/movie-node/admin.png">
+<meta property="og:image" content="http://www.qirenji.info/img/movie-node/movielist.png">
+<meta property="og:image" content="http://www.qirenji.info/img/movie-node/category.png">
+<meta property="og:updated_time" content="2017-08-28T07:48:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js + mongoDB + glup 搭建的电影网站">
+<meta name="twitter:description" content="Node.js + mongoDB + glup 搭建的电影网站前言此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。 github地址：https://github.com/qirenji/movie 实现功能 [x] 前台电影展示页 [x] 电影详情页 [x] 后台电影管理中心（电影录入、电影修改） [x] 用户登录注册">
+<meta name="twitter:image" content="http://www.qirenji.info/img/movie-node/index.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.info" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.10">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Qi Renji</h5>
+          <a href="mailto:q290187113@qq.com" title="q290187113@qq.com" class="mail">q290187113@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/collection"  >
+                <i class="icon icon-lg icon-link"></i>
+                资料收集
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qirenji" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Node.js + mongoDB + glup 搭建的电影网站</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Node.js + mongoDB + glup 搭建的电影网站</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-12T07:43:27.000Z" itemprop="datePublished" class="page-time">
+  2017-08-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Node/">Node</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Node/实战项目/">实战项目</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Node-js-mongoDB-glup-搭建的电影网站"><span class="post-toc-number">1.</span> <span class="post-toc-text">Node.js + mongoDB + glup 搭建的电影网站</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实现功能"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">实现功能</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#预览"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#技术栈"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">技术栈</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#目录结构"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">目录结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#About"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">About</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Node-js-mongoDB-glup-搭建的电影网站"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Node.js + mongoDB + glup 搭建的电影网站</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-12 15:43:27" datetime="2017-08-12T07:43:27.000Z"  itemprop="datePublished">2017-08-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Node/">Node</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Node/实战项目/">实战项目</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Node-js-mongoDB-glup-搭建的电影网站"><a href="#Node-js-mongoDB-glup-搭建的电影网站" class="headerlink" title="Node.js + mongoDB + glup 搭建的电影网站"></a>Node.js + mongoDB + glup 搭建的电影网站</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。</p>
+<p>github地址：<a href="https://github.com/qirenji/movie" target="_blank" rel="external">https://github.com/qirenji/movie</a></p>
+<h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul>
+<li>[x] 前台电影展示页</li>
+<li>[x] 电影详情页</li>
+<li>[x] 后台电影管理中心（电影录入、电影修改）</li>
+<li>[x] 用户登录注册注销功能</li>
+<li>[x] 后台用户管理中心（用户录入、用户修改）</li>
+<li>[x] 电影评论</li>
+<li>[x] 电影分类管理（分类录入、修改）<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2>在线预览地址 👉 <a href="http://60.205.181.124:18002/" target="_blank" rel="external">http://60.205.181.124:18002/</a></li>
+</ul>
+<p>电影首页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/index.png" alt="电影首页" title="">
+                </div>
+                <div class="image-caption">电影首页</div>
+            </figure>
+<p>登录页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/login.png" alt="登录页" title="">
+                </div>
+                <div class="image-caption">登录页</div>
+            </figure>
+<p>电影录入页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/admin.png" alt="电影录入页" title="">
+                </div>
+                <div class="image-caption">电影录入页</div>
+            </figure>
+<p>电影列表页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/movielist.png" alt="电影列表页" title="">
+                </div>
+                <div class="image-caption">电影列表页</div>
+            </figure>
+<p>电影分类页</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/movie-node/category.png" alt="电影分类页" title="">
+                </div>
+                <div class="image-caption">电影分类页</div>
+            </figure>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p>【前端】</p>
+<ul>
+<li>HTML/CSS/JS：亘古不变三件套</li>
+<li>ES6：ECMAScript 新一代语法，这也是以后的趋势</li>
+<li>Monment.js：时间日期格式化插件</li>
+<li>jQuery：主要用到 jQuery 的 ajax 方法处理异步请求和 DOM 操作</li>
+<li>Bootstrap：页面 UI 框架，天然响应式</li>
+<li>用SCSS做CSS预处理语言。</li>
+</ul>
+<p>【后端】</p>
+<ul>
+<li>pug：pug (以前的 jade) 是一个高性能的模板引擎，用来生成 HTML</li>
+<li>Node.js：整个后端由 Node.js 驱动；用 npm 安装资源文件</li>
+<li>Express：一个基于 Node.js 平台的 web 开发框架，由路由和中间件构成</li>
+</ul>
+<p>【数据库】</p>
+<ul>
+<li>mongoDB：进行数据存储的 NoSQL 数据库</li>
+</ul>
+<p>【自动化构建】</p>
+<ul>
+<li>gulp：前端自动化构建工具</li>
+</ul>
+<p>【部署工具】</p>
+<ul>
+<li>pm2:  Node 应用的进程管理器。</li>
+</ul>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">|<span class="string">-- movie-node                       // 项目根目录</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- app                          // 后台相关目录</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- controllers              // 控制层</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- models                   // 数据模型</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- schemas                  // 模型结构</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- views                    // 视图层</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- config                       // 路由管理</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- movie-backup                 // 数据库备份</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- public                       // 公用资源</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- dist                     // 公共资源打包目录</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- images                   // 公用图片</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- sass                     // 公用样式（初始化等）</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- scripts                  // 脚本交互文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- App.js                       // 程序入口文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- ecosystem.json               // pm2配置文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- gulpfile.js                  // gulp配置文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- package.json                 // 项目配置信息</span></div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>熟悉了 pug 的语法及其在 Node.js 中的使用方法</li>
+<li>初步掌握了 express 框架的使用，如何处理路由以及中间件</li>
+<li>掌握了 mongoose 在 Node.js 中如何连接数据库，以及 schema、model 的使用</li>
+<li>前后端数据传递与视图展现的流程</li>
+<li>学会了使用 bcryptjs（Node.js 的一个加解密模块）对密码进行 “hash + salt” 处理</li>
+<li>借助会话与 cookie 进行用户识别和持久化</li>
+</ol>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p>
+<p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="external">https://github.com/qirenji/</a></p>
+<p>E-mail: lyf@qirenji.com</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-28T07:48:20.000Z" itemprop="dateUpdated">2017-08-28 15:48:20</time>
+</span><br>
+
+
+        
+        转载请注明出处：<a href="/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/" target="_blank" rel="external">http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.qirenji.info">
+            <img src="/img/avatar.jpg" alt="Qi Renji">
+            Qi Renji
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/电影网站/">电影网站</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/08/25/数组去重的方法/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">数组去重的方法</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/10/Vue-js打造的音乐播放器/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Vue.js打造的音乐播放器</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span>Qi Renji &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/&via=http://www.qirenji.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/12/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACq0lEQVR42u3a0U7DQAwEwP7/TxeJV0izts8tSJMnJJr05pByZu3HI76e31fvk8+LK3lO9a7mhYeHh9da+uvHJYv++cmNz+RrxsPDw9vmvX7F5+CNN/PVeqIDDA8PD++jvJwxqXWTJ+Ph4eH9F14vkri6t/p8PDw8vL/GS0reU8Xx6xgijzwOZy14eHh4Ma/3ov/sz4v9PTw8PLxBV33SmqqOIOQxbmG1eHh4eAu8SSurt7jkdZ8PFkTbioeHh3eUl4enSTlb3aZeyFu4Fw8PD2+Zd2ooqnpvdYsLfww8PDy8NV5S8s6bVdVYNi+78fDw8D7Le82oHh7V9n81/G1OfuHh4eGNeQmpGi5Uw9/84ClsAR4eHt4aLy9bT0UGE1IeduDh4eFt8PJCOWk7TY6cyQjCzXrw8PDwjvJ6Uemk/V89HvIW3eWRgIeHh3eUN48Mer/Nv3G+fXh4eHh7vDw46L24e3FDL9LFw8PDeycveZX3ottTowbJPwA3hTUeHh7egFdtVvUK395hMCnljy0IDw8P74J3KgKYHBL5sVT4djw8PLwF3tnhp3wLqodN9TjBw8PD2+Pl5W9eLucv8SopD4jx8PDw9ninCty82M03bv5bPDw8vA1e3vKfjGT1XujJBt0ME+Dh4eGt8XoDTzmsGjdEMw5JmY6Hh4e3wKt+ZTXwze+qbl85pcbDw8M7xMtfxPPWVL4FkxGum5QFDw8P7ygvDxHy8HdytEyOBzw8PLw9Xn5Vm2GTIdTq8MFNmIuHh4e3wJs0q07tbjWkKBwMeHh4eGu8aiDbC2HnMUfCvkmp8fDw8N7I641G5Y2rSRBcGL3Cw8PDeztvXihXl1tt1I0OBjw8PLyYl4QRky87OxyAh4eH91lerwE2KaPzgKO3BQf6e3h4eHi/874AgExzqDnzgMwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.10"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.10" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
