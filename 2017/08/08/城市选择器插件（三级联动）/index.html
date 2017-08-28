@@ -29,7 +29,7 @@
 <meta property="og:description" content="城市选择器(三级联动)介绍一个中国地区的三级联动数据，也可以自定义数据。 github地址: https://github.com/qirenji/select-plugin 使用默认数据引入js文件。 在html文件中插入 123456789// html中添加&amp;lt;div class=&quot;container&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script src=&quot;dist/all.js">
 <meta property="og:image" content="http://www.qirenji.info/img/select-plugin/city.png">
 <meta property="og:image" content="http://www.qirenji.info/img/select-plugin/custom.png">
-<meta property="og:updated_time" content="2017-08-28T08:52:41.000Z">
+<meta property="og:updated_time" content="2017-08-28T08:58:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="城市选择器插件（三级联动）">
 <meta name="twitter:description" content="城市选择器(三级联动)介绍一个中国地区的三级联动数据，也可以自定义数据。 github地址: https://github.com/qirenji/select-plugin 使用默认数据引入js文件。 在html文件中插入 123456789// html中添加&amp;lt;div class=&quot;container&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script src=&quot;dist/all.js">
@@ -67,28 +67,28 @@
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
-                主页
+                主 页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
-                文章
+                文 章
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
-                标签
+                标 签
               </a>
             </li>
         
             <li class="waves-block waves-effect">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
-                分类
+                分 类
               </a>
             </li>
         
@@ -202,7 +202,7 @@
 <p>在html文件中插入</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// html中添加</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"dist/all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"></div><div class="line">    <span class="keyword">let</span> selector = <span class="keyword">new</span> Select(<span class="string">'.container'</span>,default_data);</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>默认就可以生成中国地区的三级联动数据啦</p>
-<h3 id="自定义数据"><a href="#自定义数据" class="headerlink" title="自定义数据"></a>自定义数据</h3><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//html中添加</div><div class="line">&lt;div class=<span class="string">"container1"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script src=<span class="string">"dist/all.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    const text = [<span class="string">'选项1'</span>,<span class="string">'选项二'</span>,<span class="string">'选项三'</span>]</div><div class="line">		//自定义数据</div><div class="line">    const data = &#123;</div><div class="line">       <span class="string">'province'</span>: [<span class="string">'a1'</span>, <span class="string">'a2'</span>, <span class="string">'a3'</span>],</div><div class="line">        <span class="string">'city'</span>: [</div><div class="line">                  [<span class="string">'a11'</span>, <span class="string">'a12'</span>, <span class="string">'a13'</span>],</div><div class="line">                  [<span class="string">'a21'</span>, <span class="string">'a22'</span>],</div><div class="line">                  [<span class="string">'a31'</span>, <span class="string">'a32'</span>]</div><div class="line">                ],</div><div class="line">        <span class="string">'county'</span>:  [</div><div class="line">                  [[<span class="string">'a111'</span>, <span class="string">'a112'</span>], [<span class="string">'a121'</span>, <span class="string">'a122'</span>], [<span class="string">'a131'</span>, <span class="string">'a132'</span>]],</div><div class="line">                  [[<span class="string">'a211'</span>, <span class="string">'a212'</span>], [<span class="string">'a221'</span>, <span class="string">'a222'</span>]],</div><div class="line">                  [[<span class="string">'a311'</span>], [<span class="string">'a312'</span>]]</div><div class="line">                ]</div><div class="line">              &#125;;</div><div class="line">	let selector1 = new <span class="symbol">Select</span>(<span class="string">'.container1'</span>,data, text)</div><div class="line">&lt;/script&gt;<span class="symbol">Select</span>(<span class="string">'.container'</span>, data, text);</div></pre></td></tr></table></figure>
+<h3 id="自定义数据"><a href="#自定义数据" class="headerlink" title="自定义数据"></a>自定义数据</h3><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">//html中添加</div><div class="line">&lt;div class=<span class="string">"container1"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script src=<span class="string">"dist/all.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    const text = [<span class="string">'选项1'</span>,<span class="string">'选项二'</span>,<span class="string">'选项三'</span>]</div><div class="line">		//自定义数据</div><div class="line">    const data = &#123;</div><div class="line">       <span class="string">'province'</span>: [<span class="string">'a1'</span>, <span class="string">'a2'</span>, <span class="string">'a3'</span>],</div><div class="line">        <span class="string">'city'</span>: [</div><div class="line">                  [<span class="string">'a11'</span>, <span class="string">'a12'</span>, <span class="string">'a13'</span>],</div><div class="line">                  [<span class="string">'a21'</span>, <span class="string">'a22'</span>],</div><div class="line">                  [<span class="string">'a31'</span>, <span class="string">'a32'</span>]</div><div class="line">                ],</div><div class="line">        <span class="string">'county'</span>:  [</div><div class="line">                  [[<span class="string">'a111'</span>, <span class="string">'a112'</span>], [<span class="string">'a121'</span>, <span class="string">'a122'</span>], [<span class="string">'a131'</span>, <span class="string">'a132'</span>]],</div><div class="line">                  [[<span class="string">'a211'</span>, <span class="string">'a212'</span>], [<span class="string">'a221'</span>, <span class="string">'a222'</span>]],</div><div class="line">                  [[<span class="string">'a311'</span>], [<span class="string">'a312'</span>]]</div><div class="line">                ]</div><div class="line">              &#125;;</div><div class="line">	let selector1 = new <span class="symbol">Select</span>(<span class="string">'.container1'</span>,data, text)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 <ul>
 <li>第一个参数是插件所在的父容器</li>
 <li>第二个参数是插件所要选择的数据（json形式）</li>
@@ -232,7 +232,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-28T08:52:41.000Z" itemprop="dateUpdated">2017-08-28 16:52:41</time>
+    Last updated: <time datetime="2017-08-28T08:58:31.000Z" itemprop="dateUpdated">2017-08-28 16:58:31</time>
 </span><br>
 
 
