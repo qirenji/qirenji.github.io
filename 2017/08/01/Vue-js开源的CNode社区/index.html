@@ -27,6 +27,7 @@
 <meta property="og:url" content="http://www.qirenji.info/2017/08/01/Vue-js开源的CNode社区/index.html">
 <meta property="og:site_name" content="一抹阳光 - qirenji.info">
 <meta property="og:description" content="Vue.js开源的CNode社区前言vue练习项目，利用cnode社区提供的api实现，需去cnode个人中心登陆查看accesstoken才可以登录。Github地址：https://github.com/qirenji/cnode-vue 实现功能 [x] 首页列表，下拉加载 – 完成 [x] 主题详情，回复，点赞 – 完成 [x] 登录,退出 –完成 [x] 消息列表，消息提醒，消息标记为已">
+<meta property="og:locale" content="zh-CH">
 <meta property="og:image" content="http://www.qirenji.info/img/cnode-vue/page.png">
 <meta property="og:image" content="http://www.qirenji.info/img/cnode-vue/pagelist.png">
 <meta property="og:image" content="http://www.qirenji.info/img/cnode-vue/aside.png">
@@ -168,7 +169,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -234,7 +235,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="Vue-js开源的CNode社区"><a href="#Vue-js开源的CNode社区" class="headerlink" title="Vue.js开源的CNode社区"></a>Vue.js开源的CNode社区</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vue练习项目，利用cnode社区提供的api实现，需去cnode个人中心登陆查看accesstoken才可以登录。<br>Github地址：<a href="https://github.com/qirenji/cnode-vue" target="_blank" rel="external">https://github.com/qirenji/cnode-vue</a></p>
+            <h1 id="Vue-js开源的CNode社区"><a href="#Vue-js开源的CNode社区" class="headerlink" title="Vue.js开源的CNode社区"></a>Vue.js开源的CNode社区</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vue练习项目，利用cnode社区提供的api实现，需去cnode个人中心登陆查看accesstoken才可以登录。<br>Github地址：<a href="https://github.com/qirenji/cnode-vue" target="_blank" rel="noopener">https://github.com/qirenji/cnode-vue</a></p>
 <h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul>
 <li>[x] 首页列表，下拉加载 – 完成</li>
 <li>[x] 主题详情，回复，点赞 – 完成</li>
@@ -243,7 +244,7 @@
 <li>[x] 发布话题 – 完成</li>
 <li>[x] 个人中心 – 完成</li>
 </ul>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://cnode.qirenji.com/" target="_blank" rel="external">http://cnode.qirenji.com/</a></p>
+<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://cnode.qirenji.com/" target="_blank" rel="noopener">http://cnode.qirenji.com/</a></p>
 <p>首页</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -298,14 +299,14 @@
 <li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li>
 <li><strong>CSS3</strong>：CSS3过渡动画及样式。</li>
 </ul>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>项目使用vue-cli手脚架工具搭建，大部分源文件放在src目录下，所有这里只列出src目录结构，其他请参考<a href="https://segmentfault.com/a/1190000007880723" target="_blank" rel="external">vue-cli手脚架</a>工具<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">|<span class="string">-- src                              // 源码目录</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- components                   // 公共组件</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- about                    // 关于页</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- asidemenu                // 侧边栏页</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- content                  // 文章列表页和文章详情页 </span></div><div class="line">|<span class="string">       </span>|<span class="string">-- header                   // 首页头部</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- info                     // 个人中心页</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- login                    // 登陆页</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- newarticle               // 新建话题页</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- user                     // 用户详情页</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- common                       // 公用资源</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- style                    // 公用sass样式（默认样式）</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- icons                    // 公用svg图标页</span></div><div class="line">|<span class="string">       </span>|<span class="string">-- js                       // 公用javascript</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- router                       // 配置页面路由</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- App.vue                      // 页面入口文件</span></div><div class="line">|<span class="string">   </span>|<span class="string">-- main.js                      // 程序入口文件，加载各种公共组件</span></div></pre></td></tr></table></figure></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>项目使用vue-cli手脚架工具搭建，大部分源文件放在src目录下，所有这里只列出src目录结构，其他请参考<a href="https://segmentfault.com/a/1190000007880723" target="_blank" rel="noopener">vue-cli手脚架</a>工具<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- src                              // 源码目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- components                   // 公共组件</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- about                    // 关于页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- asidemenu                // 侧边栏页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- content                  // 文章列表页和文章详情页 </span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- header                   // 首页头部</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- info                     // 个人中心页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- login                    // 登陆页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- newarticle               // 新建话题页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- user                     // 用户详情页</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- common                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- style                    // 公用sass样式（默认样式）</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- icons                    // 公用svg图标页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- js                       // 公用javascript</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- router                       // 配置页面路由</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.vue                      // 页面入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- main.js                      // 程序入口文件，加载各种公共组件</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
 <li>深入学习vue.js全家桶，使用Vuex管理组件状态很方便。</li>
 <li>事先要先想好整个页面结构和组件划分，方便快速开发。</li>
 </ol>
 <h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p>
-<p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="external">https://github.com/qirenji/</a></p>
-<p>E-mail: lyf@qirenji.com</p>
+<p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p>
+<p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>
 
         </div>
 
@@ -313,7 +314,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-29T07:37:39.000Z" itemprop="dateUpdated">2017-08-29 15:37:39</time>
+    Last updated: <time datetime="2017-08-29T07:37:39.000Z" itemprop="dateUpdated">2017-08-29 15:37:39</time>
 </span><br>
 
 

@@ -27,6 +27,7 @@
 <meta property="og:url" content="http://www.qirenji.info/2017/07/22/git常用命令/index.html">
 <meta property="og:site_name" content="一抹阳光 - qirenji.info">
 <meta property="og:description" content="git常用命令基本命令使用 在当前目录创建Git仓库，会在当前目录创建.git文件夹 1git init  把文件提交到暂存区   1git add ./&amp;lt;path&amp;gt;  提交当前工作空前的修改内容  1git commit -m &apos;注释&apos;  将存储库克隆到本地目录中  1git clone https://github.com/jquery/jquery.git  将本地分支的更新，推">
+<meta property="og:locale" content="zh-CH">
 <meta property="og:updated_time" content="2017-07-22T13:49:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令">
@@ -162,7 +163,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -230,64 +231,64 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h1><h2 id="基本命令使用"><a href="#基本命令使用" class="headerlink" title="基本命令使用"></a>基本命令使用</h2><ol>
 <li><p>在当前目录创建Git仓库，会在当前目录创建.git文件夹</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git init</span></div></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git init</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>把文件提交到暂存区</p>
 </li>
 </ol>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> ./&lt;path&gt;</span></div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> ./&lt;path&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
 <li>提交当前工作空前的修改内容</li>
 </ol>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m <span class="string">'注释'</span></div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">'注释'</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
 <li>将存储库克隆到本地目录中</li>
 </ol>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/jquery/jquery.git</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/jquery/jquery.git</span><br></pre></td></tr></table></figure>
+<ol start="5">
 <li>将本地分支的更新，推送到远程主机。</li>
 </ol>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure>
+<ol start="6">
 <li>从远程获取最新版本并merge到本地</li>
 </ol>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git pull</span></div></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git pull</span></span><br></pre></td></tr></table></figure>
 <p>相当于git fetch和git merge一起使用</p>
-<ol>
+<ol start="7">
 <li>列出详细信息，在每一个名字后面列出其远程url</li>
 </ol>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git remote -v</span></div></pre></td></tr></table></figure>
-<ol>
-<li>在url创建名字为name的仓库<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="selector-tag">git</span> <span class="selector-tag">remote</span> <span class="selector-tag">add</span> <span class="selector-tag">origin</span> <span class="selector-tag">git</span>@<span class="keyword">git</span>.*/<span class="keyword">website_node</span>.<span class="keyword">git</span></div></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git remote -v</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>在url创建名字为name的仓库<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">git</span> <span class="selector-tag">remote</span> <span class="selector-tag">add</span> <span class="selector-tag">origin</span> <span class="selector-tag">git</span>@<span class="keyword">git</span>.*/<span class="keyword">website_node</span>.<span class="keyword">git</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ol>
 <li>创建分支</li>
 </ol>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>dev</div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>dev</span><br></pre></td></tr></table></figure>
+<ol start="2">
 <li>切换分支</li>
 </ol>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git checkout dev</span></div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git checkout dev</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
 <li>查看当前分支</li>
 </ol>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git branch</span></div></pre></td></tr></table></figure>
-<ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git branch</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
 <li>创建并切换分支</li>
 </ol>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d dev</div></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-d dev</span><br></pre></td></tr></table></figure>
 <h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>Git最常用的可能就是多人协作时解决冲突问题。</p>
 <p>一般会先push上自己的文件</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> .</span></div><div class="line">git commit -m <span class="string">'注释'</span></div><div class="line">git push -u origin branch-name</div></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br><span class="line"><span class="bash">git commit -m <span class="string">'注释'</span></span></span><br><span class="line"><span class="bash">git push -u origin branch-name</span></span><br></pre></td></tr></table></figure>
 <p>然后发现推送失败了，这是因为远程的分支和自己的本地推送内容更新，所以需要使用git pull把远程分支与本地合并。</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git pull</span></div></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git pull</span></span><br></pre></td></tr></table></figure>
 <p>如果合并有冲突，则需要在本地解决冲突。</p>
 <p>解决冲突之后，再重新git push就能推送成功了。</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> baranch-name</div></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> baranch-name</span><br></pre></td></tr></table></figure>
 <p>这就是多人协作之解决冲突。</p>
-<p>这里也推荐初学者使用 <a href="https://desktop.github.com/" target="_blank" rel="external">github desktop</a>，毕竟图形化界面使用起来更直观一些。</p>
-<p>如需学习更多内容，请参廖雪峰老师的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a></p>
+<p>这里也推荐初学者使用 <a href="https://desktop.github.com/" target="_blank" rel="noopener">github desktop</a>，毕竟图形化界面使用起来更直观一些。</p>
+<p>如需学习更多内容，请参廖雪峰老师的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git教程</a></p>
 
         </div>
 
@@ -295,7 +296,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-22T13:49:52.000Z" itemprop="dateUpdated">2017-07-22 21:49:52</time>
+    Last updated: <time datetime="2017-07-22T13:49:52.000Z" itemprop="dateUpdated">2017-07-22 21:49:52</time>
 </span><br>
 
 

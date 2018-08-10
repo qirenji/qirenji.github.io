@@ -27,6 +27,7 @@
 <meta property="og:url" content="http://www.qirenji.info/2017/08/02/gulp执行顺序-gulp-sequence/index.html">
 <meta property="og:site_name" content="一抹阳光 - qirenji.info">
 <meta property="og:description" content="介绍Node.js 工具链中的典型任务运行器有 Grunt ，以及后起之秀 Gulp。  与以传统的方式进行配置的 Grunt 相比， Gulp 则使用“代码”的方式来描述任务。而它们另一个巨大的不同，则体现在运行方式上：Grunt 的运行方式很直观：解析依赖，使用配置逐步运行已定义的任务；而 Gulp 则默认将所有任务和步骤异步化运行。显而易见，Gulp 在效率上是有明显的提升的。 问题上文介绍">
+<meta property="og:locale" content="zh-CH">
 <meta property="og:image" content="http://www.qirenji.info/img/gulp-stream.png">
 <meta property="og:image" content="http://www.qirenji.info/img/gulp-stream-ok.png">
 <meta property="og:updated_time" content="2017-08-25T02:43:04.000Z">
@@ -165,7 +166,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -234,7 +235,7 @@
             <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Node.js 工具链中的典型任务运行器有 Grunt ，以及后起之秀 Gulp。 </p>
 <p>与以传统的方式进行配置的 Grunt 相比， Gulp 则使用“代码”的方式来描述任务。而它们另一个巨大的不同，则体现在运行方式上：Grunt 的运行方式很直观：解析依赖，使用配置逐步运行已定义的任务；而 Gulp 则默认将所有任务和步骤异步化运行。显而易见，Gulp 在效率上是有明显的提升的。</p>
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>上文介绍gulp是异步的，但是当写完一系列任务准备执行时</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.<span class="keyword">task</span>(<span class="symbol">'build</span>', [<span class="symbol">'clean</span>', <span class="symbol">'styles</span>', <span class="symbol">'images</span>', <span class="symbol">'scripts</span>']));</div></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.<span class="keyword">task</span>(<span class="symbol">'build</span>', [<span class="symbol">'clean</span>', <span class="symbol">'styles</span>', <span class="symbol">'images</span>', <span class="symbol">'scripts</span>']));</span><br></pre></td></tr></table></figure>
 <p>发现终端报错</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -245,11 +246,11 @@
             </figure>
 <p>如上图所示，任务完全错乱了，我们是想先执行clean，然后执行scritp和styles等任务。但由于异步操作，导致了执行出错。</p>
 <p>当然如果是一个任务，可以使用依赖</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp.<span class="keyword">task</span>(<span class="symbol">'scripts</span>', [<span class="symbol">'clean</span>']));</div></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.<span class="keyword">task</span>(<span class="symbol">'scripts</span>', [<span class="symbol">'clean</span>']));</span><br></pre></td></tr></table></figure>
 <p>这样就可以在执行clean后执行scripts任务了。</p>
 <p>但我们有一系列任务，这时候就可以使用国内的 Teambition 团队开源了 gulp-sequence ，以及国外开发者开发的 run-sequence来完美解决这个问题。</p>
 <h1 id="gulp-sequence"><a href="#gulp-sequence" class="headerlink" title="gulp-sequence"></a>gulp-sequence</h1><p>它们提供了类似的调用方式，下面的代码演示如何使用 gulp-sequence 按顺序地运行多个或多组 Gulp 任务：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulpSequence = <span class="built_in">require</span>(<span class="string">'gulp-sequence'</span>); </div><div class="line"></div><div class="line">gulp.task(<span class="string">'build'</span>, gulpSequence(<span class="string">'clean'</span>, [<span class="string">'styles'</span>, <span class="string">'images'</span>, <span class="string">'scripts'</span>]));</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulpSequence = <span class="built_in">require</span>(<span class="string">'gulp-sequence'</span>); </span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'build'</span>, gulpSequence(<span class="string">'clean'</span>, [<span class="string">'styles'</span>, <span class="string">'images'</span>, <span class="string">'scripts'</span>]));</span><br></pre></td></tr></table></figure>
 <p>这样就可以预期的先执行clean再之行其他任务了。</p>
 <p>具体终端执行结果如下图</p>
 <figure class="image-bubble">
@@ -266,7 +267,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-25T02:43:04.000Z" itemprop="dateUpdated">2017-08-25 10:43:04</time>
+    Last updated: <time datetime="2017-08-25T02:43:04.000Z" itemprop="dateUpdated">2017-08-25 10:43:04</time>
 </span><br>
 
 

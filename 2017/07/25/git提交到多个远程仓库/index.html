@@ -27,6 +27,7 @@
 <meta property="og:url" content="http://www.qirenji.info/2017/07/25/git提交到多个远程仓库/index.html">
 <meta property="og:site_name" content="一抹阳光 - qirenji.info">
 <meta property="og:description" content="问题分别有仓库A（github）,B（码云的git），本机为C。 假设以 a 仓库作为最终的使用仓库， b为发布仓库，想两个仓库一起使用，怎么用呢？ 增加远程仓库1234#添加githubgit remote add origin https://github.com/xxx(仓库地址)#添加oschinagit remote set-url --add origin https://git.os">
+<meta property="og:locale" content="zh-CH">
 <meta property="og:updated_time" content="2017-08-25T03:12:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git提交到多个远程仓库">
@@ -162,7 +163,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -230,12 +231,12 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>分别有仓库A（github）,B（码云的git），本机为C。</p>
 <p>假设以 a 仓库作为最终的使用仓库， b为发布仓库，想两个仓库一起使用，怎么用呢？</p>
-<h2 id="增加远程仓库"><a href="#增加远程仓库" class="headerlink" title="增加远程仓库"></a>增加远程仓库</h2><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#添加github</span></div><div class="line"><span class="string">git </span><span class="string">remote </span><span class="string">add </span><span class="string">origin </span><span class="string">https:</span>//<span class="string">github.</span><span class="string">com/</span><span class="string">xxx(</span>仓库地址)</div><div class="line"><span class="comment">#添加oschina</span></div><div class="line"><span class="string">git </span><span class="string">remote </span><span class="built_in">set-url</span> <span class="built_in">--add</span> <span class="string">origin </span><span class="string">https:</span>//<span class="string">git.</span><span class="string">oschina.</span><span class="string">net/</span><span class="string">xxxx(</span>仓库地址)</div></pre></td></tr></table></figure>
-<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> --all</div></pre></td></tr></table></figure>
+<h2 id="增加远程仓库"><a href="#增加远程仓库" class="headerlink" title="增加远程仓库"></a>增加远程仓库</h2><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#添加github</span></span><br><span class="line"><span class="string">git </span><span class="string">remote </span><span class="string">add </span><span class="string">origin </span><span class="string">https:</span>//<span class="string">github.</span><span class="string">com/</span><span class="string">xxx(</span>仓库地址)</span><br><span class="line"><span class="comment">#添加oschina</span></span><br><span class="line"><span class="string">git </span><span class="string">remote </span><span class="built_in">set-url</span> <span class="built_in">--add</span> <span class="string">origin </span><span class="string">https:</span>//<span class="string">git.</span><span class="string">oschina.</span><span class="string">net/</span><span class="string">xxxx(</span>仓库地址)</span><br></pre></td></tr></table></figure>
+<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> --all</span><br></pre></td></tr></table></figure>
 <p>这样就可以把本机的代码提交两个仓库了。</p>
 <p>但是如果两个仓库都有内容。那么问题来了： 怎么才能把两个远程仓库代码同步？以便以后可以代码同时推送到这两个仓库。</p>
 <p>直接在命令行敲：</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git push -f origin --all </div><div class="line"></div><div class="line">注释： origin 远程仓库名， <span class="keyword">master</span> <span class="title">分支名， -f</span> 为force，意为：强行、强制。</div></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin --all </span><br><span class="line"></span><br><span class="line">注释： origin 远程仓库名， <span class="keyword">master</span> <span class="title">分支名， -f</span> 为force，意为：强行、强制。</span><br></pre></td></tr></table></figure>
 <p>当然不止这一种操作方式了，但是这种操作是最快速的，不会有冲突什么。</p>
 <p>⚠️：这个-f命令请谨慎使用：请谨慎使用！请谨慎使用！请谨慎使用！</p>
 <p>毕竟数据无价，如果被覆盖后，就不那么好恢复了。</p>
@@ -246,7 +247,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-25T03:12:13.000Z" itemprop="dateUpdated">2017-08-25 11:12:13</time>
+    Last updated: <time datetime="2017-08-25T03:12:13.000Z" itemprop="dateUpdated">2017-08-25 11:12:13</time>
 </span><br>
 
 
