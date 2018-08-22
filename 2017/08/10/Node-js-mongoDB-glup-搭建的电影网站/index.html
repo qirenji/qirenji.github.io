@@ -13,7 +13,7 @@
     
     
     
-    <title>Node.js + mongoDB + glup 搭建的电影网站 | 一抹阳光 - qirenji.info | IT技术分享</title>
+    <title>Node.js + mongoDB + glup 搭建的电影网站 | 一抹阳光 - qirenji.com | IT技术分享</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -24,22 +24,22 @@
 <meta name="keywords" content="Node,mongodb,电影网站">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js + mongoDB + glup 搭建的电影网站">
-<meta property="og:url" content="http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/index.html">
-<meta property="og:site_name" content="一抹阳光 - qirenji.info">
+<meta property="og:url" content="http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/index.html">
+<meta property="og:site_name" content="一抹阳光 - qirenji.com">
 <meta property="og:description" content="Node.js + mongoDB + glup 搭建的电影网站前言此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。 github地址：https://github.com/qirenji/movie 实现功能 [x] 前台电影展示页 [x] 电影详情页 [x] 后台电影管理中心（电影录入、电影修改） [x] 用户登录注册">
 <meta property="og:locale" content="zh-CH">
-<meta property="og:image" content="http://www.qirenji.info/img/movie-node/index.png">
-<meta property="og:image" content="http://www.qirenji.info/img/movie-node/login.png">
-<meta property="og:image" content="http://www.qirenji.info/img/movie-node/admin.png">
-<meta property="og:image" content="http://www.qirenji.info/img/movie-node/movielist.png">
-<meta property="og:image" content="http://www.qirenji.info/img/movie-node/category.png">
-<meta property="og:updated_time" content="2017-08-29T07:41:25.000Z">
+<meta property="og:image" content="http://www.qirenji.com/img/movie-node/index.png">
+<meta property="og:image" content="http://www.qirenji.com/img/movie-node/login.png">
+<meta property="og:image" content="http://www.qirenji.com/img/movie-node/admin.png">
+<meta property="og:image" content="http://www.qirenji.com/img/movie-node/movielist.png">
+<meta property="og:image" content="http://www.qirenji.com/img/movie-node/category.png">
+<meta property="og:updated_time" content="2018-08-22T12:19:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js + mongoDB + glup 搭建的电影网站">
 <meta name="twitter:description" content="Node.js + mongoDB + glup 搭建的电影网站前言此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。 github地址：https://github.com/qirenji/movie 实现功能 [x] 前台电影展示页 [x] 电影详情页 [x] 后台电影管理中心（电影录入、电影修改） [x] 用户登录注册">
-<meta name="twitter:image" content="http://www.qirenji.info/img/movie-node/index.png">
+<meta name="twitter:image" content="http://www.qirenji.com/img/movie-node/index.png">
     
-        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.info" href="/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="一抹阳光 - qirenji.com" href="/atom.xml">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="/css/style.css?v=1.6.10">
@@ -118,20 +118,6 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://movie.qirenji.com" target="_blank" >
-                <i class="icon icon-lg icon-film"></i>
-                Node电影网站
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="http://chat.qirenji.com" target="_blank" >
-                <i class="icon icon-lg icon-globe"></i>
-                智能聊天室
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
               <a href="http://github.qirenji.com" target="_blank" >
                 <i class="icon icon-lg icon-star"></i>
                 GitHub排行榜
@@ -139,7 +125,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/about"  >
+              <a href="http://www.qirenji.com/resume/"  >
                 <i class="icon icon-lg icon-user"></i>
                 关于我
               </a>
@@ -244,7 +230,7 @@
 <li>[x] 用户登录注册注销功能</li>
 <li>[x] 后台用户管理中心（用户录入、用户修改）</li>
 <li>[x] 电影评论</li>
-<li>[x] 电影分类管理（分类录入、修改）<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2>在线预览地址 👉 <a href="http://movie.qirenji.com/" target="_blank" rel="noopener">http://movie.qirenji.com/</a></li>
+<li>[x] 电影分类管理（分类录入、修改）<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2>在线预览地址 👉 <a href="http://movie.qirenji.com/" target="_blank" rel="noopener">http://movie.qirenji.com/</a> [已停止维护]</li>
 </ul>
 <p>电影首页</p>
 <figure class="image-bubble">
@@ -322,9 +308,9 @@
 <li>学会了使用 bcryptjs（Node.js 的一个加解密模块）对密码进行 “hash + salt” 处理</li>
 <li>借助会话与 cookie 进行用户识别和持久化</li>
 </ol>
-<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p>
+<h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com/about">http://www.qirenji.com/about</a></p>
 <p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p>
-<p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>
+<p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>
 
         </div>
 
@@ -332,16 +318,16 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-29T07:41:25.000Z" itemprop="dateUpdated">2017-08-29 15:41:25</time>
+    Last updated: <time datetime="2018-08-22T12:19:50.000Z" itemprop="dateUpdated">2018-08-22 20:19:50</time>
 </span><br>
 
 
         
-        转载请注明出处：<a href="/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" target="_blank" rel="external">http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/</a>
+        转载请注明出处：<a href="/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" target="_blank" rel="external">http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/</a>
         
     </div>
     <footer>
-        <a href="http://www.qirenji.info">
+        <a href="http://www.qirenji.com">
             <img src="/img/avatar.jpg" alt="Qi Renji">
             Qi Renji
         </a>
@@ -367,7 +353,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.com&pic=http://www.qirenji.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -377,22 +363,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.com&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&via=http://www.qirenji.info" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.com&url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&via=http://www.qirenji.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -500,7 +486,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&pic=http://www.qirenji.info/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.com&pic=http://www.qirenji.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -510,22 +496,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&title=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.com&source=天才在于积累，聪明在于勤奋。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.info&url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&via=http://www.qirenji.info" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node.js + mongoDB + glup 搭建的电影网站》 — 一抹阳光 - qirenji.com&url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/&via=http://www.qirenji.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -536,7 +522,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwUlEQVR42u3aQW7jMBAEQP//01lgT7sILHfPiEoOpZMRRTKLAThMD1+v+Pr6e33/fP2b//7k+5V8Y/vU8MLDw8MbDf36dfmg3z11/Tl59vqpt1OAh4eHd4yXFIMEfGJlzosTHh4e3m/j5ct0vvlONs35m/Hw8PB+Gy8h5UO/fv8sEMHDw8N7kpdsedtFvJ2C5G0HsxY8PDy8mLdpgP3U54f6e3h4eHjlIr6JGNq7eYxbjBYPDw/vAG/TypoNLlnu84A4mnQ8PDy8W3l5eJpsZ9tpyqcsR/73LB4eHt4xXhLUJkt/vmS38evsN/Hw8PBO8PKBbhpas1g233bj4eHhPcmbbVWvh9uy2+NWqwYYHh4e3k282ca3DSlmccOqtYaHh4d3mNeuq8m2e1aWNq21tzEuHh4e3k28tgBsgon8wMFsE//hZAQeHh7eTbz28NMGkJeWfZSMh4eH9ySvbV/NQts8pGjjjOhsFx4eHt6Cl0eiX4srKQz7kGLYGMPDw8Mb8ZLoYTOUPH6dlagPd/Hw8PBu5eVzsG/8zwrP7O6r/RPj4eHhlby8vZRvc9sikYQddTMMDw8P7wAv/8c+D2HzAtMeJmgjEjw8PLwTvNn2N89O98i2RfchjMDDw8Nb8/Yb3Nnd2XGr9i4eHh7eCV4SNBTzFB8y2JSEooDh4eHhHePtDzxdv6eNG9o4uD46gIeHh7fgbRb3PMCdHSzIY4g6pcbDw8Nb8JJtdHvsqd2I5+9sywMeHh7eaV5bBmZHrPLSsikPeHh4eOd47VGAtpzkcUNenK4nFA8PD+8Z3r5ZtZ/dNqQoCgMeHh7eMV4byOatr007bcb+kFLj4eHhPci7a6udhx1tFLIqDHh4eHjHeG3AuikGszevCgMeHh5ezJsdDsi/7N7DAXh4eHg/y2sbYPvikbf8Z1Ow6u/h4eHhXY3wD5KUac6P4nc+AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3aQXLbQAwEQP//08rVKUfyDLBrK1XNk4qWyO09kPAAHx/x8fh0fD3/7PPXX329QvL9Z3c/duDh4eEtlp4sK1/is4W+PvN6nfma8fDw8G7zksvlj/J245KF5luMh4eH9868pOBOCuLkJYGHh4f3P/LamKA9375y8PDw8H6Xt4kSZi+JZOmbYh0PDw/vHi/vIr3P5yv9PTw8PLx1Vz0PVdsHd77Q9pp/XR8PDw/vAm8zOtCW0fly2/bbN5EEHh4e3jXeLDiYtcTqJZbfx8PDw7vNS0rkvMzNRwGS86twFg8PD+8ab1PmJjfOS+1Zcf/NevDw8PCu8fJW09lIN38ZzAIRPDw8vLO8Nj5IevRtUZ5vYjuGhYeHh/czvFmE2oYLyV/b0avofwU8PDy8o7z9WMA+LE62uLgLHh4e3mXefuwpjxhmg1b5oAAeHh7ePd6snE1eCZsCel9q4+Hh4d3jtY/sdnTgMTragvvpFfDw8PCu8Wax6QzQpqyrmBgPDw/vl3ivH9PtuEBeoB8YYsDDw8O7xstL1dkY62b0qt0IPDw8vNu89pXQjgskcW3SDJsNJeDh4eHd4yWxwmagatYwO9Vsw8PDw/sZ3iZ6yMvopNnWvlSe3h0PDw/vKO/10mcDWPmQwSxKzteMh4eHd5u3L4LzCDhvaLUBx4H/FfDw8PACXv4IbqPYdgva7wzzXTw8PLw1bxaV5i+DR3Dsxwv+8Ss8PDy8o7xHeczig3azNvHu05kyPDw8vEO8dqSpjQ/ayHW2rSsYHh4e3ojXhgJtADEbLGjDkae/xcPDw7vGyx/xSWGd3L49377G8PDw8N6f1wYWwwd9HCvj4eHhvQ8vaYPty+jZphwoqfHw8PBi3qzxn48FtKV222A7FuPi4eHhHW2AzUrhG+3/oqTGw8PDO8n7A0hxl4QRQHmEAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -579,6 +565,23 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
 
 
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>一抹阳光 - qirenji.info</title>
+  <title>一抹阳光 - qirenji.com</title>
   
   <subtitle>IT技术分享</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.qirenji.info/"/>
+  <link href="http://www.qirenji.com/"/>
   <updated>2017-12-11T08:35:07.000Z</updated>
-  <id>http://www.qirenji.info/</id>
+  <id>http://www.qirenji.com/</id>
   
   <author>
     <name>Qi Renji</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>JS数组常用操作</title>
-    <link href="http://www.qirenji.info/2017/11/21/JS%E4%B8%AD%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
-    <id>http://www.qirenji.info/2017/11/21/JS中数组常用操作/</id>
+    <link href="http://www.qirenji.com/2017/11/21/JS%E4%B8%AD%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://www.qirenji.com/2017/11/21/JS中数组常用操作/</id>
     <published>2017-11-21T12:27:55.000Z</published>
     <updated>2017-12-11T08:35:07.000Z</updated>
     
@@ -34,21 +34,21 @@
     
     </summary>
     
-      <category term="JS基础" scheme="http://www.qirenji.info/categories/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="JS基础" scheme="http://www.qirenji.com/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="数组" scheme="http://www.qirenji.info/categories/JS%E5%9F%BA%E7%A1%80/%E6%95%B0%E7%BB%84/"/>
+      <category term="数组" scheme="http://www.qirenji.com/categories/JS%E5%9F%BA%E7%A1%80/%E6%95%B0%E7%BB%84/"/>
     
     
-      <category term="JS基础" scheme="http://www.qirenji.info/tags/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="JS基础" scheme="http://www.qirenji.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="数组操作" scheme="http://www.qirenji.info/tags/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/"/>
+      <category term="数组操作" scheme="http://www.qirenji.com/tags/%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>JS字符串常用操作</title>
-    <link href="http://www.qirenji.info/2017/11/21/JS%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
-    <id>http://www.qirenji.info/2017/11/21/JS字符串常用操作/</id>
+    <link href="http://www.qirenji.com/2017/11/21/JS%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://www.qirenji.com/2017/11/21/JS字符串常用操作/</id>
     <published>2017-11-21T12:27:55.000Z</published>
     <updated>2017-11-22T02:38:45.000Z</updated>
     
@@ -64,21 +64,21 @@
     
     </summary>
     
-      <category term="JS基础" scheme="http://www.qirenji.info/categories/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="JS基础" scheme="http://www.qirenji.com/categories/JS%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="字符串" scheme="http://www.qirenji.info/categories/JS%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="字符串" scheme="http://www.qirenji.com/categories/JS%E5%9F%BA%E7%A1%80/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-      <category term="JS基础" scheme="http://www.qirenji.info/tags/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="JS基础" scheme="http://www.qirenji.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="字符串操作" scheme="http://www.qirenji.info/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/"/>
+      <category term="字符串操作" scheme="http://www.qirenji.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>数组去重的方法</title>
-    <link href="http://www.qirenji.info/2017/08/25/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>http://www.qirenji.info/2017/08/25/数组去重的方法/</id>
+    <link href="http://www.qirenji.com/2017/08/25/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.qirenji.com/2017/08/25/数组去重的方法/</id>
     <published>2017-08-25T07:03:25.000Z</published>
     <updated>2017-08-25T07:07:11.000Z</updated>
     
@@ -93,23 +93,23 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="http://www.qirenji.info/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.qirenji.com/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="http://www.qirenji.info/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.qirenji.com/tags/JavaScript/"/>
     
-      <category term="ES6" scheme="http://www.qirenji.info/tags/ES6/"/>
+      <category term="ES6" scheme="http://www.qirenji.com/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js打造的音乐播放器</title>
-    <link href="http://www.qirenji.info/2017/08/14/Vue-js%E6%89%93%E9%80%A0%E7%9A%84%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
-    <id>http://www.qirenji.info/2017/08/14/Vue-js打造的音乐播放器/</id>
+    <link href="http://www.qirenji.com/2017/08/14/Vue-js%E6%89%93%E9%80%A0%E7%9A%84%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    <id>http://www.qirenji.com/2017/08/14/Vue-js打造的音乐播放器/</id>
     <published>2017-08-14T04:17:34.000Z</published>
-    <updated>2017-08-29T07:41:33.000Z</updated>
+    <updated>2018-08-22T12:20:33.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Vue-js打造的音乐播放器"><a href="#Vue-js打造的音乐播放器" class="headerlink" title="Vue.js打造的音乐播放器"></a>Vue.js打造的音乐播放器</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vue学习项目，基于qq音乐API，完成音乐播放和搜索等。</p><p>Github地址：<a href="https://github.com/qirenji/music-vue" target="_blank" rel="noopener">https://github.com/qirenji/music-vue</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 音乐播放</li><li>[x] 音乐控制和自动循环播放</li><li>[x] 音乐搜索</li><li>[x] 播放详情页</li><li>[x] 音乐进度拖拽</li><li>[x] 个人中心模版</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://music.qirenji.com/" target="_blank" rel="noopener">http://music.qirenji.com/</a></p><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Vue-cli</strong>：vue手脚架工具。</li><li><strong>vue-router</strong>：页面路由切换。</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>Vuex</strong>：实现不同组件间的状态共享。</li><li><strong>ES6</strong>：箭头函数等语法很好用。</li><li><strong>localStorage</strong>：本地存储，保存歌单和个性化设置。</li><li><strong>Express</strong>：后端调用qq音乐API，返回数据。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>项目使用vue-cli手脚架工具搭建，大部分源文件放在src目录下，所有这里只列出src目录结构，其他请参考<a href="https://segmentfault.com/a/1190000007880723" target="_blank" rel="noopener">vue-cli手脚架</a>工具<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- src                              // 源码目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- components                   // 公共组件</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- about                    // 关于页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- find                     // 搜索页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- footer                   // mini播放器</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- header                   // 页面头部</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- musiclist                // 歌曲列表页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- play                     // 播放详情页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- social                   // 个人中心页</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- common                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- style                    // 公用sass样式（默认样式）</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- router                       // 配置页面路由</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.vue                      // 页面入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- main.js                      // 程序入口文件，加载各种公共组件</span></span><br></pre></td></tr></table></figure></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>深入学习vue.js全家桶，使用Vuex管理组件状态很方便。</li><li>事先要先想好整个页面结构和组件划分，方便快速开发。</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue-js打造的音乐播放器"><a href="#Vue-js打造的音乐播放器" class="headerlink" title="Vue.js打造的音乐播放器"></a>Vue.js打造的音乐播放器</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vue学习项目，基于qq音乐API，完成音乐播放和搜索等。</p><p>Github地址：<a href="https://github.com/qirenji/music-vue" target="_blank" rel="noopener">https://github.com/qirenji/music-vue</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 音乐播放</li><li>[x] 音乐控制和自动循环播放</li><li>[x] 音乐搜索</li><li>[x] 播放详情页</li><li>[x] 音乐进度拖拽</li><li>[x] 个人中心模版</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://music.qirenji.com/" target="_blank" rel="noopener">http://music.qirenji.com/</a></p><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Vue-cli</strong>：vue手脚架工具。</li><li><strong>vue-router</strong>：页面路由切换。</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>Vuex</strong>：实现不同组件间的状态共享。</li><li><strong>ES6</strong>：箭头函数等语法很好用。</li><li><strong>localStorage</strong>：本地存储，保存歌单和个性化设置。</li><li><strong>Express</strong>：后端调用qq音乐API，返回数据。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>项目使用vue-cli手脚架工具搭建，大部分源文件放在src目录下，所有这里只列出src目录结构，其他请参考<a href="https://segmentfault.com/a/1190000007880723" target="_blank" rel="noopener">vue-cli手脚架</a>工具<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- src                              // 源码目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- components                   // 公共组件</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- about                    // 关于页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- find                     // 搜索页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- footer                   // mini播放器</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- header                   // 页面头部</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- musiclist                // 歌曲列表页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- play                     // 播放详情页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- social                   // 个人中心页</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- common                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- style                    // 公用sass样式（默认样式）</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- router                       // 配置页面路由</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.vue                      // 页面入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- main.js                      // 程序入口文件，加载各种公共组件</span></span><br></pre></td></tr></table></figure></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>深入学习vue.js全家桶，使用Vuex管理组件状态很方便。</li><li>事先要先想好整个页面结构和组件划分，方便快速开发。</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com/about">http://www.qirenji.com/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>]]></content>
     
     <summary type="html">
     
@@ -120,25 +120,25 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/categories/Vue/"/>
     
-      <category term="实战项目" scheme="http://www.qirenji.info/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+      <category term="实战项目" scheme="http://www.qirenji.com/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/tags/Vue/"/>
     
-      <category term="Vue音乐播放器" scheme="http://www.qirenji.info/tags/Vue%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+      <category term="Vue音乐播放器" scheme="http://www.qirenji.com/tags/Vue%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>Node.js + mongoDB + glup 搭建的电影网站</title>
-    <link href="http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-%E6%90%AD%E5%BB%BA%E7%9A%84%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
-    <id>http://www.qirenji.info/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/</id>
+    <link href="http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-%E6%90%AD%E5%BB%BA%E7%9A%84%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
+    <id>http://www.qirenji.com/2017/08/10/Node-js-mongoDB-glup-搭建的电影网站/</id>
     <published>2017-08-10T07:43:27.000Z</published>
-    <updated>2017-08-29T07:41:25.000Z</updated>
+    <updated>2018-08-22T12:19:50.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Node-js-mongoDB-glup-搭建的电影网站"><a href="#Node-js-mongoDB-glup-搭建的电影网站" class="headerlink" title="Node.js + mongoDB + glup 搭建的电影网站"></a>Node.js + mongoDB + glup 搭建的电影网站</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。</p><p>github地址：<a href="https://github.com/qirenji/movie" target="_blank" rel="noopener">https://github.com/qirenji/movie</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 前台电影展示页</li><li>[x] 电影详情页</li><li>[x] 后台电影管理中心（电影录入、电影修改）</li><li>[x] 用户登录注册注销功能</li><li>[x] 后台用户管理中心（用户录入、用户修改）</li><li>[x] 电影评论</li><li>[x] 电影分类管理（分类录入、修改）<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2>在线预览地址 👉 <a href="http://movie.qirenji.com/" target="_blank" rel="noopener">http://movie.qirenji.com/</a></li></ul><p>电影首页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/index.png" alt="电影首页" title="">                </div>                <div class="image-caption">电影首页</div>            </figure><p>登录页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/login.png" alt="登录页" title="">                </div>                <div class="image-caption">登录页</div>            </figure><p>电影录入页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/admin.png" alt="电影录入页" title="">                </div>                <div class="image-caption">电影录入页</div>            </figure><p>电影列表页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/movielist.png" alt="电影列表页" title="">                </div>                <div class="image-caption">电影列表页</div>            </figure><p>电影分类页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/category.png" alt="电影分类页" title="">                </div>                <div class="image-caption">电影分类页</div>            </figure><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p>【前端】</p><ul><li>HTML/CSS/JS：亘古不变三件套</li><li>ES6：ECMAScript 新一代语法，这也是以后的趋势</li><li>Monment.js：时间日期格式化插件</li><li>jQuery：主要用到 jQuery 的 ajax 方法处理异步请求和 DOM 操作</li><li>Bootstrap：页面 UI 框架，天然响应式</li><li>用SCSS做CSS预处理语言。</li></ul><p>【后端】</p><ul><li>pug：pug (以前的 jade) 是一个高性能的模板引擎，用来生成 HTML</li><li>Node.js：整个后端由 Node.js 驱动；用 npm 安装资源文件</li><li>Express：一个基于 Node.js 平台的 web 开发框架，由路由和中间件构成</li></ul><p>【数据库】</p><ul><li>mongoDB：进行数据存储的 NoSQL 数据库</li></ul><p>【自动化构建】</p><ul><li>gulp：前端自动化构建工具</li></ul><p>【部署工具】</p><ul><li>pm2:  Node 应用的进程管理器。</li></ul><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- movie-node                       // 项目根目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- app                          // 后台相关目录</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- controllers              // 控制层</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- models                   // 数据模型</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- schemas                  // 模型结构</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- views                    // 视图层</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- config                       // 路由管理</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- movie-backup                 // 数据库备份</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- public                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- dist                     // 公共资源打包目录</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- images                   // 公用图片</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- sass                     // 公用样式（初始化等）</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- scripts                  // 脚本交互文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.js                       // 程序入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- ecosystem.json               // pm2配置文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- gulpfile.js                  // gulp配置文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- package.json                 // 项目配置信息</span></span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>熟悉了 pug 的语法及其在 Node.js 中的使用方法</li><li>初步掌握了 express 框架的使用，如何处理路由以及中间件</li><li>掌握了 mongoose 在 Node.js 中如何连接数据库，以及 schema、model 的使用</li><li>前后端数据传递与视图展现的流程</li><li>学会了使用 bcryptjs（Node.js 的一个加解密模块）对密码进行 “hash + salt” 处理</li><li>借助会话与 cookie 进行用户识别和持久化</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Node-js-mongoDB-glup-搭建的电影网站"><a href="#Node-js-mongoDB-glup-搭建的电影网站" class="headerlink" title="Node.js + mongoDB + glup 搭建的电影网站"></a>Node.js + mongoDB + glup 搭建的电影网站</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此项目是基于 Node.js + Express + mongoDB + Bootstrap + gulp 搭建的电影网站。</p><p>github地址：<a href="https://github.com/qirenji/movie" target="_blank" rel="noopener">https://github.com/qirenji/movie</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 前台电影展示页</li><li>[x] 电影详情页</li><li>[x] 后台电影管理中心（电影录入、电影修改）</li><li>[x] 用户登录注册注销功能</li><li>[x] 后台用户管理中心（用户录入、用户修改）</li><li>[x] 电影评论</li><li>[x] 电影分类管理（分类录入、修改）<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2>在线预览地址 👉 <a href="http://movie.qirenji.com/" target="_blank" rel="noopener">http://movie.qirenji.com/</a> [已停止维护]</li></ul><p>电影首页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/index.png" alt="电影首页" title="">                </div>                <div class="image-caption">电影首页</div>            </figure><p>登录页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/login.png" alt="登录页" title="">                </div>                <div class="image-caption">登录页</div>            </figure><p>电影录入页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/admin.png" alt="电影录入页" title="">                </div>                <div class="image-caption">电影录入页</div>            </figure><p>电影列表页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/movielist.png" alt="电影列表页" title="">                </div>                <div class="image-caption">电影列表页</div>            </figure><p>电影分类页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/movie-node/category.png" alt="电影分类页" title="">                </div>                <div class="image-caption">电影分类页</div>            </figure><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><p>【前端】</p><ul><li>HTML/CSS/JS：亘古不变三件套</li><li>ES6：ECMAScript 新一代语法，这也是以后的趋势</li><li>Monment.js：时间日期格式化插件</li><li>jQuery：主要用到 jQuery 的 ajax 方法处理异步请求和 DOM 操作</li><li>Bootstrap：页面 UI 框架，天然响应式</li><li>用SCSS做CSS预处理语言。</li></ul><p>【后端】</p><ul><li>pug：pug (以前的 jade) 是一个高性能的模板引擎，用来生成 HTML</li><li>Node.js：整个后端由 Node.js 驱动；用 npm 安装资源文件</li><li>Express：一个基于 Node.js 平台的 web 开发框架，由路由和中间件构成</li></ul><p>【数据库】</p><ul><li>mongoDB：进行数据存储的 NoSQL 数据库</li></ul><p>【自动化构建】</p><ul><li>gulp：前端自动化构建工具</li></ul><p>【部署工具】</p><ul><li>pm2:  Node 应用的进程管理器。</li></ul><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- movie-node                       // 项目根目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- app                          // 后台相关目录</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- controllers              // 控制层</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- models                   // 数据模型</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- schemas                  // 模型结构</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- views                    // 视图层</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- config                       // 路由管理</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- movie-backup                 // 数据库备份</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- public                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- dist                     // 公共资源打包目录</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- images                   // 公用图片</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- sass                     // 公用样式（初始化等）</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- scripts                  // 脚本交互文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.js                       // 程序入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- ecosystem.json               // pm2配置文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- gulpfile.js                  // gulp配置文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- package.json                 // 项目配置信息</span></span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>熟悉了 pug 的语法及其在 Node.js 中的使用方法</li><li>初步掌握了 express 框架的使用，如何处理路由以及中间件</li><li>掌握了 mongoose 在 Node.js 中如何连接数据库，以及 schema、model 的使用</li><li>前后端数据传递与视图展现的流程</li><li>学会了使用 bcryptjs（Node.js 的一个加解密模块）对密码进行 “hash + salt” 处理</li><li>借助会话与 cookie 进行用户识别和持久化</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com/about">http://www.qirenji.com/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>]]></content>
     
     <summary type="html">
     
@@ -149,27 +149,27 @@
     
     </summary>
     
-      <category term="Node" scheme="http://www.qirenji.info/categories/Node/"/>
+      <category term="Node" scheme="http://www.qirenji.com/categories/Node/"/>
     
-      <category term="实战项目" scheme="http://www.qirenji.info/categories/Node/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+      <category term="实战项目" scheme="http://www.qirenji.com/categories/Node/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Node" scheme="http://www.qirenji.info/tags/Node/"/>
+      <category term="Node" scheme="http://www.qirenji.com/tags/Node/"/>
     
-      <category term="mongodb" scheme="http://www.qirenji.info/tags/mongodb/"/>
+      <category term="mongodb" scheme="http://www.qirenji.com/tags/mongodb/"/>
     
-      <category term="电影网站" scheme="http://www.qirenji.info/tags/%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
+      <category term="电影网站" scheme="http://www.qirenji.com/tags/%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>城市选择器插件（三级联动）</title>
-    <link href="http://www.qirenji.info/2017/08/08/%E5%9F%8E%E5%B8%82%E9%80%89%E6%8B%A9%E5%99%A8%E6%8F%92%E4%BB%B6%EF%BC%88%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8%EF%BC%89/"/>
-    <id>http://www.qirenji.info/2017/08/08/城市选择器插件（三级联动）/</id>
+    <link href="http://www.qirenji.com/2017/08/08/%E5%9F%8E%E5%B8%82%E9%80%89%E6%8B%A9%E5%99%A8%E6%8F%92%E4%BB%B6%EF%BC%88%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8%EF%BC%89/"/>
+    <id>http://www.qirenji.com/2017/08/08/城市选择器插件（三级联动）/</id>
     <published>2017-08-08T14:49:20.000Z</published>
-    <updated>2017-08-28T08:58:31.000Z</updated>
+    <updated>2018-08-22T12:18:08.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="城市选择器-三级联动"><a href="#城市选择器-三级联动" class="headerlink" title="城市选择器(三级联动)"></a>城市选择器(三级联动)</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个中国地区的三级联动数据，也可以自定义数据。</p><p>github地址: <a href="https://github.com/qirenji/select-plugin" target="_blank" rel="noopener">https://github.com/qirenji/select-plugin</a></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="默认数据"><a href="#默认数据" class="headerlink" title="默认数据"></a>默认数据</h3><p>引入js文件。</p><p>在html文件中插入</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// html中添加</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"dist/all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> selector = <span class="keyword">new</span> Select(<span class="string">'.container'</span>,default_data);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>默认就可以生成中国地区的三级联动数据啦</p><h3 id="自定义数据"><a href="#自定义数据" class="headerlink" title="自定义数据"></a>自定义数据</h3><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//html中添加</span><br><span class="line">&lt;div class=<span class="string">"container1"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"dist/all.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    const text = [<span class="string">'选项1'</span>,<span class="string">'选项二'</span>,<span class="string">'选项三'</span>]</span><br><span class="line">//自定义数据</span><br><span class="line">    const data = &#123;</span><br><span class="line">       <span class="string">'province'</span>: [<span class="string">'a1'</span>, <span class="string">'a2'</span>, <span class="string">'a3'</span>],</span><br><span class="line">        <span class="string">'city'</span>: [</span><br><span class="line">                  [<span class="string">'a11'</span>, <span class="string">'a12'</span>, <span class="string">'a13'</span>],</span><br><span class="line">                  [<span class="string">'a21'</span>, <span class="string">'a22'</span>],</span><br><span class="line">                  [<span class="string">'a31'</span>, <span class="string">'a32'</span>]</span><br><span class="line">                ],</span><br><span class="line">        <span class="string">'county'</span>:  [</span><br><span class="line">                  [[<span class="string">'a111'</span>, <span class="string">'a112'</span>], [<span class="string">'a121'</span>, <span class="string">'a122'</span>], [<span class="string">'a131'</span>, <span class="string">'a132'</span>]],</span><br><span class="line">                  [[<span class="string">'a211'</span>, <span class="string">'a212'</span>], [<span class="string">'a221'</span>, <span class="string">'a222'</span>]],</span><br><span class="line">                  [[<span class="string">'a311'</span>], [<span class="string">'a312'</span>]]</span><br><span class="line">                ]</span><br><span class="line">              &#125;;</span><br><span class="line">let selector1 = new <span class="symbol">Select</span>(<span class="string">'.container1'</span>,data, text)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><ul><li>第一个参数是插件所在的父容器</li><li>第二个参数是插件所要选择的数据（json形式）</li><li>第三个参数是选择器前面的提示词语</li></ul><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/select-plugin/city.png" alt="城市选择器插件" title="">                </div>                <div class="image-caption">城市选择器插件</div>            </figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/select-plugin/custom.png" alt="自定义数据选择" title="">                </div>                <div class="image-caption">自定义数据选择</div>            </figure><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="城市选择器-三级联动"><a href="#城市选择器-三级联动" class="headerlink" title="城市选择器(三级联动)"></a>城市选择器(三级联动)</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>一个中国地区的三级联动数据，也可以自定义数据。</p><p>github地址: <a href="https://github.com/qirenji/select-plugin" target="_blank" rel="noopener">https://github.com/qirenji/select-plugin</a></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="默认数据"><a href="#默认数据" class="headerlink" title="默认数据"></a>默认数据</h3><p>引入js文件。</p><p>在html文件中插入</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// html中添加</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"dist/all.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> selector = <span class="keyword">new</span> Select(<span class="string">'.container'</span>,default_data);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>默认就可以生成中国地区的三级联动数据啦</p><h3 id="自定义数据"><a href="#自定义数据" class="headerlink" title="自定义数据"></a>自定义数据</h3><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//html中添加</span><br><span class="line">&lt;div class=<span class="string">"container1"</span>&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"dist/all.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    const text = [<span class="string">'选项1'</span>,<span class="string">'选项二'</span>,<span class="string">'选项三'</span>]</span><br><span class="line">//自定义数据</span><br><span class="line">    const data = &#123;</span><br><span class="line">       <span class="string">'province'</span>: [<span class="string">'a1'</span>, <span class="string">'a2'</span>, <span class="string">'a3'</span>],</span><br><span class="line">        <span class="string">'city'</span>: [</span><br><span class="line">                  [<span class="string">'a11'</span>, <span class="string">'a12'</span>, <span class="string">'a13'</span>],</span><br><span class="line">                  [<span class="string">'a21'</span>, <span class="string">'a22'</span>],</span><br><span class="line">                  [<span class="string">'a31'</span>, <span class="string">'a32'</span>]</span><br><span class="line">                ],</span><br><span class="line">        <span class="string">'county'</span>:  [</span><br><span class="line">                  [[<span class="string">'a111'</span>, <span class="string">'a112'</span>], [<span class="string">'a121'</span>, <span class="string">'a122'</span>], [<span class="string">'a131'</span>, <span class="string">'a132'</span>]],</span><br><span class="line">                  [[<span class="string">'a211'</span>, <span class="string">'a212'</span>], [<span class="string">'a221'</span>, <span class="string">'a222'</span>]],</span><br><span class="line">                  [[<span class="string">'a311'</span>], [<span class="string">'a312'</span>]]</span><br><span class="line">                ]</span><br><span class="line">              &#125;;</span><br><span class="line">let selector1 = new <span class="symbol">Select</span>(<span class="string">'.container1'</span>,data, text)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><ul><li>第一个参数是插件所在的父容器</li><li>第二个参数是插件所要选择的数据（json形式）</li><li>第三个参数是选择器前面的提示词语</li></ul><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/select-plugin/city.png" alt="城市选择器插件" title="">                </div>                <div class="image-caption">城市选择器插件</div>            </figure><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/select-plugin/custom.png" alt="自定义数据选择" title="">                </div>                <div class="image-caption">自定义数据选择</div>            </figure><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com/about">http://www.qirenji.com/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>]]></content>
     
     <summary type="html">
     
@@ -180,19 +180,19 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="http://www.qirenji.info/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.qirenji.com/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="http://www.qirenji.info/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.qirenji.com/tags/JavaScript/"/>
     
-      <category term="组件" scheme="http://www.qirenji.info/tags/%E7%BB%84%E4%BB%B6/"/>
+      <category term="组件" scheme="http://www.qirenji.com/tags/%E7%BB%84%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>gulp执行顺序(gulp-sequence)</title>
-    <link href="http://www.qirenji.info/2017/08/02/gulp%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F-gulp-sequence/"/>
-    <id>http://www.qirenji.info/2017/08/02/gulp执行顺序-gulp-sequence/</id>
+    <link href="http://www.qirenji.com/2017/08/02/gulp%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F-gulp-sequence/"/>
+    <id>http://www.qirenji.com/2017/08/02/gulp执行顺序-gulp-sequence/</id>
     <published>2017-08-02T02:40:23.000Z</published>
     <updated>2017-08-25T02:43:04.000Z</updated>
     
@@ -208,25 +208,25 @@
     
     </summary>
     
-      <category term="工具" scheme="http://www.qirenji.info/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://www.qirenji.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="gulp" scheme="http://www.qirenji.info/categories/%E5%B7%A5%E5%85%B7/gulp/"/>
+      <category term="gulp" scheme="http://www.qirenji.com/categories/%E5%B7%A5%E5%85%B7/gulp/"/>
     
     
-      <category term="gulp" scheme="http://www.qirenji.info/tags/gulp/"/>
+      <category term="gulp" scheme="http://www.qirenji.com/tags/gulp/"/>
     
-      <category term="自动化工具" scheme="http://www.qirenji.info/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+      <category term="自动化工具" scheme="http://www.qirenji.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js开源的CNode社区</title>
-    <link href="http://www.qirenji.info/2017/08/01/Vue-js%E5%BC%80%E6%BA%90%E7%9A%84CNode%E7%A4%BE%E5%8C%BA/"/>
-    <id>http://www.qirenji.info/2017/08/01/Vue-js开源的CNode社区/</id>
+    <link href="http://www.qirenji.com/2017/08/01/Vue-js%E5%BC%80%E6%BA%90%E7%9A%84CNode%E7%A4%BE%E5%8C%BA/"/>
+    <id>http://www.qirenji.com/2017/08/01/Vue-js开源的CNode社区/</id>
     <published>2017-08-01T02:08:02.000Z</published>
-    <updated>2017-08-29T07:37:39.000Z</updated>
+    <updated>2018-08-22T12:20:21.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Vue-js开源的CNode社区"><a href="#Vue-js开源的CNode社区" class="headerlink" title="Vue.js开源的CNode社区"></a>Vue.js开源的CNode社区</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vue练习项目，利用cnode社区提供的api实现，需去cnode个人中心登陆查看accesstoken才可以登录。<br>Github地址：<a href="https://github.com/qirenji/cnode-vue" target="_blank" rel="noopener">https://github.com/qirenji/cnode-vue</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 首页列表，下拉加载 – 完成</li><li>[x] 主题详情，回复，点赞 – 完成</li><li>[x] 登录,退出 –完成</li><li>[x] 消息列表，消息提醒，消息标记为已读 – 完成</li><li>[x] 发布话题 – 完成</li><li>[x] 个人中心 – 完成</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://cnode.qirenji.com/" target="_blank" rel="noopener">http://cnode.qirenji.com/</a></p><p>首页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/page.png" alt="首页" title="">                </div>                <div class="image-caption">首页</div>            </figure><p>文章详情页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/pagelist.png" alt="文章详情页" title="">                </div>                <div class="image-caption">文章详情页</div>            </figure><p>侧边栏</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/aside.png" alt="侧边栏" title="">                </div>                <div class="image-caption">侧边栏</div>            </figure><p>回复页面</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/replay.png" alt="回复页面" title="">                </div>                <div class="image-caption">回复页面</div>            </figure><p>发布话题页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/newartical.png" alt="发布话题页" title="">                </div>                <div class="image-caption">发布话题页</div>            </figure><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Vue-cli</strong>：vue手脚架工具。</li><li><strong>Vuex</strong>：实现不同组件间的状态共享。</li><li><strong>vue-router</strong>：页面路由切换。</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>Moment.js</strong>：格式化时间。</li><li><strong>ES6</strong>：箭头函数等语法很好用。</li><li><strong>localStorage</strong>：保存用户信息。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>项目使用vue-cli手脚架工具搭建，大部分源文件放在src目录下，所有这里只列出src目录结构，其他请参考<a href="https://segmentfault.com/a/1190000007880723" target="_blank" rel="noopener">vue-cli手脚架</a>工具<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- src                              // 源码目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- components                   // 公共组件</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- about                    // 关于页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- asidemenu                // 侧边栏页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- content                  // 文章列表页和文章详情页 </span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- header                   // 首页头部</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- info                     // 个人中心页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- login                    // 登陆页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- newarticle               // 新建话题页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- user                     // 用户详情页</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- common                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- style                    // 公用sass样式（默认样式）</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- icons                    // 公用svg图标页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- js                       // 公用javascript</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- router                       // 配置页面路由</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.vue                      // 页面入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- main.js                      // 程序入口文件，加载各种公共组件</span></span><br></pre></td></tr></table></figure></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>深入学习vue.js全家桶，使用Vuex管理组件状态很方便。</li><li>事先要先想好整个页面结构和组件划分，方便快速开发。</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue-js开源的CNode社区"><a href="#Vue-js开源的CNode社区" class="headerlink" title="Vue.js开源的CNode社区"></a>Vue.js开源的CNode社区</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>vue练习项目，利用cnode社区提供的api实现，需去cnode个人中心登陆查看accesstoken才可以登录。<br>Github地址：<a href="https://github.com/qirenji/cnode-vue" target="_blank" rel="noopener">https://github.com/qirenji/cnode-vue</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 首页列表，下拉加载 – 完成</li><li>[x] 主题详情，回复，点赞 – 完成</li><li>[x] 登录,退出 –完成</li><li>[x] 消息列表，消息提醒，消息标记为已读 – 完成</li><li>[x] 发布话题 – 完成</li><li>[x] 个人中心 – 完成</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://cnode.qirenji.com/" target="_blank" rel="noopener">http://cnode.qirenji.com/</a></p><p>首页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/page.png" alt="首页" title="">                </div>                <div class="image-caption">首页</div>            </figure><p>文章详情页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/pagelist.png" alt="文章详情页" title="">                </div>                <div class="image-caption">文章详情页</div>            </figure><p>侧边栏</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/aside.png" alt="侧边栏" title="">                </div>                <div class="image-caption">侧边栏</div>            </figure><p>回复页面</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/replay.png" alt="回复页面" title="">                </div>                <div class="image-caption">回复页面</div>            </figure><p>发布话题页</p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/cnode-vue/newartical.png" alt="发布话题页" title="">                </div>                <div class="image-caption">发布话题页</div>            </figure><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Vue-cli</strong>：vue手脚架工具。</li><li><strong>Vuex</strong>：实现不同组件间的状态共享。</li><li><strong>vue-router</strong>：页面路由切换。</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>Moment.js</strong>：格式化时间。</li><li><strong>ES6</strong>：箭头函数等语法很好用。</li><li><strong>localStorage</strong>：保存用户信息。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>项目使用vue-cli手脚架工具搭建，大部分源文件放在src目录下，所有这里只列出src目录结构，其他请参考<a href="https://segmentfault.com/a/1190000007880723" target="_blank" rel="noopener">vue-cli手脚架</a>工具<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">-- src                              // 源码目录</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- components                   // 公共组件</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- about                    // 关于页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- asidemenu                // 侧边栏页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- content                  // 文章列表页和文章详情页 </span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- header                   // 首页头部</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- info                     // 个人中心页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- login                    // 登陆页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- newarticle               // 新建话题页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- user                     // 用户详情页</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- common                       // 公用资源</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- style                    // 公用sass样式（默认样式）</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- icons                    // 公用svg图标页</span></span><br><span class="line">|<span class="string">       </span>|<span class="string">-- js                       // 公用javascript</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- router                       // 配置页面路由</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- App.vue                      // 页面入口文件</span></span><br><span class="line">|<span class="string">   </span>|<span class="string">-- main.js                      // 程序入口文件，加载各种公共组件</span></span><br></pre></td></tr></table></figure></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>深入学习vue.js全家桶，使用Vuex管理组件状态很方便。</li><li>事先要先想好整个页面结构和组件划分，方便快速开发。</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com/about">http://www.qirenji.com/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>]]></content>
     
     <summary type="html">
     
@@ -237,21 +237,21 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/categories/Vue/"/>
     
-      <category term="实战项目" scheme="http://www.qirenji.info/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+      <category term="实战项目" scheme="http://www.qirenji.com/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/tags/Vue/"/>
     
-      <category term="CNode社区" scheme="http://www.qirenji.info/tags/CNode%E7%A4%BE%E5%8C%BA/"/>
+      <category term="CNode社区" scheme="http://www.qirenji.com/tags/CNode%E7%A4%BE%E5%8C%BA/"/>
     
   </entry>
   
   <entry>
     <title>gulp学习</title>
-    <link href="http://www.qirenji.info/2017/07/31/gulp%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://www.qirenji.info/2017/07/31/gulp学习/</id>
+    <link href="http://www.qirenji.com/2017/07/31/gulp%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.qirenji.com/2017/07/31/gulp学习/</id>
     <published>2017-07-31T15:31:43.000Z</published>
     <updated>2017-08-09T02:38:31.000Z</updated>
     
@@ -266,23 +266,23 @@
     
     </summary>
     
-      <category term="工具" scheme="http://www.qirenji.info/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://www.qirenji.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="gulp" scheme="http://www.qirenji.info/categories/%E5%B7%A5%E5%85%B7/gulp/"/>
+      <category term="gulp" scheme="http://www.qirenji.com/categories/%E5%B7%A5%E5%85%B7/gulp/"/>
     
     
-      <category term="gulp" scheme="http://www.qirenji.info/tags/gulp/"/>
+      <category term="gulp" scheme="http://www.qirenji.com/tags/gulp/"/>
     
-      <category term="自动化工具" scheme="http://www.qirenji.info/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+      <category term="自动化工具" scheme="http://www.qirenji.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>webpack学习</title>
-    <link href="http://www.qirenji.info/2017/07/29/webpack%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://www.qirenji.info/2017/07/29/webpack学习/</id>
+    <link href="http://www.qirenji.com/2017/07/29/webpack%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.qirenji.com/2017/07/29/webpack学习/</id>
     <published>2017-07-29T15:50:25.000Z</published>
-    <updated>2017-07-30T15:52:32.000Z</updated>
+    <updated>2018-08-22T12:20:56.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="webpack学习"><a href="#webpack学习" class="headerlink" title="webpack学习"></a>webpack学习</h1><p>webpack室一款模块加载器兼打包工具，它能把各种资源，例如JS、样式（含less/sass）、图片等都作为模块来使用和处理。</p><p>webpack不同于gulp和grunt。</p><p>gulp是工具链、构建工具，可以配合各种插件做js压缩，css压缩，less编译 替代手工实现自动化的工具</p><pre><code>1.构建工具2.自动化3.提高效率用</code></pre><p>webpack是文件打包工具，可以把项目的各种js文、css文件等打包合并成一个或多个文件，主要用于模块化方案，预编译模块的方案。</p><pre><code>1.打包工具2.模块化识别3.编译模块代码方案用</code></pre><p>webpack的官网是 <a href="http://webpack.github.io/" target="_blank" rel="noopener">http://webpack.github.io/</a> ，文档地址是 <a href="http://webpack.github.io/docs/" target="_blank" rel="noopener">http://webpack.github.io/docs/</a> 。</p><p>webpack主要有4大核心概念</p><h2 id="Entry"><a href="#Entry" class="headerlink" title="Entry"></a>Entry</h2><p>entry 是页面入口文件配置，其语法大致为：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">entry</span>: &#123;</span><br><span class="line">        page1: <span class="string">"./page1"</span>,</span><br><span class="line">        page2: [<span class="string">"./entry1"</span>, <span class="string">"./entry2"</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="output"><a href="#output" class="headerlink" title="output"></a>output</h2><p>output 是对应输出项配置（即入口文件最终要生成什么名字的文件、存放到哪里）</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">output</span>: &#123;</span><br><span class="line">        <span class="attribute">path</span>: <span class="string">"dist/js/page"</span>,</span><br><span class="line">        filename: <span class="string">"[name].bundle.js"</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h2 id="module-loaders"><a href="#module-loaders" class="headerlink" title="module.loaders"></a>module.loaders</h2><p> module.loaders 是最关键的一块配置。它告知 webpack 每一种文件都需要使用什么加载器来处理：</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">module:</span> &#123;</span><br><span class="line">        <span class="comment">//加载器配置</span></span><br><span class="line"><span class="symbol">        loaders:</span> [</span><br><span class="line">            <span class="comment">//.css 文件使用 style-loader 和 css-loader 来处理</span></span><br><span class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.css$/</span>, <span class="string">loader:</span> <span class="string">'style-loader!css-loader'</span> &#125;,</span><br><span class="line">            <span class="comment">//.js 文件使用 jsx-loader 来编译处理</span></span><br><span class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.js$/</span>, <span class="string">loader:</span> <span class="string">'jsx-loader?harmony'</span> &#125;,</span><br><span class="line">            <span class="comment">//.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理</span></span><br><span class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.scss$/</span>, <span class="string">loader:</span> <span class="string">'style!css!sass?sourceMap'</span>&#125;,</span><br><span class="line">            <span class="comment">//图片文件使用 url-loader 来处理，小于8kb的直接转为base64</span></span><br><span class="line">            &#123; <span class="string">test:</span> <span class="regexp">/\.(png|jpg)$/</span>, <span class="string">loader:</span> <span class="string">'url-loader?limit=8192'</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>Loaders是以单个文件为基础对文件进行操作，而Plugins与Loaders不同的是，Plugins是对整体进行操作。</p><p>使用插件，你只需要将其进行引入到配置文件并添加到plugins数组中，大多数的插件都是可通过选项进行配置。</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">plugins:</span> [</span><br><span class="line">    <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(),  <span class="comment">//丑化压缩JS</span></span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;<span class="string">template:</span> <span class="string">'./src/index.html'</span>&#125;)  <span class="comment">//生成HTML模板</span></span><br><span class="line">  ]</span><br></pre></td></tr></table></figure><p>如需了解更多，请跳转址<a href="https://doc.webpack-china.org/" target="_blank" rel="noopener">webpack中文教程</a>。</p>]]></content>
     
@@ -295,25 +295,25 @@
     
     </summary>
     
-      <category term="webpack" scheme="http://www.qirenji.info/categories/webpack/"/>
+      <category term="webpack" scheme="http://www.qirenji.com/categories/webpack/"/>
     
-      <category term="工具" scheme="http://www.qirenji.info/categories/webpack/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://www.qirenji.com/categories/webpack/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="webpack" scheme="http://www.qirenji.info/tags/webpack/"/>
+      <category term="webpack" scheme="http://www.qirenji.com/tags/webpack/"/>
     
-      <category term="打包工具" scheme="http://www.qirenji.info/tags/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
+      <category term="打包工具" scheme="http://www.qirenji.com/tags/%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js+Socket.io- 智能聊天室</title>
-    <link href="http://www.qirenji.info/2017/07/27/Vue-js-Socket-io-%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
-    <id>http://www.qirenji.info/2017/07/27/Vue-js-Socket-io-智能聊天室/</id>
+    <link href="http://www.qirenji.com/2017/07/27/Vue-js-Socket-io-%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+    <id>http://www.qirenji.com/2017/07/27/Vue-js-Socket-io-智能聊天室/</id>
     <published>2017-07-27T13:02:29.000Z</published>
-    <updated>2017-08-29T07:36:48.000Z</updated>
+    <updated>2018-08-22T12:20:52.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Vue-js-Socket-io-智能聊天室"><a href="#Vue-js-Socket-io-智能聊天室" class="headerlink" title="Vue.js+Socket.io- 智能聊天室"></a>Vue.js+Socket.io- 智能聊天室</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本项目是使用Vue.js+Socket.io+Express实现的一个多人聊天室，也可以和智能机器人聊天，这里调用<a href="http://api.qingyunke.com/" target="_blank" rel="noopener">青云客API</a>接口。本项目虽然简单，但对vue的技术使用的还是比较全面的。</p><p>源码地址 👉 <a href="https://github.com/qirenji/chat-vue" target="_blank" rel="noopener">https://github.com/qirenji/chat-vue</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 登录功能 – 完成</li><li>[x] 聊天功能 – 完成</li><li>[x] 多人聊天室 – 完成</li><li>[x] 与机器人聊天 – 完成</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://chat.qirenji.com/" target="_blank" rel="noopener">http://chat.qirenji.com/</a></p><p>多人群聊效果预览<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/chat-vue/chat.png" alt="多人群聊效果图" title="">                </div>                <div class="image-caption">多人群聊效果图</div>            </figure></p><p>智能机器人聊天效果预览<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/chat-vue/ai.png" alt="智能机器人聊天效果图" title="">                </div>                <div class="image-caption">智能机器人聊天效果图</div>            </figure></p><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Socket.io</strong>：实现实时通信</li><li><strong>Vuex</strong>：实现不同组件间的状态共享</li><li><strong>vue-router</strong>：页面路由切换</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>Express</strong>：实现后端socket.io监听功能。</li><li><strong>Moment.js</strong>：格式化时间。</li><li><strong>ES6</strong>：箭头函数等语法很好用。</li><li><strong>localStorage</strong>：保存用户信息以及聊天记录。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>socket.io</p><p>在服务器端</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">io.<span class="literal">on</span>(<span class="string">'connection'</span>, <span class="function"><span class="params">(socket)</span> =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> 群聊</span><br><span class="line">  socket.<span class="literal">on</span>(<span class="string">'sendGroupMsg'</span>, function (data) &#123;</span><br><span class="line">    socket.broadcast.emit(<span class="string">'receiveGroupMsg'</span>, data);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>在客户端</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/socket.io/socket.io.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">  //上线发送名称信息 </span></span><br><span class="line"><span class="xml">    socket.emit('online', this.$store.state.name);</span></span><br><span class="line"><span class="xml">    // console.log(this.$store.state.name);</span></span><br><span class="line"><span class="xml">    // 监听是否有上线的</span></span><br><span class="line"><span class="xml">    socket.on('online', (name) =&gt; </span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">     ……</span></span><br><span class="line"><span class="template-variable">    &#125;</span><span class="xml">);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    // 监听是否有人在发送信息</span></span><br><span class="line"><span class="xml">    socket.on('receiveGroupMsg', data =&gt; </span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">      ……</span></span><br><span class="line"><span class="template-variable">    &#125;</span><span class="xml">);</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不管是服务器还是客户端都有 emit 和 on 这两个函数，可以说 socket.io 的核心就是这两个函数了，通过 emit 和 on 可以轻松地实现服务器与客户端之间的双向通信。</p><p>##emit## ：用来触发一个事件，第一个参数为事件名，第二个参数为要发送的数据,如果要向所有在线的人发送信息需要夹，broadcast是发送信息到广播组的其他人。</p><p>##on## ：用来监听一个 emit 触发的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来接收对方发来的数据。</p><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info">http://www.qirenji.info</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue-js-Socket-io-智能聊天室"><a href="#Vue-js-Socket-io-智能聊天室" class="headerlink" title="Vue.js+Socket.io- 智能聊天室"></a>Vue.js+Socket.io- 智能聊天室</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本项目是使用Vue.js+Socket.io+Express实现的一个多人聊天室，也可以和智能机器人聊天，这里调用<a href="http://api.qingyunke.com/" target="_blank" rel="noopener">青云客API</a>接口。本项目虽然简单，但对vue的技术使用的还是比较全面的。</p><p>源码地址 👉 <a href="https://github.com/qirenji/chat-vue" target="_blank" rel="noopener">https://github.com/qirenji/chat-vue</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] 登录功能 – 完成</li><li>[x] 聊天功能 – 完成</li><li>[x] 多人聊天室 – 完成</li><li>[x] 与机器人聊天 – 完成</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://chat.qirenji.com/" target="_blank" rel="noopener">http://chat.qirenji.com/</a></p><p>多人群聊效果预览<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/chat-vue/chat.png" alt="多人群聊效果图" title="">                </div>                <div class="image-caption">多人群聊效果图</div>            </figure></p><p>智能机器人聊天效果预览<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/chat-vue/ai.png" alt="智能机器人聊天效果图" title="">                </div>                <div class="image-caption">智能机器人聊天效果图</div>            </figure></p><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Socket.io</strong>：实现实时通信</li><li><strong>Vuex</strong>：实现不同组件间的状态共享</li><li><strong>vue-router</strong>：页面路由切换</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>Express</strong>：实现后端socket.io监听功能。</li><li><strong>Moment.js</strong>：格式化时间。</li><li><strong>ES6</strong>：箭头函数等语法很好用。</li><li><strong>localStorage</strong>：保存用户信息以及聊天记录。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>socket.io</p><p>在服务器端</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">io.<span class="literal">on</span>(<span class="string">'connection'</span>, <span class="function"><span class="params">(socket)</span> =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="regexp">//</span> 群聊</span><br><span class="line">  socket.<span class="literal">on</span>(<span class="string">'sendGroupMsg'</span>, function (data) &#123;</span><br><span class="line">    socket.broadcast.emit(<span class="string">'receiveGroupMsg'</span>, data);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>在客户端</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/socket.io/socket.io.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span></span><br><span class="line"><span class="xml">  //上线发送名称信息 </span></span><br><span class="line"><span class="xml">    socket.emit('online', this.$store.state.name);</span></span><br><span class="line"><span class="xml">    // console.log(this.$store.state.name);</span></span><br><span class="line"><span class="xml">    // 监听是否有上线的</span></span><br><span class="line"><span class="xml">    socket.on('online', (name) =&gt; </span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">     ……</span></span><br><span class="line"><span class="template-variable">    &#125;</span><span class="xml">);</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    // 监听是否有人在发送信息</span></span><br><span class="line"><span class="xml">    socket.on('receiveGroupMsg', data =&gt; </span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">      ……</span></span><br><span class="line"><span class="template-variable">    &#125;</span><span class="xml">);</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不管是服务器还是客户端都有 emit 和 on 这两个函数，可以说 socket.io 的核心就是这两个函数了，通过 emit 和 on 可以轻松地实现服务器与客户端之间的双向通信。</p><p>##emit## ：用来触发一个事件，第一个参数为事件名，第二个参数为要发送的数据,如果要向所有在线的人发送信息需要夹，broadcast是发送信息到广播组的其他人。</p><p>##on## ：用来监听一个 emit 触发的事件，第一个参数为要监听的事件名，第二个参数为一个匿名函数用来接收对方发来的数据。</p><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com">http://www.qirenji.com</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>]]></content>
     
     <summary type="html">
     
@@ -324,21 +324,21 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/categories/Vue/"/>
     
-      <category term="实战项目" scheme="http://www.qirenji.info/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+      <category term="实战项目" scheme="http://www.qirenji.com/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/tags/Vue/"/>
     
-      <category term="智能聊天室" scheme="http://www.qirenji.info/tags/%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+      <category term="智能聊天室" scheme="http://www.qirenji.com/tags/%E6%99%BA%E8%83%BD%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
     
   </entry>
   
   <entry>
     <title>nginx学习</title>
-    <link href="http://www.qirenji.info/2017/07/26/nginx%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://www.qirenji.info/2017/07/26/nginx学习/</id>
+    <link href="http://www.qirenji.com/2017/07/26/nginx%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.qirenji.com/2017/07/26/nginx学习/</id>
     <published>2017-07-26T14:04:29.000Z</published>
     <updated>2017-07-26T14:05:42.000Z</updated>
     
@@ -353,19 +353,19 @@
     
     </summary>
     
-      <category term="服务器" scheme="http://www.qirenji.info/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="http://www.qirenji.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="Nginx" scheme="http://www.qirenji.info/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/"/>
+      <category term="Nginx" scheme="http://www.qirenji.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/Nginx/"/>
     
     
-      <category term="Nginx" scheme="http://www.qirenji.info/tags/Nginx/"/>
+      <category term="Nginx" scheme="http://www.qirenji.com/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>git提交到多个远程仓库</title>
-    <link href="http://www.qirenji.info/2017/07/25/git%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"/>
-    <id>http://www.qirenji.info/2017/07/25/git提交到多个远程仓库/</id>
+    <link href="http://www.qirenji.com/2017/07/25/git%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/"/>
+    <id>http://www.qirenji.com/2017/07/25/git提交到多个远程仓库/</id>
     <published>2017-07-25T03:11:05.000Z</published>
     <updated>2017-08-25T03:12:13.000Z</updated>
     
@@ -381,19 +381,19 @@
     
     </summary>
     
-      <category term="远程管理" scheme="http://www.qirenji.info/categories/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+      <category term="远程管理" scheme="http://www.qirenji.com/categories/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
     
     
-      <category term="git" scheme="http://www.qirenji.info/tags/git/"/>
+      <category term="git" scheme="http://www.qirenji.com/tags/git/"/>
     
-      <category term="远程管理" scheme="http://www.qirenji.info/tags/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+      <category term="远程管理" scheme="http://www.qirenji.com/tags/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>flex布局学习</title>
-    <link href="http://www.qirenji.info/2017/07/24/flex%E5%B8%83%E5%B1%80%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://www.qirenji.info/2017/07/24/flex布局学习/</id>
+    <link href="http://www.qirenji.com/2017/07/24/flex%E5%B8%83%E5%B1%80%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.qirenji.com/2017/07/24/flex布局学习/</id>
     <published>2017-07-24T14:54:39.000Z</published>
     <updated>2017-07-24T14:55:49.000Z</updated>
     
@@ -408,19 +408,19 @@
     
     </summary>
     
-      <category term="CSS3" scheme="http://www.qirenji.info/categories/CSS3/"/>
+      <category term="CSS3" scheme="http://www.qirenji.com/categories/CSS3/"/>
     
     
-      <category term="flex" scheme="http://www.qirenji.info/tags/flex/"/>
+      <category term="flex" scheme="http://www.qirenji.com/tags/flex/"/>
     
-      <category term="CSS3" scheme="http://www.qirenji.info/tags/CSS3/"/>
+      <category term="CSS3" scheme="http://www.qirenji.com/tags/CSS3/"/>
     
   </entry>
   
   <entry>
     <title>git常用命令</title>
-    <link href="http://www.qirenji.info/2017/07/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.qirenji.info/2017/07/22/git常用命令/</id>
+    <link href="http://www.qirenji.com/2017/07/22/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.qirenji.com/2017/07/22/git常用命令/</id>
     <published>2017-07-22T13:48:13.000Z</published>
     <updated>2017-07-22T13:49:52.000Z</updated>
     
@@ -435,19 +435,19 @@
     
     </summary>
     
-      <category term="远程管理" scheme="http://www.qirenji.info/categories/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+      <category term="远程管理" scheme="http://www.qirenji.com/categories/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
     
     
-      <category term="git" scheme="http://www.qirenji.info/tags/git/"/>
+      <category term="git" scheme="http://www.qirenji.com/tags/git/"/>
     
-      <category term="远程管理" scheme="http://www.qirenji.info/tags/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
+      <category term="远程管理" scheme="http://www.qirenji.com/tags/%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>vue全家桶总结</title>
-    <link href="http://www.qirenji.info/2017/07/20/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%80%BB%E7%BB%93/"/>
-    <id>http://www.qirenji.info/2017/07/20/vue全家桶总结/</id>
+    <link href="http://www.qirenji.com/2017/07/20/vue%E5%85%A8%E5%AE%B6%E6%A1%B6%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.qirenji.com/2017/07/20/vue全家桶总结/</id>
     <published>2017-07-20T14:09:27.000Z</published>
     <updated>2017-07-20T14:15:18.000Z</updated>
     
@@ -462,23 +462,23 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/categories/Vue/"/>
     
-      <category term="JavaScript" scheme="http://www.qirenji.info/categories/Vue/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.qirenji.com/categories/Vue/JavaScript/"/>
     
     
-      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>Vue.js打造的GitHub排行榜</title>
-    <link href="http://www.qirenji.info/2017/07/20/Vue-js%E6%89%93%E9%80%A0%E7%9A%84GitHub%E6%8E%92%E8%A1%8C%E6%A6%9C/"/>
-    <id>http://www.qirenji.info/2017/07/20/Vue-js打造的GitHub排行榜/</id>
+    <link href="http://www.qirenji.com/2017/07/20/Vue-js%E6%89%93%E9%80%A0%E7%9A%84GitHub%E6%8E%92%E8%A1%8C%E6%A6%9C/"/>
+    <id>http://www.qirenji.com/2017/07/20/Vue-js打造的GitHub排行榜/</id>
     <published>2017-07-20T02:56:30.000Z</published>
-    <updated>2017-08-29T07:37:27.000Z</updated>
+    <updated>2018-08-22T12:20:44.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Vue-js打造的GitHub排行榜"><a href="#Vue-js打造的GitHub排行榜" class="headerlink" title="Vue.js打造的GitHub排行榜"></a>Vue.js打造的GitHub排行榜</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>爬虫简单小练习，利用Node js对github项目进行爬虫，对github各种类项目进行按🌟star数目进行排序。</p><p>Github地址：<a href="https://github.com/qirenji/github-ranking" target="_blank" rel="noopener">https://github.com/qirenji/github-ranking</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] github爬取 – 完成</li><li>[x] 项目主页显示 – 完成</li><li>[x] 项目切换 – 完成</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://github.qirenji.com/" target="_blank" rel="noopener">http://github.qirenji.com/</a></p><p><strong>首页</strong></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/github-ranking/index.png" alt="首页" title="">                </div>                <div class="image-caption">首页</div>            </figure><p><strong>侧边栏项目切换</strong></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/github-ranking/aside.png" alt="文章详情页" title="">                </div>                <div class="image-caption">文章详情页</div>            </figure><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Vue-cli</strong>：vue手脚架工具。</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>cheerio</strong>：快速、灵活、实施的jQuery核心实现，抓取页面内容很方便。</li><li><strong>ES6</strong>：箭头函数、promise等语法很好用。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>每次现爬取github等待时间较长，可以使用缓冲，加快访问速度。使用json数据文件存到服务器，等有用户访问的时候读取该文件，活着使用redis缓存工具来解决此问题。</li><li>异步操作很好用，但也容易出错！熟练掌握Promis等方法，提高效率。</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.info/about">http://www.qirenji.info/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:lyf@qirenji.com" target="_blank" rel="noopener">lyf@qirenji.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Vue-js打造的GitHub排行榜"><a href="#Vue-js打造的GitHub排行榜" class="headerlink" title="Vue.js打造的GitHub排行榜"></a>Vue.js打造的GitHub排行榜</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>爬虫简单小练习，利用Node js对github项目进行爬虫，对github各种类项目进行按🌟star数目进行排序。</p><p>Github地址：<a href="https://github.com/qirenji/github-ranking" target="_blank" rel="noopener">https://github.com/qirenji/github-ranking</a></p><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><ul><li>[x] github爬取 – 完成</li><li>[x] 项目主页显示 – 完成</li><li>[x] 项目切换 – 完成</li></ul><h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览地址 👉 <a href="http://github.qirenji.com/" target="_blank" rel="noopener">http://github.qirenji.com/</a></p><p><strong>首页</strong></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/github-ranking/index.png" alt="首页" title="">                </div>                <div class="image-caption">首页</div>            </figure><p><strong>侧边栏项目切换</strong></p><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="/img/github-ranking/aside.png" alt="文章详情页" title="">                </div>                <div class="image-caption">文章详情页</div>            </figure><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul><li><strong>Vue2.0</strong>：前端页面展示。</li><li><strong>Vue-cli</strong>：vue手脚架工具。</li><li><strong>axios</strong>：向后端发起请求。</li><li><strong>cheerio</strong>：快速、灵活、实施的jQuery核心实现，抓取页面内容很方便。</li><li><strong>ES6</strong>：箭头函数、promise等语法很好用。</li><li><strong>Webpack</strong>：vue-cli自带Webpack，添加sass相关loader，其他vue-cli已经配置好了webpack，你只需要安装依赖就可以，使用的时候只需要<style lang="scss"></style>。</li><li><strong>SASS(SCSS)</strong>：用SCSS做CSS预处理语言。</li><li><strong>flex</strong>：flex弹性布局，简单适配手机、PC端。</li><li><strong>CSS3</strong>：CSS3过渡动画及样式。</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>每次现爬取github等待时间较长，可以使用缓冲，加快访问速度。使用json数据文件存到服务器，等有用户访问的时候读取该文件，活着使用redis缓存工具来解决此问题。</li><li>异步操作很好用，但也容易出错！熟练掌握Promis等方法，提高效率。</li></ol><h2 id="About"><a href="#About" class="headerlink" title="About"></a>About</h2><p>关于我: <a href="http://www.qirenji.com/about">http://www.qirenji.com/about</a></p><p>GitHub: <a href="https://github.com/qirenji/" target="_blank" rel="noopener">https://github.com/qirenji/</a></p><p>E-mail: <a href="mailto:work@qirenji.com" target="_blank" rel="noopener">work@qirenji.com</a></p>]]></content>
     
     <summary type="html">
     
@@ -489,21 +489,21 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://www.qirenji.info/categories/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/categories/Vue/"/>
     
-      <category term="实战项目" scheme="http://www.qirenji.info/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
+      <category term="实战项目" scheme="http://www.qirenji.com/categories/Vue/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/tags/Vue/"/>
     
-      <category term="Github排行榜" scheme="http://www.qirenji.info/tags/Github%E6%8E%92%E8%A1%8C%E6%A6%9C/"/>
+      <category term="Github排行榜" scheme="http://www.qirenji.com/tags/Github%E6%8E%92%E8%A1%8C%E6%A6%9C/"/>
     
   </entry>
   
   <entry>
     <title>Vue项目部署阿里云</title>
-    <link href="http://www.qirenji.info/2017/07/19/Vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/"/>
-    <id>http://www.qirenji.info/2017/07/19/Vue项目部署阿里云/</id>
+    <link href="http://www.qirenji.com/2017/07/19/Vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    <id>http://www.qirenji.com/2017/07/19/Vue项目部署阿里云/</id>
     <published>2017-07-19T14:06:29.000Z</published>
     <updated>2017-07-20T14:12:10.000Z</updated>
     
@@ -518,19 +518,19 @@
     
     </summary>
     
-      <category term="建站" scheme="http://www.qirenji.info/categories/%E5%BB%BA%E7%AB%99/"/>
+      <category term="建站" scheme="http://www.qirenji.com/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="Vue" scheme="http://www.qirenji.info/tags/Vue/"/>
+      <category term="Vue" scheme="http://www.qirenji.com/tags/Vue/"/>
     
-      <category term="项目部署" scheme="http://www.qirenji.info/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
+      <category term="项目部署" scheme="http://www.qirenji.com/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
   <entry>
     <title>hexo搭建github个人博客</title>
-    <link href="http://www.qirenji.info/2017/07/18/hexo%E6%90%AD%E5%BB%BAgithub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://www.qirenji.info/2017/07/18/hexo搭建github个人博客/</id>
+    <link href="http://www.qirenji.com/2017/07/18/hexo%E6%90%AD%E5%BB%BAgithub%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://www.qirenji.com/2017/07/18/hexo搭建github个人博客/</id>
     <published>2017-07-18T15:41:11.000Z</published>
     <updated>2017-07-19T14:33:19.000Z</updated>
     
@@ -545,12 +545,12 @@
     
     </summary>
     
-      <category term="建站" scheme="http://www.qirenji.info/categories/%E5%BB%BA%E7%AB%99/"/>
+      <category term="建站" scheme="http://www.qirenji.com/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-      <category term="hexo" scheme="http://www.qirenji.info/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.qirenji.com/tags/hexo/"/>
     
-      <category term="个人博客" scheme="http://www.qirenji.info/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <category term="个人博客" scheme="http://www.qirenji.com/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
